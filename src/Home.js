@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+
 import './App.css';
+import Footer from './Footer';
 import logo from './images/vslogo.png';
 import image from './images/sample-image.gif';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import './card.css';
 import images from './images/about.gif';
 import imag from './images/service.gif';
 import ima from  './images/creations.gif';
@@ -14,6 +16,12 @@ import logo3 from './images/delivery.gif';
 import logo4 from './images/team.gif';
 import logo5 from './images/price.gif';
 import logo6 from './images/support.gif';
+import service1Image from './images/service1.jpg';
+import service2Image from './images/service2.jpg';
+import service3Image from './images/service3.jpg';
+import service4Image from './images/service4.jpg';
+import service5Image from './images/service5.jpg';
+import service6Image from './images/service6.jpg';
 
 
 const bannersData = [
@@ -50,6 +58,14 @@ stunning websites that drive results and elevate your brand." `,
 
 ];
 
+const cardsData = [
+  { photo: service1Image, heading: 'Website Development', content: 'We Build Interactive and Dynamic Website.' },
+  { photo: service2Image, heading: 'Android App Development', content: 'We Build and Organized App ' },
+  { photo: service3Image, heading: 'Digital Marketing', content: 'Promote your business through Social Medias.' },
+  { photo: service4Image, heading: 'SEO Service', content: 'Optimization services to improve a site.' },
+  { photo: service5Image, heading: 'UI/UX Design', content: 'Build interactive and Designs.' },
+  { photo: service6Image, heading: 'Data Entry Operator', content: 'We Transcribing data into computers and databases. ' },
+];
 
 function Home() {
   const markerRef = useRef(null);
@@ -62,7 +78,8 @@ function Home() {
   const solutionsRef = useRef(null);
   const workEthicsRef = useRef(null);
   
-  
+
+ 
 
   useEffect(() => {
     const marker = markerRef.current;
@@ -71,116 +88,85 @@ function Home() {
     const pageTransition = pageTransitionRef.current;
     const nav = navRef.current;
     const logo = logoRef.current;
-    
-   
+  
+    // Move indicator animation
     function moveIndicator(e) {
       if (marker) {
-        gsap.to(marker, { left: e.offsetLeft, width: e.offsetWidth, duration: 1 });
+        gsap.to(marker, { left: e.offsetLeft, width: e.offsetWidth, duration: 0.5 });
       }
     }
-
+  
     function activeLink() {
       list.forEach((item) => {
         if (item) item.classList.remove('active');
       });
       this.classList.add('active');
     }
-
-    if (list.length > 0) {
-      list.forEach((item) => {
-        if (item) {
-          item.addEventListener('mousemove', (e) => moveIndicator(e.target));
-          item.addEventListener('mouseover', activeLink);
-        }
-      });
-    }
-
+  
+    list.forEach((item) => {
+      if (item) {
+        item.addEventListener('mousemove', moveIndicator);
+        item.addEventListener('mouseover', activeLink);
+      }
+    });
+  
     gsap.fromTo(pageTransition, 
-      { opacity: 0, scale: 0.8, rotate: '45deg' }, 
-      { opacity: 1, scale: 1, rotate: '0deg', duration: 1.5, ease: 'power2.out' }
+      { opacity: 0, scale: 0.8 }, 
+      { opacity: 1, scale: 1, duration: 1.5, ease: 'power2.out' }
     );
-
-    gsap.fromTo(
-      headingRef.current,
+  
+    gsap.fromTo(headingRef.current, 
       { opacity: 0, x: '-100%' },
-      { opacity: 1, x: '0%', duration: 2.5, delay: 1, ease: 'power2.out' }
+      { opacity: 1, x: '0%', duration: 1.5, delay: 1, ease: 'power2.out' }
     );
-    
-
-    gsap.fromTo(
-      solutionsRef.current,
+  
+    gsap.fromTo(solutionsRef.current, 
       { opacity: 0, y: '50px' },
-      { opacity: 1, y: '0', duration: 2, delay: 2, ease: 'power2.out' }
+      { opacity: 1, y: '0', duration: 1.5, delay: 1.5, ease: 'power2.out' }
     );
-
-    // Navigation animation
-    gsap.fromTo(
-      nav,
+  
+    gsap.fromTo(nav, 
       { opacity: 0, x: '100%' },
-      { opacity: 1, x: '0%', duration: 2, delay: 2.5, ease: 'power2.out' }
+      { opacity: 1, x: '0%', duration: 1.5, delay: 2, ease: 'power2.out' }
     );
-
-    gsap.fromTo(
-      nav.querySelectorAll('ul li a'),
-      { fontSize: '2.5rem' },
-      { fontSize: '1.5rem', duration: 2, delay: 2.5, ease: 'power2.out' }
-    );
-
-    // Logo spin animation
+  
     gsap.fromTo(logo, 
       { rotate: 0 }, 
       { rotate: 360, duration: 2, ease: 'power2.inOut' }
     );
-
-    // Heading 3D Effect
-    if (headingRef.current) {
-      gsap.fromTo(
-        headingRef.current,
-        { opacity: 0, x: '-100%' },
-        { opacity: 1, x: '0%', duration: 2.5, delay: 1, ease: 'power2.out' }
-      );
-    }
   
-
-    // Article and aside animations
-    gsap.fromTo(
-      '.article span',
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: 'power2.out' }
-    );
-
-    gsap.fromTo(
-      '.aside img',
-      { scale: 0.5, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 2, ease: 'power2.out' }
-    );
-
-    // Initialize banner animation
     const timeline = gsap.timeline({ repeat: -1, repeatDelay: 0 });
-
+  
     banners.forEach((banner, index) => {
       timeline
         .fromTo(banner, 
           { opacity: 0, x: '100%' }, 
-          { opacity: 1, x: '0%', duration: 3, ease: 'power2.out' }, 
-          index * 15 // Each banner shows for 10 seconds before transitioning
+          { opacity: 1, x: '0%', duration: 2, ease: 'power2.out' }, 
+          index * 10
         )
         .to(banner, 
           { opacity: 0, x: '-100%', duration: 1, ease: 'power2.out' }, 
-          (index * 15) + 15 // Transition to the next banner after 10 seconds of display
+          (index * 10) + 10
         );
     });
-
-
-
-    return () => timeline.kill(); 
-    
-    // Cleanup GSAP timeline on component unmount
-
+  
+    gsap.fromTo('.service-card', 
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, stagger: 0.2, duration: 1, ease: 'power2.out' }
+    );
+  
+    return () => {
+      timeline.kill(); 
+      list.forEach((item) => {
+        if (item) {
+          item.removeEventListener('mousemove', moveIndicator);
+          item.removeEventListener('mouseover', activeLink);
+        }
+      });
+    };
+  
   }, []);
-
-
-
+  
 
   return (
     <div className="App" ref={pageTransitionRef}>
@@ -285,7 +271,34 @@ function Home() {
           </div>
         </div>
       </div>
-    </div>
+      <div className="Servisess">
+  <h2>Our Services</h2>
+  <div className="cards-container">
+    {cardsData.map((card, index) => (
+      <div key={index} className="service-card">
+        <div className="card-inner">
+        <div
+                className="card-front"
+                style={{ backgroundImage: `url(${card.photo})` }}
+              >
+           
+          </div>
+
+          
+          <div className="card-back">
+            <h3>{card.heading}</h3>
+            <p>{card.content}</p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+<Footer />
+
+</div>
+
+    
   );
 }
 

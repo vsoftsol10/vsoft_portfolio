@@ -1,0 +1,87 @@
+.footer {
+    background-color: rgba(10, 60, 100, 0.979);
+    color: #ffffff;
+    margin-top: 60px;
+   
+   
+  
+    .footer-container {
+      .footer-row {
+        display: flex; // Arrange columns in a row
+        justify-content: space-between; // Distribute columns evenly
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+      
+  
+        .footer-column {
+          flex: 1;
+       // Ensure columns have a minimum width
+          margin: 10px; // Space between columns
+          
+  
+          h3 {
+            text-align: center;
+       margin: 0%;
+            font-size: 18px;
+            color: white;
+      
+          }
+  
+          p, a {
+            color: black;
+            font-size: 15px;
+            text-decoration: none;
+            margin-right: 0;
+            margin-top: 28px;
+  
+            &:hover {
+              color: #dcdcdc;
+            }
+          }
+  
+          ul {
+           
+            padding: 1px;
+            margin-top: 10px;
+  
+            li {
+              margin-bottom: 10px;
+            }
+          }
+          .social-icons {
+            display: flex;
+            flex-wrap: wrap; // Allow icons to wrap to the next line if needed
+            gap: 8px; // Space between icons
+  
+            a {
+              display: inline-block;
+              font-size: 3rem; // Social icons size
+              color: #ffffff;
+              margin-right: 8px; // Space between icons
+  
+              &:hover {
+                color: #dcdcdc;
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      border-top: 1px solid #ffffff;
+      padding-top: 10px;
+      font-size: 14px;
+  
+      p {
+        margin: 0;
+        font-size: large;
+        color: white;
+      }
+    }
+  }
+  
