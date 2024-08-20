@@ -22,18 +22,27 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Validation check
+    const { name, email, phone, service, message } = formData;
+    if (!name || !email || !phone || !service || !message) {
+      alert('Please fill out all fields.');
+      return;
+    }
+
     emailjs.send(
       'service_wt6r4yb', 'template_mzs9yvj',
       formData,
       'B12h1HpEd_42HbUJy' 
     )
     .then((result) => {
-      setSuccessMessage('Data saved successfully. We will contact you later.');
+      
+      alert('Form submitted successfully!'); // Popup success message
       setTimeout(() => {
         navigate('/'); // Redirect to the home page after 2 seconds
       }, 2000);
     }, (error) => {
       console.error('Failed to send email:', error.text);
+      alert('Failed to submit the form. Please try again.'); // Popup error message
     });
   };
 
@@ -60,7 +69,6 @@ const ContactForm = () => {
           <div className="social-media">
             <p>Connect with us :</p>
             <div className="social-icons">
-           
               <a href="#"><i className="fab fa-twitter"></i></a>
               <a href="#"><i className="fab fa-instagram"></i></a>
               <a href="#"><i className="fab fa-linkedin-in"></i></a>
@@ -105,7 +113,7 @@ const ContactForm = () => {
               />
             </div>
             <div className="input-container">
-            <h4 className="label">Services:</h4> 
+              <h4 className="label">Services:</h4> 
               <select
                 name="service"
                 className="input"
