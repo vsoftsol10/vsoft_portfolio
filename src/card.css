@@ -108,6 +108,7 @@
   @media (max-width: 768px) {
     .cards-container {
       grid-template-columns: 1fr;
+      gap: 3px;
     }
 
     .service-card {
@@ -116,116 +117,7 @@
   }
 }
 
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 40px 20px;
-  text-align: center;
-
-  .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-
-    .footer-logo {
-      flex: 1;
-      img {
-        max-width: 150px;
-      }
-    }
-
-    .footer-links {
-      flex: 2;
-      ul {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-
-        li {
-          margin: 0 15px;
-          a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-
-            &:hover {
-              color: #1e90ff; 
-            }
-          }
-        }
-      }
-    }
-
-    .footer-social {
-      flex: 1;
-      a {
-        margin: 0 10px;
-        color: #fff;
-        font-size: 3rem; 
-        transition: color 0.3s ease;
-
-        &:hover {
-          color: #1e90ff;
-        }
-      }
-    }
-  }
-
-  .footer-bottom {
-    p {
-      margin: 0;
-      font-size: 0.9rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .footer-content {
-      flex-direction: column;
-      text-align: center;
-
-      .footer-logo,
-      .footer-links,
-      .footer-social {
-        margin-bottom: 20px;
-      }
-
-      .footer-social {
-        a {
-          font-size: 2rem; 
-        }
-      }
-    }
-  }
-}
-
-@keyframes fadeInFromTop {
-  to {
-    opacity: 1; 
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInContent {
-  from {
-    opacity: 0;
-    transform: translateY(10px); 
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0); 
-  }
+/* Hide scroll markers in production */
+.scroll-marker {
+  display: none;
 }

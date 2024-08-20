@@ -72,13 +72,23 @@
 .heading-part-solutions {
   margin-top: 15px;
 }
-
 .App-nav {
   display: flex;
+  position: relative;
   gap: 70px;
   align-items: center;
-  opacity: 0; /* Start with opacity 0 for animation */
+  padding-bottom: 10px; /* Add space for marker */
 }
+
+.App-nav ul {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+
 
 ul {
   position: relative;
@@ -129,11 +139,12 @@ ul li.active a ion-icon {
 
 #marker {
   position: absolute;
-  bottom: 0; /* Align to the bottom of the list items */
-  transition: 0.5s;
-  z-index: 1;
-  height: 4px; /* Adjust height as needed */
+  bottom: 0; /* Align with the bottom of the nav */
+  height: 4px; /* Height of the marker */
+  background-color: var(--color-secondary); /* Marker color */
+  transition: 0.5s ease; /* Smooth transition */
 }
+
 
 #marker::before {
   content: '';
@@ -247,83 +258,14 @@ ul li:nth-child(6).active ~ #marker::before {
 
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .main-content {
-    flex-direction: column;
-  }
 
-  .content-left {
-    max-width: 100%;
-  }
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .App-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .App-logo {
-    height: 120px;
-    margin-bottom: 10px;
-  }
-
-  .App-nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  ul li a {
-    padding: 10px 15px;
-  }
-
-  .App-heading {
-    font-size: 1.5rem;
-    letter-spacing: 0.2rem;
-  }
-
-  .heading-part-solutions {
-    font-size: 1.2rem;
-    margin-top: 2px;
-  }
-
-  .intro-heading {
-    font-size: 2.5rem;
-  }
-
-  .intro-subheading {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .App-heading {
-    font-size: 1.2rem;
-    letter-spacing: 0.1rem;
-  }
-
-  .heading-part-solutions {
-    font-size: 1rem;
-  }
-
-  .intro-heading {
-    font-size: 2rem;
-  }
-
-  .intro-subheading {
-    font-size: 1.2rem;
-  }
-}
 
 /* Banner Container Styles */
 .banner-container {
   position: relative;
   overflow: hidden;
   height: 100vh; /* Adjust as needed */
-  background: linear-gradient(60% white, 40% rgb(28, 28, 64));
+ 
 }
 
 .banner {
@@ -340,13 +282,23 @@ ul li:nth-child(6).active ~ #marker::before {
   animation: fadeInOut 12s infinite; /* Animation for fade-in and fade-out */
 }
 
+
 .banner-grid {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 70% 30%;
   align-items: center; /* Vertically align the content */
   height: 100%; /* Ensure both columns fill the banner */
-  background: linear-gradient(60% white, 40% rgb(28, 28, 64));
+  background: linear-gradient(
+      to right, 
+      rgba(255, 255, 255, 0) 60%, /* Transparent part for the image */
+      rgba(255, 255, 255, 1) 60% /* White part for the gradient */
+    ), 
+    url('./images/vsoft Image .jpg'); 
+  background-size: contain;
+  background-position: center left; 
+  background-repeat: no-repeat; 
 }
+
 
 .banner-content {
   position: relative;
@@ -354,7 +306,7 @@ ul li:nth-child(6).active ~ #marker::before {
   color: white;
   margin-left: 50px;
   margin-top: 30px;
-  background-color: white;
+  
   justify-content: start;
   font-family: 'Poppins', sans-serif;
   animation: slideInFromLeft 2s ease-out;
@@ -417,10 +369,11 @@ h3{
 
 .secondary-heading {
   font-size: 1rem;
-  color: rgba(10, 60, 100, 0.979);
+  color: rgba(21, 116, 194, 0.979);
   margin-left: 100px;
-  width: 80%;
+  width: 70%;
   font-family: 'Poppins', sans-serif;
+  background: white;
   animation: float 3s ease-in-out infinite; /* Apply the floating animation */
 }
 
@@ -458,7 +411,9 @@ button:hover {
 
 
 .work-ethics {
-  padding: 2rem; /* Added padding to the whole section */
+  padding:4rem; 
+  margin-top: 8px;
+  /* Added padding to the whole section */
 }
  p{
   text-align: center;
@@ -508,7 +463,173 @@ button:hover {
 .work-ethics-column img {
   width: 100%;
   height:100%;
-  animation: float 5s ease-in-out infinite;
+  animation: float 5s ease-in-out infinite;/* Mobile Devices (Portrait) */
+@media only screen and (max-width: 480px) {
+  .App-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .App-logo {
+    height: 120px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .header-text {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .App-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .App-nav ul {
+    flex-direction: column;
+  }
+
+  .banner-grid {
+    grid-template-columns: 100%;
+    background-position: center;
+  }
+
+  .banner-content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .work-ethics-container {
+    flex-direction: column;
+  }
+
+  .work-ethics-column {
+    padding: 0.5rem;
+  }
+
+  .banner-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  button {
+    width: 100%;
+    font-size: 20px;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Tablets (Portrait) */
+@media only screen and (max-width: 768px) {
+  .App-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .App-logo {
+    height: 140px;
+  }
+
+  .header-text {
+    text-align: center;
+  }
+
+  .App-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .App-nav ul {
+    flex-direction: column;
+  }
+
+  .banner-grid {
+    grid-template-columns: 100%;
+    background-position: center;
+  }
+
+  .banner-content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .work-ethics-container {
+    flex-direction: column;
+  }
+
+  .work-ethics-column {
+    padding: 0.5rem;
+  }
+
+  .banner-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  button {
+    width: 100%;
+    font-size: 22px;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Tablets (Landscape) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .App-header {
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .App-logo {
+    height: 150px;
+    margin-right: 20px;
+  }
+
+  .header-text {
+    text-align: center;
+  }
+
+  .App-nav {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .App-nav ul {
+    flex-direction: row;
+  }
+
+  .banner-grid {
+    grid-template-columns: 60% 40%;
+  }
+
+  .banner-content {
+    margin-left: 50px;
+  }
+
+  .work-ethics-container {
+    flex-direction: row;
+  }
+
+  .work-ethics-column {
+    padding: 1rem;
+  }
+
+  .banner-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  button {
+    width: auto;
+    font-size: 24px;
+    padding: 1rem 2rem;
+  }
+}
+
 }
 @keyframes float {
   0%, 100% {
@@ -518,4 +639,199 @@ button:hover {
       transform: translateY(-20px); /* Adjust the float height */
   }
 }
+
+@media (min-width: 769px) {
+  .App-nav {
+    display: flex; /* Show the nav by default on desktop */
+  }
+  
+  .menu-button {
+    display: none; /* Hide the menu button on desktop */
+  }
+}
+
+/* Mobile Devices (Portrait) */
+@media only screen and (max-width: 480px) {
+  .App-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .App-logo {
+    height: 120px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .header-text {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .App-nav {
+    display: none; /* Hide the nav by default on mobile */
+  }
+  
+  .App-nav.show {
+    display: block; /* Show the nav when 'show' class is added */
+  }
+  
+  .menu-button {
+    display: block; /* Show the menu button on mobile */
+  }
+
+ 
+
+  .banner-grid {
+    grid-template-columns: 100%;
+    background-size: cover; /* Cover the entire area on mobile */
+    background-position: center center; /* Center the image on mobile */
+  }
+
+  .banner-content {
+    margin-left: 0;
+    margin-top: 20px;
+    align-items: center;
+  }
+  .banner-text {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-text {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .work-ethics-container {
+    flex-direction: column;
+  }
+
+  .work-ethics-column {
+    padding: 0.5rem;
+  }
+
+  .banner-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  button {
+    width: 100%;
+    font-size: 20px;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Tablets (Portrait) */
+@media only screen and (max-width: 768px) {
+  .App-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .App-logo {
+    height: 140px;
+  }
+
+  .header-text {
+    text-align: center;
+  }
+
+  .App-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .App-nav ul {
+    flex-direction: column;
+  }
+
+  .banner-grid {
+    grid-template-columns: 100%;
+    background-position: center;
+  }
+
+  .banner-content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .work-ethics-container {
+    flex-direction: column;
+  }
+
+  .work-ethics-column {
+    padding: 0.5rem;
+  }
+
+  .banner-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  button {
+    width: 100%;
+    font-size: 22px;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Tablets (Landscape) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .App-header {
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .App-logo {
+    height: 150px;
+    margin-right: 20px;
+  }
+
+  .header-text {
+    text-align: center;
+  }
+
+  .App-nav {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .App-nav ul {
+    flex-direction: row;
+  }
+
+  .banner-grid {
+    grid-template-columns: 60% 40%;
+  }
+
+  .banner-content {
+    margin-left: 50px;
+  }
+
+  .work-ethics-container {
+    flex-direction: row;
+  }
+
+  .work-ethics-column {
+    padding: 1rem;
+  }
+
+  .banner-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  button {
+    width: auto;
+    font-size: 24px;
+    padding: 1rem 2rem;
+  }
+}
+
 

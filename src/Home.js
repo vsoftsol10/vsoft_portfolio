@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 import './App.css';
 import Footer from './Footer';
 import logo from './images/vslogo.png';
@@ -78,8 +79,14 @@ function Home() {
   const solutionsRef = useRef(null);
   const workEthicsRef = useRef(null);
   
-
+  const cardsContainerRef = useRef(null);
  
+  const handleMenuToggle = () => {
+    if (window.innerWidth <= 768) { // Check if the screen width is 768px or less
+      navRef.current.classList.toggle('show');
+    }
+  };
+
 
   useEffect(() => {
     const marker = markerRef.current;
@@ -88,19 +95,19 @@ function Home() {
     const pageTransition = pageTransitionRef.current;
     const nav = navRef.current;
     const logo = logoRef.current;
-  
+    gsap.registerPlugin(ScrollTrigger);
     // Move indicator animation
     function moveIndicator(e) {
       if (marker) {
-        gsap.to(marker, { left: e.offsetLeft, width: e.offsetWidth, duration: 0.5 });
+        gsap.to(marker, { left: e.target.offsetLeft, width: e.target.offsetWidth, duration: 0.5 });
       }
     }
   
-    function activeLink() {
+    function activeLink(e) {
       list.forEach((item) => {
         if (item) item.classList.remove('active');
       });
-      this.classList.add('active');
+      e.target.closest('li').classList.add('active');
     }
   
     list.forEach((item) => {
@@ -109,7 +116,7 @@ function Home() {
         item.addEventListener('mouseover', activeLink);
       }
     });
-  
+    
     gsap.fromTo(pageTransition, 
       { opacity: 0, scale: 0.8 }, 
       { opacity: 1, scale: 1, duration: 1.5, ease: 'power2.out' }
@@ -152,10 +159,29 @@ function Home() {
   
     gsap.fromTo('.service-card', 
       { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, stagger: 0.2, duration: 1, ease: 'power2.out' }
+      { opacity: 1, y: 0, stagger: 10, duration: 1, ease: 'power2.out' }
     );
-  
-    return () => {
+  // ScrollTrigger animations for cards
+  gsap.utils.toArray('.service-card').forEach((card, index) => {
+    gsap.fromTo(card, 
+      { opacity: 0, y: index < 3 ? '100px' : '-100px' },
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 1, 
+        ease: 'power2.out', 
+        scrollTrigger: {
+          trigger: cardsContainerRef.current,
+          start: 'top center+=100',
+          end: 'bottom center',
+          scrub: true,
+          markers: false,
+          stagger: 0.2
+        }
+      }
+    );
+  });
+     return () => {
       timeline.kill(); 
       list.forEach((item) => {
         if (item) {
@@ -166,7 +192,6 @@ function Home() {
     };
   
   }, []);
-  
 
   return (
     <div className="App" ref={pageTransitionRef}>
@@ -186,6 +211,9 @@ function Home() {
             </h2>
           </div>
         </div>
+        <button className="menu-button" onClick={handleMenuToggle}>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
         <nav className="App-nav" ref={navRef}>
           <ul>
             <li ref={(el) => (listRefs.current[0] = el)}>
@@ -213,11 +241,11 @@ function Home() {
               </a>
             </li>
             <li ref={(el) => (listRefs.current[4] = el)}>
-              <a href="#contact">
-                <ion-icon name="person-outline"></ion-icon>
-                <h6 className="custom-heading1">Contact</h6>
-              </a>
-            </li>
+  <Link to="/contact">
+    <ion-icon name="person-outline"></ion-icon>
+    <h6 className="custom-heading1">Contact</h6>
+  </Link>
+</li>
             <div id="marker" ref={markerRef}></div>
           </ul>
         </nav>
@@ -302,4 +330,4 @@ function Home() {
   );
 }
 
-export default  Home;
+export default  Home; 

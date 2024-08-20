@@ -1,87 +1,145 @@
 .footer {
-    background-color: rgba(10, 60, 100, 0.979);
-    color: #ffffff;
-    margin-top: 60px;
-   
-   
-  
-    .footer-container {
-      .footer-row {
-        display: flex; // Arrange columns in a row
-        justify-content: space-between; // Distribute columns evenly
-        flex-wrap: wrap;
-        width: 100%;
-        height: auto;
-      
-  
-        .footer-column {
-          flex: 1;
-       // Ensure columns have a minimum width
-          margin: 10px; // Space between columns
-          
-  
-          h3 {
-            text-align: center;
-       margin: 0%;
-            font-size: 18px;
+  color: #ffffff;
+  margin-top: 60px;
+  background-color: rgba(10, 60, 100, 0.979); // Footer background color
+
+  .footer-container {
+    background-color: inherit; // Inherit background color from .footer
+
+    .footer-row {
+      display: flex; // Arrange columns in a row
+      justify-content: space-between; // Distribute columns evenly
+      flex-wrap: wrap;
+      width: 100%;
+      height: auto;
+      background-color: inherit; // Inherit background color from .footer-container
+
+      .footer-column {
+        flex: 1; // Ensure columns have a minimum width
+        margin: 10px; // Space between columns
+
+        h3 {
+          text-align: center;
+          margin: 0%;
+          font-size: 18px;
+          color: white;
+        }
+
+        p, a {
+          color: black;
+          font-size: 15px;
+          text-decoration: none;
+          margin-right: 0;
+          margin-top: 28px;
+
+          &:hover {
             color: white;
-      
           }
-  
-          p, a {
-            color: black;
-            font-size: 15px;
-            text-decoration: none;
-            margin-right: 0;
-            margin-top: 28px;
-  
+        }
+
+        ul {
+          padding: 1px;
+          margin-top: 10px;
+
+          li {
+            margin-bottom: 10px;
+          }
+        }
+
+        .social-icons {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+
+          a {
+            display: inline-block;
+            font-size: 3rem; // Social icons size
+            color: #ffffff;
+            margin-right: 8px; // Space between icons
+
             &:hover {
               color: #dcdcdc;
             }
           }
-  
-          ul {
-           
-            padding: 1px;
-            margin-top: 10px;
-  
-            li {
-              margin-bottom: 10px;
-            }
-          }
-          .social-icons {
-            display: flex;
-            flex-wrap: wrap; // Allow icons to wrap to the next line if needed
-            gap: 8px; // Space between icons
-  
-            a {
-              display: inline-block;
-              font-size: 3rem; // Social icons size
-              color: #ffffff;
-              margin-right: 8px; // Space between icons
-  
-              &:hover {
-                color: #dcdcdc;
-              }
-            }
-          }
-          
         }
       }
     }
-  
-    .footer-bottom {
-      text-align: center;
-      margin-top: 20px;
-      border-top: 1px solid #ffffff;
-      padding-top: 10px;
-      font-size: 14px;
-  
-      p {
-        margin: 0;
-        font-size: large;
-        color: white;
-      }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ffffff;
+    padding-top: 10px;
+    font-size: 14px;
+    background-color: inherit; // Inherit background color from .footer
+
+    p {
+      margin: 0;
+      font-size: large;
+      color: white;
     }
   }
-  
+
+  // Tablet view adjustments
+  @media (max-width: 768px) {
+    .footer-row {
+      flex-direction: column; // Stack columns on top of each other
+      align-items: center; // Center align the columns
+    }
+
+    .footer-column {
+      width: 100%; // Make each column take full width
+      margin: 5px 0; // Adjust margin for spacing between stacked columns
+
+      h3 {
+        font-size: 16px; // Adjust font size for h3
+      }
+
+      p, a {
+        font-size: 14px; // Adjust font size for p and a elements
+        margin-top: 15px; // Adjust top margin for spacing
+      }
+
+      .social-icons a {
+        font-size: 2.5rem; // Adjust icon size for tablet view
+        margin-right: 6px; // Adjust space between icons
+      }
+    }
+
+    .footer-bottom {
+      font-size: 12px; // Adjust font size for footer-bottom
+    }
+  }
+
+  // Mobile view adjustments
+  @media (max-width: 480px) {
+    .footer-row {
+      flex-direction: column; // Stack columns vertically
+      align-items: center; // Center align the columns
+    }
+
+    .footer-column {
+      width: 100%; // Full width for each column
+      margin: 5px 0; // Adjust margin for stacked columns
+
+      h3 {
+        font-size: 14px; // Smaller font size for h3 on mobile
+      }
+
+      p, a {
+        font-size: 13px; // Smaller font size for p and a on mobile
+        margin-top: 10px; // Adjust top margin for spacing
+      }
+
+      .social-icons a {
+        font-size: 2rem; // Smaller icon size on mobile
+        margin-right: 4px; // Less space between icons on mobile
+      }
+    }
+
+    .footer-bottom {
+      font-size: 10px; // Adjust font size for footer-bottom on mobile
+    }
+  }
+}
