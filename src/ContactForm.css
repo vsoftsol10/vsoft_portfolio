@@ -84,7 +84,7 @@ form {
   border: 2px solid #fafafa;
   background: none;
   padding: 0.6rem 1.2rem;
-  color: #fff;
+
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
@@ -292,15 +292,21 @@ textarea.input {
   color: #fff;
 }
 
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .form {
     grid-template-columns: 1fr;
+    gap: 0.5rem; /* Add gap for mobile view */
   }
 
   .contact-form,
   .contact-info {
-    width: 100%;
+    width: 80%;
   }
-
-
+  .social-icons a {
+    color: rgba(80, 0, 80, 0.979);;
+    font-size: 0.8rem;
+    margin-right: 3rem;
+  }
 }

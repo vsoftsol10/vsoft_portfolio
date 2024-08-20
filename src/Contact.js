@@ -60,7 +60,7 @@ const ContactForm = () => {
           <div className="social-media">
             <p>Connect with us :</p>
             <div className="social-icons">
-              <a href="#"><i className="fab fa-facebook-f"></i></a>
+           
               <a href="#"><i className="fab fa-twitter"></i></a>
               <a href="#"><i className="fab fa-instagram"></i></a>
               <a href="#"><i className="fab fa-linkedin-in"></i></a>
@@ -105,13 +105,13 @@ const ContactForm = () => {
               />
             </div>
             <div className="input-container">
+            <h4 className="label">Services:</h4> 
               <select
                 name="service"
                 className="input"
                 value={formData.service}
                 onChange={handleChange}
               >
-                <option value="">Select a service</option>
                 <option value="Website Creation">Website Creation</option>
                 <option value="App Development">App Development</option>
                 <option value="Digital Marketing">Digital Marketing</option>
