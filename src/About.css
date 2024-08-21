@@ -1,0 +1,390 @@
+
+
+.App-header {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  }
+  
+  .App-logo {
+    height: 160px;
+    margin-right: 20px;
+    transition: transform 1s ease-out;
+  }
+  
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+  
+  .App-heading {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.4rem;
+    margin: 0;
+    color: #0a3c64; /* Replace with your color */
+  }
+  
+  .heading-part {
+    display: inline-block;
+  }
+  
+  .heading-part-solutions {
+    font-size: 1.5rem;
+    color: #0a3c64; /* Replace with your color */
+  }
+  
+  .menu-button {
+    display: none;
+  }
+  
+  .App-nav {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  
+  .App-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+  }
+  
+  ul li a ion-icon {
+    font-size: 2rem;
+    color: #000000;
+    margin-right: 8px;
+  }
+  
+  #marker {
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    background-color: #0a3c64; /* Replace with your color */
+    transition: 0.5s ease;
+  }
+  
+  .banners {
+    background: url('./images/AboutWall.jpg') ;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .banner-contents {
+    background-color: white;
+    max-width: 800px;
+    height: 180px;
+    position:absolute ;
+    bottom: 100px;
+    left: 50px;
+    border-radius: 30px;
+  }
+  
+  .banner-headings {
+    font-size: 2rem;
+   text-align: center;
+    color: black;
+    margin-top: 30px;
+    font-weight: lighter;
+  }
+  
+  .banner-descriptions {
+    font-size: 1.2rem;
+  }
+  
+  
+  @media only screen and (max-width: 768px) {
+    .App-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu-button {
+      display: block;
+    }
+  
+    .App-nav {
+      display: none;
+    }
+  
+    .App-nav.show {
+      display: block;
+    }
+  }
+  .about {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .about-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideInFromLeft 1s ease-out forwards;
+    overflow: hidden; 
+
+    transform-origin: center -20px;
+    float:left;
+    flex: 1;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);}
+    
+  .about-image img {
+    width: 100%;
+ 
+    height: auto;
+    object-fit: cover; 
+    border: 5px solid #f8f8f8;
+    display: block;
+   /* Ensures the image covers the area without distortion */
+  }
+  .about-image:after { 
+     content: '';
+    position: absolute;  
+    width: 20px; height: 25px;  
+    border: 1px solid white;
+    top: -20px; left: 80%;
+    z-index: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+  }
+
+
+  .about-image :before{
+    content: '';
+    position: absolute;
+    width: 5px; height: 5px;
+    top: -24px;left: 54%;
+    z-index: 5;
+    border-radius: 50% 50%;
+    background: #000;
+}
+
+@keyframes  about-image{
+  0% { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+}
+  .about-content {
+    padding: 10px;
+   
+  }
+  
+  .about-content h3 {
+    margin-bottom: 10px;
+    color:  rgba(10, 60, 100, 0.979);
+    text-align: center;
+  }
+  
+  .about-content p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: justify;
+    color:rgba(80, 0, 80, 0.979); ;
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+/* About.css */
+
+/* About.css */
+
+.values {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.values-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.values-content {
+  flex: 2;
+  padding-right: 50px;
+  
+}
+
+.values-image {
+  flex: 1;
+}
+
+.values-change {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.values-change button {
+  background-color: rgba(10, 60, 100, 0.979);;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  width: 180px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.values-change button:hover {
+  background-color: rgba(60, 0, 60, 0.979);
+}
+
+.content-values {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.values-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(80, 0, 80, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: rgba(80, 0, 80, 0.979);
+}
+h3{
+  color:  rgba(10, 60, 100, 0.979);
+  font-size: 2.3rem;
+  margin-top: 40px;
+}
+p{
+  color: rgba(80, 0, 80, 0.979) ;
+  font-size: 1rem;
+  text-align: justify;
+  margin-top: 3px;
+
+
+}
+.content-values h3{
+  color: rgba(80, 0, 80, 0.979) ;
+  font-size: 1.5rem;
+
+
+}
+
+.content-values p{
+  color:  rgba(10, 60, 100, 0.979); ;
+  font-size: 1.3rem;
+  margin-top: 5px;
+
+
+}/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .App-header {
+    padding: 15px;
+  }
+
+  .App-logo {
+    height: 140px;
+  }
+
+  .App-heading {
+    font-size: 1.8rem;
+  }
+
+  .banner-contents {
+    max-width: 700px;
+    height: 160px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Values Section Adjustments */
+  .values-container {
+    flex-direction: column;
+  }
+
+  .values-change {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .values-change button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* Laptops */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .App-header {
+    padding: 20px;
+  }
+
+  .App-logo {
+    height: 160px;
+  }
+
+  .App-heading {
+    font-size: 2rem;
+  }
+
+  .banner-contents {
+    max-width: 800px;
+    height: 180px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}

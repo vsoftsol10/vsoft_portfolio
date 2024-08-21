@@ -271,8 +271,8 @@ ul li:nth-child(6).active ~ #marker::before {
 .banner {
   position: absolute;
   width: 100%;
-  height: 100%;
-  margin-top: 7px;
+  height: 80%;
+  margin: 0%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -284,10 +284,12 @@ ul li:nth-child(6).active ~ #marker::before {
 
 
 .banner-grid {
+margin: 0%;
   display: grid;
   grid-template-columns: 70% 30%;
   align-items: center; /* Vertically align the content */
-  height: 100%; /* Ensure both columns fill the banner */
+  height: 90%;
+  width: 100%; /* Ensure both columns fill the banner */
   background: linear-gradient(
       to right, 
       rgba(255, 255, 255, 0) 60%, /* Transparent part for the image */
@@ -301,12 +303,11 @@ ul li:nth-child(6).active ~ #marker::before {
 
 
 .banner-content {
-  position: relative;
+  margin: 0;
+ position: relative;
   text-align: center;
+  border-radius: 40px;
   color: white;
-  margin-left: 50px;
-  margin-top: 30px;
-  
   justify-content: start;
   font-family: 'Poppins', sans-serif;
   animation: slideInFromLeft 2s ease-out;
@@ -369,10 +370,11 @@ h3{
 
 .secondary-heading {
   font-size: 1rem;
-  color: rgba(21, 116, 194, 0.979);
+  color:black;
   margin-left: 100px;
   width: 70%;
   font-family: 'Poppins', sans-serif;
+font-weight: lighter;
   background: white;
   animation: float 3s ease-in-out infinite; /* Apply the floating animation */
 }
@@ -411,8 +413,8 @@ button:hover {
 
 
 .work-ethics {
-  padding:4rem; 
-  margin-top: 8px;
+  
+  padding:0 ;
   /* Added padding to the whole section */
 }
  p{
@@ -463,7 +465,11 @@ button:hover {
 .work-ethics-column img {
   width: 100%;
   height:100%;
-  animation: float 5s ease-in-out infinite;/* Mobile Devices (Portrait) */
+  animation: float 5s ease-in-out infinite;
+  
+}
+  /* Mobile Devices (Portrait) */
+
 @media only screen and (max-width: 480px) {
   .App-header {
     flex-direction: column;
@@ -630,7 +636,7 @@ button:hover {
   }
 }
 
-}
+
 @keyframes float {
   0%, 100% {
       transform: translateY(0);
@@ -671,6 +677,10 @@ button:hover {
 
   .App-nav {
     display: none; /* Hide the nav by default on mobile */
+  }
+
+  #marker{
+    display: none;
   }
   
   .App-nav.show {

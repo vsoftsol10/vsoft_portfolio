@@ -234,12 +234,13 @@ function Home() {
                 <h6 className="custom-heading1">Creations</h6>
               </a>
             </li>
+
             <li ref={(el) => (listRefs.current[3] = el)}>
-              <a href="#about">
+            <Link to="/about">
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <h6 className="custom-heading2">About</h6>
-              </a>
-            </li>
+                </Link>            </li>
+                
             <li ref={(el) => (listRefs.current[4] = el)}>
   <Link to="/contact">
     <ion-icon name="person-outline"></ion-icon>
