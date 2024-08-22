@@ -412,62 +412,6 @@ button:hover {
 
 
 
-.work-ethics {
-  
-  padding:0 ;
-  /* Added padding to the whole section */
-}
- p{
-  text-align: center;
-  font-size: 3rem;
-  color:rgba(80, 0, 80, 0.979); ;
-  
-}
-
-
-
-.work-ethics-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.work-ethics-column {
-  flex: 1;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column; 
-}
-
-
-.work-ethics-column h5 {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem; /* Adjusted margin for 2rem space */
-  font-size: 1rem;
-  color: rgba(6, 106, 189, 0.979); 
-  width: 100%; 
-}
-
-.work-ethics-column h5 img {
-  width: 150px; /* Adjust size as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 1rem; /* Add space between image and text */
-
-}
-.work-ethics-column h5 img {
-  width: 150px; /* Adjust size as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 1rem;
-  /* Add space between image and text */
-  
-}
-
-.work-ethics-column img {
-  width: 100%;
-  height:100%;
-  animation: float 5s ease-in-out infinite;
-  
-}
   /* Mobile Devices (Portrait) */
 
 @media only screen and (max-width: 480px) {
@@ -843,5 +787,85 @@ button:hover {
     padding: 1rem 2rem;
   }
 }
+.vs-process-container {
+  text-align: center;
+  padding: 2rem;
+  margin: 0%;
+}
 
+.vs-process-heading {
+  margin-bottom: 2rem;
+  color:  rgba(80, 0, 80, 0.979) ;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
 
+}
+
+.vs-process-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+.vs-process-item {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;
+  position: relative; /* For positioning the arrow */
+}
+
+.vs-process-circle {
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  border-radius: 50%;
+  background-color: #fff; /* Background color of the circle */
+  border: 2px solid #ddd; /* Border color of the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem; /* Space between circle and name */
+
+}
+
+.vs-process-image {
+  margin-top: 2.5rem;
+  width: 130px; /* Adjust size as needed */
+  height: 130px; /* Adjust size as needed */
+  border-radius: 50%;
+  animation: rotate 10s linear infinite;
+}
+
+.vs-process-arrow {
+  font-size: 2rem; /* Adjust size as needed */
+  color: #000; /* Arrow color */
+  position: absolute;
+  right: -5rem; 
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.vs-process-item:not(:last-child) .vs-process-arrow {
+  display: inline-block;
+}
+
+.vs-process-name {
+  margin-top: 2.5rem; 
+color:  rgba(80, 0, 80, 0.979);
+
+}
+
+.vs-process-name p {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}

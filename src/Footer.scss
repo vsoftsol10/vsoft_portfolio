@@ -1,61 +1,73 @@
 .footer {
   color: #ffffff;
   margin-top: 60px;
-  background-color: rgba(10, 60, 100, 0.979); // Footer background color
+  background-color: rgba(60, 0, 60, 0.979);
 
   .footer-container {
-    background-color: inherit; // Inherit background color from .footer
-
+    background-color: inherit; 
     .footer-row {
       display: flex; // Arrange columns in a row
       justify-content: space-between; // Distribute columns evenly
       flex-wrap: wrap;
       width: 100%;
       height: auto;
-      background-color: inherit; // Inherit background color from .footer-container
+      background-color: inherit; 
+ 
+
+
+    
 
       .footer-column {
         flex: 1; // Ensure columns have a minimum width
-        margin: 10px; // Space between columns
+        margin: 2px; // Space between columns
 
         h3 {
-          text-align: center;
-          margin: 0%;
-          font-size: 18px;
+         justify-content: center;
+      margin-top: 2.8rem;
+          font-size: 15px;
           color: white;
         }
 
         p, a {
-          color: black;
+          color: white;
           font-size: 15px;
           text-decoration: none;
-          margin-right: 0;
+          text-align: justify;
           margin-top: 28px;
 
           &:hover {
-            color: white;
+            color:rgba(10, 60, 100, 0.979);
           }
         }
 
         ul {
-          padding: 1px;
+    
           margin-top: 10px;
+          background: none;
+          background-color: rgba(10, 60, 100, 0.979);
+          border-radius: 90px;
+        width: 80%; 
+height:min-content;
+          
 
           li {
             margin-bottom: 10px;
+         
           }
         }
 
         .social-icons {
           display: flex;
           flex-wrap: wrap;
-          gap: 8px;
+          gap: 4rem;
+          margin-top: 28px;
 
           a {
-            display: inline-block;
-            font-size: 3rem; // Social icons size
+         
+            font-size: 16rem; // Social icons size
             color: #ffffff;
             margin-right: 8px; // Space between icons
+          
 
             &:hover {
               color: #dcdcdc;

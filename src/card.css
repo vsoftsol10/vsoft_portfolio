@@ -13,6 +13,7 @@
     grid-template-columns: repeat(3, 1fr); 
     gap: 30px; 
     margin-top: 50px;
+    border-radius: 30px;
 
     .service-card {
       position: relative;
@@ -20,6 +21,8 @@
       opacity: 0; 
       transform: translateY(-50px);
       animation: fadeInFromTop 0.8s ease-out forwards; 
+      
+
 
       &:nth-child(1) { animation-delay: 0.2s; }
       &:nth-child(2) { animation-delay: 0.4s; }
@@ -34,6 +37,7 @@
         height: 180px;
         transition: transform 0.6s, box-shadow 0.3s;
         transform-style: preserve-3d;
+        
 
         &:hover {
           transform: rotateY(180deg);
@@ -60,6 +64,7 @@
           flex-direction: column;
           justify-content: flex-start; 
           padding: 10px;
+          border-radius: 60px;
 
           .headings {
             margin: 0;
@@ -78,6 +83,7 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
+         
           text-align: center;
           animation: fadeInContent 0.5s ease-in-out; 
 

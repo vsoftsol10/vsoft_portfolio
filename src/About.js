@@ -96,37 +96,38 @@ const About = () => {
           <ion-icon name="menu-outline"></ion-icon>
         </button>
         <nav className="App-nav" ref={navRef}>
-          <ul>
+        <ul>
             <li ref={(el) => (listRefs.current[0] = el)}>
-              <a href="#vsflows">
+            <Link to="/home">
                 <ion-icon name="home-outline"></ion-icon>
                 <h6 className="custom-heading1">Vsflows</h6>
-              </a>
+                </Link>
             </li>
             <li ref={(el) => (listRefs.current[1] = el)}>
-              <a href="#services">
+            <Link to="/services">
                 <ion-icon name="add-circle-outline"></ion-icon>
                 <h6 className="custom-heading2">Services</h6>
-              </a>
+                </Link>
             </li>
             <li ref={(el) => (listRefs.current[2] = el)}>
-              <a href="#creations">
+            <Link to="/services">
                 <ion-icon name="settings-outline"></ion-icon>
                 <h6 className="custom-heading1">Creations</h6>
-              </a>
+                </Link>
             </li>
+
             <li ref={(el) => (listRefs.current[3] = el)}>
-              <a href="#about">
+            <Link to="/about">
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <h6 className="custom-heading2">About</h6>
-              </a>
-            </li>
+                </Link>            </li>
+                
             <li ref={(el) => (listRefs.current[4] = el)}>
-              <Link to="/contact">
-                <ion-icon name="person-outline"></ion-icon>
-                <h6 className="custom-heading1">Contact</h6>
-              </Link>
-            </li>
+  <Link to="/contact">
+    <ion-icon name="person-outline"></ion-icon>
+    <h6 className="custom-heading1">Contact</h6>
+  </Link>
+</li>
             <div id="marker" ref={markerRef}></div>
           </ul>
         </nav>

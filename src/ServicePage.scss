@@ -1,0 +1,50 @@
+
+  
+.servicesss{
+    color:  rgba(10, 60, 100, 0.979);
+    text-align: center;
+}
+.servicesss-containers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; // Adjust as needed
+    margin-top: 40px; // Add margin to separate rows if needed
+}
+
+.servicesss-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white; // Adjust background color if needed
+    border: 2px solid rgba(80, 0, 80, 0.979);
+    border-radius: 30px; // Optional border-radius
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-left: 50px;
+    text-align: center;
+    border-radius: 40px;
+   
+   
+    
+    
+    
+    &:hover {
+        transform: scale(1.2);
+        box-shadow: 0 16px 8pxrgba(80, 0, 80, 0.979);
+    }
+    
+  
+}
+
+
+.floating-image {
+    width: 70%;
+    height: auto;
+}
+.ss{
+    text-align: center;
+    color: rgba(80, 0, 80, 0.979);
+    font-weight: lighter;
+    font-size: 1rem;
+}

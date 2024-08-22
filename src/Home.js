@@ -10,13 +10,7 @@ import './card.css';
 import images from './images/about.gif';
 import imag from './images/service.gif';
 import ima from  './images/creations.gif';
-import imagesss from  './images/why us.gif';
-import logo1 from './images/experience.gif'; 
-import logo2 from './images/processing.gif';
-import logo3 from './images/delivery.gif';
-import logo4 from './images/team.gif';
-import logo5 from './images/price.gif';
-import logo6 from './images/support.gif';
+
 import service1Image from './images/service1.jpg';
 import service2Image from './images/service2.jpg';
 import service3Image from './images/service3.jpg';
@@ -24,6 +18,12 @@ import service4Image from './images/service4.jpg';
 import service5Image from './images/service5.jpg';
 import service6Image from './images/service6.jpg';
 
+import vsProcess1 from './images/requirement.gif';
+import vsProcess2 from './images/design.gif';
+import vsProcess3 from './images/development.gif';
+import vsProcess4 from './images/testing.gif';
+import vsProcess5 from './images/easy_deployment_2.gif';
+import vsProcess6 from './images/maintence.webp';
 
 const bannersData = [
   {
@@ -77,7 +77,7 @@ function Home() {
   const logoRef = useRef(null);
   const headingRef = useRef(null);
   const solutionsRef = useRef(null);
-  const workEthicsRef = useRef(null);
+
   
   const cardsContainerRef = useRef(null);
  
@@ -217,22 +217,22 @@ function Home() {
         <nav className="App-nav" ref={navRef}>
           <ul>
             <li ref={(el) => (listRefs.current[0] = el)}>
-              <a href="#vsflows">
+            <Link to="/home">
                 <ion-icon name="home-outline"></ion-icon>
                 <h6 className="custom-heading1">Vsflows</h6>
-              </a>
+                </Link>
             </li>
             <li ref={(el) => (listRefs.current[1] = el)}>
-              <a href="#services">
+            <Link to="/services">
                 <ion-icon name="add-circle-outline"></ion-icon>
                 <h6 className="custom-heading2">Services</h6>
-              </a>
+                </Link>
             </li>
             <li ref={(el) => (listRefs.current[2] = el)}>
-              <a href="#creations">
+            <Link to="/services">
                 <ion-icon name="settings-outline"></ion-icon>
                 <h6 className="custom-heading1">Creations</h6>
-              </a>
+                </Link>
             </li>
 
             <li ref={(el) => (listRefs.current[3] = el)}>
@@ -281,25 +281,68 @@ function Home() {
     </div>
   ))}
 </div>
-<div className="work-ethics" ref={workEthicsRef}>
-        <p>WHY WE ARE?..</p>
-        <div className="work-ethics-container">
-          <div className="work-ethics-column">
-            <h5><img src={logo1} alt="Logo 1" /> WELL-ORGANIZED</h5>
-            <h5><img src={logo2} alt="Logo 2" /> TRANSPARENT PROCESS</h5>
-            <h5><img src={logo3} alt="Logo 3" /> ON-TIME DELIVERY</h5>
-          </div>
-          <div className="work-ethics-column">
-            <h5><img src={logo4} alt="Logo 4" /> WORKED TOGETHER</h5>
-            <h5><img src={logo5} alt="Logo 5" /> AFFORDABLE PRICE</h5>
-            <h5><img src={logo6} alt="Logo 6" /> FRIENDLY SUPPORT</h5>
-          </div>
 
-          <div className="work-ethics-column">
-            <img src={imagesss} alt="Work Ethic Image" />
-          </div>
+<div className="vs-process-container">
+    <h2 className="vs-process-heading">VS Process</h2>
+    <div className="vs-process-row">
+      <div className="vs-process-item">
+        <div className="vs-process-circle">
+          <img src={vsProcess1} alt="Discovery" className="vs-process-image" />
+        </div>
+        <div className="vs-process-name">
+          <p>Discovery</p>
+        </div>
+        <i className="fas fa-arrow-right vs-process-arrow"></i>
+      </div>
+      <div className="vs-process-item">
+        <div className="vs-process-circle">
+          <img src={vsProcess2} alt="Design" className="vs-process-image" />
+        </div>
+        <div className="vs-process-name">
+          <p>Design</p>
+        </div>
+        <i className="fas fa-arrow-right vs-process-arrow"></i>
+      </div>
+      <div className="vs-process-item">
+        <div className="vs-process-circle">
+          <img src={vsProcess3} alt="Deployment" className="vs-process-image" />
+        </div>
+        <div className="vs-process-name">
+          <p>Deployment</p>
+        </div>
+        <i className="fas fa-arrow-right vs-process-arrow"></i>
+      </div>
+      <div className="vs-process-item">
+        <div className="vs-process-circle">
+          <img src={vsProcess4} alt="Testing" className="vs-process-image" />
+        </div>
+        <div className="vs-process-name">
+          <p>Testing</p>
+        </div>
+        <i className="fas fa-arrow-right vs-process-arrow"></i>
+      </div>
+      <div className="vs-process-item">
+        <div className="vs-process-circle">
+          <img src={vsProcess5} alt="Launch" className="vs-process-image" />
+        </div>
+        <div className="vs-process-name">
+          <p>Launch</p>
+        </div>
+        <i className="fas fa-arrow-right vs-process-arrow"></i>
+      </div>
+      <div className="vs-process-item">
+        <div className="vs-process-circle">
+          <img src={vsProcess6} alt="Maintenance" className="vs-process-image" />
+        </div>
+        <div className="vs-process-name">
+          <p>Maintenance</p>
         </div>
       </div>
+    </div>
+  </div>
+
+
+
       <div className="Servisess">
   <h2>Our Services</h2>
   <div className="cards-container">
