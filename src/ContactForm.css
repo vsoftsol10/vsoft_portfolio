@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 body,
 input,
 textarea {
@@ -35,15 +36,11 @@ textarea {
 }
 
 .contact-form {
-  background-color: rgba(10, 60, 100, 0.979);
+  background-color: rgba(80, 0, 80, 0.979);
   position: relative;
 }
 
-.circle {
-  border-radius: 50%;
-  background: linear-gradient(135deg, transparent 20%, rgba(10, 60, 100, 0.979));
-  position: absolute;
-}
+
 
 
 
@@ -52,7 +49,7 @@ textarea {
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: rgba(10, 60, 100, 0.979);
+  background-color: rgba(80, 0, 80, 0.979);;
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
@@ -84,7 +81,7 @@ form {
   border: 2px solid #fafafa;
   background: none;
   padding: 0.6rem 1.2rem;
-
+color: white;
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
@@ -117,6 +114,9 @@ textarea.input {
 .input-container.textarea label {
   top: 1rem;
   transform: translateY(0);
+}.button-container {
+  display: flex;
+  gap: 10px;
 }
 
 .btn {
@@ -124,6 +124,7 @@ textarea.input {
   background-color: #fff;
   border: 2px solid #fafafa;
   font-size: 0.95rem;
+gap: 7px;
   color:  rgba(10, 60, 100, 0.979);
   line-height: 1;
   border-radius: 5px;
@@ -135,9 +136,10 @@ textarea.input {
 }
 
 .btn:hover {
-  background-color: transparent;
-  color: rgba(80, 0, 80, 0.979);
+  background-color: rgba(10, 60, 100, 0.979);;
+  color:   rgba(10, 60, 100, 0.979);
 }
+
 
 .input-container span {
   position: absolute;
@@ -256,7 +258,7 @@ textarea.input {
 
 .social-icons a {
   color: rgba(80, 0, 80, 0.979);;
-  font-size: 1.2rem;
+  font-size: 3rem;
   margin-right: 3rem;
 }
 
@@ -291,18 +293,14 @@ textarea.input {
   background-color: rgba(80, 0, 80, 0.979);
   color: #fff;
 }
-.error-message {
-  color: red;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
 
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  
   .form {
     grid-template-columns: 1fr;
-    gap: 0.5rem; /* Add gap for mobile view */
+    gap: 0.5rem; 
   }
 
   .contact-form,
@@ -313,5 +311,181 @@ textarea.input {
     color: rgba(80, 0, 80, 0.979);;
     font-size: 0.8rem;
     margin-right: 3rem;
+  }
+ 
+}
+
+div.backBtn {
+  width: 100px;
+  left: 100px;
+  top: 100px;
+  background-color: #f4f4f4;
+  transition: all 0.4s ease;
+  position: fixed;
+  cursor: pointer;
+}
+
+span.line {
+  bottom: auto;
+  right: auto;
+  top: auto;
+  left: auto;
+  background-color: rgba(80, 0, 80, 0.979);;
+  border-radius: 10px;
+  width: 100%;
+  left: 0px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  transition: width 0.2s ease 0.1s, left 0.2s ease, transform 0.2s ease 0.3s, background-color 0.2s ease;
+}
+
+span.tLine {
+  top: 0px;
+}
+
+span.mLine {
+  top: 13px;
+  opacity: 0;
+}
+
+span.bLine {
+  top: 26px;
+}
+
+.label {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.4s ease;
+  font-size: 1em;
+}
+
+div.backBtn:hover span.label {
+  left: 25px
+}
+
+div.backBtn:hover span.line {
+  left: -10px;
+  height: 5px;
+  background-color: rgba(80, 0, 80, 0.979);;
+}
+
+div.backBtn:hover span.tLine {
+  width: 25px;
+  transform: rotate(-45deg);
+  left: -15px;
+  top: 6px;
+}
+
+div.backBtn:hover span.mLine {
+  opacity: 1;
+  width: 30px;
+}
+
+div.backBtn:hover span.bLine {
+  width: 25px;
+  transform: rotate(45deg);
+  left: -15px;
+  top: 20px;
+}
+
+
+
+div.backBtns {
+  width: 50px;
+  left: 50px;
+  top: 50px;
+  background-color: #f4f4f4;
+  transition: all 0.4s ease;
+  position: fixed;
+  cursor: pointer;
+}
+
+span.line {
+  bottom: auto;
+  right: auto;
+  top: auto;
+  left: auto;
+  background-color: rgba(80, 0, 80, 0.979);;
+  border-radius: 10px;
+  width: 100%;
+  left: 0px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  transition: width 0.2s ease 0.1s, left 0.2s ease, transform 0.2s ease 0.3s, background-color 0.2s ease;
+}
+
+span.tLine {
+  top: 0px;
+}
+
+span.mLine {
+  top: 13px;
+  opacity: 0;
+}
+
+span.bLine {
+  top: 26px;
+}
+
+.label {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.4s ease;
+  font-size: 1em;
+}
+
+div.backBtns:hover span.label {
+  left: 25px
+}
+
+div.backBtns:hover span.line {
+  left: -10px;
+  height: 5px;
+  background-color: rgba(80, 0, 80, 0.979);;
+}
+
+div.backBtns:hover span.tLine {
+  width: 25px;
+  transform: rotate(-45deg);
+  left: -15px;
+  top: 6px;
+}
+
+div.backBtns:hover span.mLine {
+  opacity: 1;
+  width: 30px;
+}
+
+div.backBtns:hover span.bLine {
+  width: 25px;
+  transform: rotate(45deg);
+  left: -15px;
+  top: 20px;
+}
+/* Hide .backBtns on larger screens */
+.backBtns {
+  display: none;
+}
+
+.backBtn {
+  display: block;
+}
+
+/* Show .backBtns and hide .backBtn on smaller screens */
+@media only screen and (max-width: 768px) {
+  .backBtn {
+    display: none;
+  }
+
+  .backBtns {
+    display: block;
   }
 }

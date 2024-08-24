@@ -23,7 +23,8 @@
 
         h3 {
          justify-content: center;
-      margin-top: 2.8rem;
+         text-align: start;
+      margin-top: 3.8rem;
           font-size: 15px;
           color: white;
         }
@@ -40,22 +41,7 @@
           }
         }
 
-        ul {
-    
-          margin-top: 10px;
-          background: none;
-          background-color: rgba(10, 60, 100, 0.979);
-          border-radius: 90px;
-        width: 80%; 
-height:min-content;
-          
-
-          li {
-            margin-bottom: 10px;
-         
-          }
-        }
-
+     
         .social-icons {
           display: flex;
           flex-wrap: wrap;

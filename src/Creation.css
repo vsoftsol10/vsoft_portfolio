@@ -1,0 +1,223 @@
+.products{
+    background: url('./images/Product.webp') ;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+
+.products-content{
+    background-color: white;
+    max-width: 800px;
+    height: 180px;
+ justify-items: left;
+margin-top:11rem;
+margin-right: 0%;
+    border-radius: 30px;}
+
+    .product-headings{
+        font-size: 2rem;
+   text-align: center;
+    color:black;
+    margin-top: 30px;
+    font-weight: lighter;
+    }
+  
+/* General Styles */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 1 column layout */
+  gap: 1rem; /* Gap between each item */
+  padding: 1rem;
+}
+
+.details-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details-images, .details-posters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Arrange in 3 columns */
+  gap: 3rem; /* Gap between each image */
+  width: 100%;
+  height: 100%; /* Ensure full height */
+}
+
+.details-image, .details-poster {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  animation-duration: 1s;
+}
+
+.details-image {
+  animation-name: slide-in-left; /* Slide in from left animation */
+}
+
+.details-poster {
+  animation-name: splitAndSlideFromRight; 
+  animation: scrollPosters 10s linear infinite; /* Split and slide from right animation */
+}
+
+/* Image styling */
+.details-image img, .details-poster img {
+  margin-top: 3rem;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.details-image a, .details-poster a {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #500050;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.details-image:hover img, .details-poster:hover img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Scrollable Flow for Posters */
+.details-posters {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap; /* Use nowrap for horizontal scrolling */
+  scroll-behavior: smooth;
+  padding: 1rem;
+}
+
+.details-poster {
+  flex: 0 0 auto;
+  width: 350px; /* Set a fixed width for each poster */
+  height: auto;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.details-posters:hover .details-poster {
+  animation-play-state: paused; /* Pause the flow on hover */
+}
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  25% {
+      transform: translateX(-50%);
+      opacity: 0.5;
+  }
+  50% {
+      transform: translateX(0%);
+      opacity: 1;
+  }
+  75% {
+      transform: translateX(0%);
+      opacity: 1;
+  }
+  100% {
+      transform: translateX(0%);
+      opacity: 1;
+  }
+}
+
+.details-image {
+  animation: slideInFromLeft 1s ease-out;
+}
+
+
+@keyframes splitAndSlideFromRight {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  25% {
+      transform: translateX(50%);
+      opacity: 0.5;
+  }
+  50% {
+      transform: translateX(0%);
+      opacity: 1;
+  }
+  75% {
+      transform: translateX(0%);
+      opacity: 1;
+  }
+  100% {
+      transform: translateX(0%);
+      opacity: 1;
+  }
+}
+
+/* Additional Styling for Sidebar */
+.sidebar {
+  background-color: white;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+.sideul {
+  list-style-type: none;
+  padding: 1rem;
+  background-color: #0a3c64;
+}
+
+.sideli {
+  margin-top: 0.6rem;
+  text-align: center;
+  cursor: pointer;
+  font-weight: lighter;
+  background-color: #0a3c64;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 13px;
+  transition: background-color 0.3s ease;
+}
+
+.sideli:hover {
+  background-color: #500050;
+}
+@keyframes scrollPosters {
+  0% {
+    transform: translateX(100%); /* Start from the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move to the left */
+  }
+}
+
+/* Pause scrolling on hover */
+.details-posters:hover {
+  animation-play-state: paused;
+}
+
+/* Mobile Screens */
+@media only screen and (max-width: 768px) {
+  .products {
+    height: auto; /* Adjust height for mobile */
+  }
+
+  .details-images, .details-posters {
+    grid-template-columns: repeat(1, 1fr); /* 1 column layout */
+  }
+
+  .details-poster {
+    width: 100%; /* Full width for mobile */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .products-content {
+    max-width: 100%; /* Full width for mobile */
+    margin-top: 5rem; /* Adjust margin for mobile */
+  }
+}

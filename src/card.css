@@ -71,6 +71,7 @@
             color: white;
             font-size: 3rem; 
           }
+  
         }
 
         .card-back {
@@ -114,7 +115,7 @@
   @media (max-width: 768px) {
     .cards-container {
       grid-template-columns: 1fr;
-      gap: 3px;
+      gap: 3rem; /* Adjust gap between cards on mobile */
     }
 
     .service-card {

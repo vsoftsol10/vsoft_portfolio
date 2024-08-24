@@ -25,11 +25,13 @@ const CustomButton = styled(Button)({
 
 const About = () => {
   const logoRef = useRef(null);
+  const pageTransitionRef = useRef(null);
   const headingRef = useRef(null);
   const solutionsRef = useRef(null);
   const navRef = useRef(null);
   const markerRef = useRef(null);
   const listRefs = useRef([]);
+  const valuesRef = useRef(null);
   const imageRef = useRef(null);
   const [activeSection, setActiveSection] = useState('mission');
 
@@ -40,8 +42,41 @@ const About = () => {
   const handleButtonClick = (section) => {
     setActiveSection(section);
   };
-
+  const handleButtonClicks = () => {
+    if (valuesRef.current) {
+      valuesRef.current.scrollIntoView({ behavior: 'smooth' });
+    } };
   useEffect(() => {
+    const pageTransition = pageTransitionRef.current;
+    const nav = navRef.current;
+    const logo = logoRef.current;
+
+
+        
+gsap.fromTo(pageTransition, 
+{ opacity: 0, scale: 0.8 }, 
+{ opacity: 1, scale: 1, duration: 1.5, ease: 'power2.out' }
+);
+
+gsap.fromTo(headingRef.current, 
+{ opacity: 0, x: '-100%' },
+{ opacity: 1, x: '0%', duration: 1.5, delay: 1, ease: 'power2.out' }
+);
+
+gsap.fromTo(solutionsRef.current, 
+{ opacity: 0, y: '50px' },
+{ opacity: 1, y: '0', duration: 1.5, delay: 1.5, ease: 'power2.out' }
+);
+
+gsap.fromTo(nav, 
+{ opacity: 0, x: '100%' },
+{ opacity: 1, x: '0%', duration: 1.5, delay: 2, ease: 'power2.out' }
+);
+
+gsap.fromTo(logo, 
+{ rotate: 0 }, 
+{ rotate: 360, duration: 2, ease: 'power2.inOut' }
+);
     gsap.from(imageRef.current, {
       x: '-130%', // Start offscreen to the left
       opacity: 0, // Start with no opacity
@@ -79,18 +114,7 @@ const About = () => {
       <header className="App-header">
         <div className="header-left">
           <img src={logo} ref={logoRef} className="App-logo" alt="logo" />
-          <div className="header-text">
-            <h1 className="App-heading" ref={headingRef}>
-              <span className="heading-part heading-part-v">V</span>
-              <span className="heading-part heading-part-s">S</span>
-              <span className="heading-part heading-part-o">o</span>
-              <span className="heading-part heading-part-f">f</span>
-              <span className="heading-part heading-part-t">t</span>
-            </h1>
-            <h2 className="heading-part-solutions" ref={solutionsRef}>
-              Solutions
-            </h2>
-          </div>
+        
         </div>
         <button className="menu-button" onClick={handleMenuToggle}>
           <ion-icon name="menu-outline"></ion-icon>
@@ -136,7 +160,7 @@ const About = () => {
       <section className="banners">
         <div className="banner-contents">
           <h1 className="banner-headings">About Company</h1>
-          <CustomButton variant="contained" size="Large">
+          <CustomButton variant="contained" size="Large" onClick={handleButtonClicks}>
             More Details
           </CustomButton>
         </div>
@@ -161,7 +185,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="values">
+      <section className="values"  ref={valuesRef} >
         <div className="values-container">
           <div className="values-content">
             {activeSection === 'mission' && (
@@ -174,7 +198,7 @@ const About = () => {
             )}
             {activeSection === 'values' && (
               <div className="content-values">
-                <div className="icon-container">
+               <div className="icon-container">
                   <h3>Our Values</h3>
                   <div className="icon-item">
                     <span className="icon">1</span>
@@ -182,19 +206,19 @@ const About = () => {
                   </div>
                   <div className="icon-item">
                     <span className="icon">2</span>
-                    <p>Innovation is Our DNA</p>
+                    <p>Commitment to Excellence</p>
                   </div>
                   <div className="icon-item">
                     <span className="icon">3</span>
-                    <p>Passionate About Product Excellence</p>
+                    <p>Innovation</p>
                   </div>
                   <div className="icon-item">
                     <span className="icon">4</span>
-                    <p>Uncompromising Integrity</p>
+                    <p>Integrity</p>
                   </div>
                   <div className="icon-item">
                     <span className="icon">5</span>
-                    <p>Respect in Every Interaction</p>
+                    <p> Interaction</p>
                   </div>
                 </div>
               </div>

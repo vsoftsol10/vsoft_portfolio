@@ -23,29 +23,34 @@ const Services = () => {
     const listRefs = useRef([]);
 
     useEffect(() => {
-        const handleScroll = () => {
-            const servicesSection = document.querySelector('.servicesss');
-            const sectionTop = servicesSection.getBoundingClientRect().top;
-            const triggerPoint = window.innerHeight * 0.75;
+        const pageTransition = pageTransitionRef.current;
+        const nav = navRef.current;
+        const logo = logoRef.current;
 
-            if (sectionTop < triggerPoint) {
-                gsap.fromTo(
-                    '.servicesss-card.left',
-                    { x: '-100%', opacity: 0 },
-                    { x: '0%', opacity: 1, duration: 1, stagger: 0.2, ease: 'power3.out' }
-                );
-                gsap.fromTo(
-                    '.servicesss-card.right',
-                    { x: '100%', opacity: 0 },
-                    { x: '0%', opacity: 1, duration: 1, stagger: 0.2, ease: 'power3.out' }
-                );
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Initial check
-
-        return () => window.removeEventListener('scroll', handleScroll);
+        gsap.fromTo(pageTransition, 
+            { opacity: 0, scale: 0.8 }, 
+            { opacity: 1, scale: 1, duration: 1.5, ease: 'power2.out' }
+        );
+    
+        gsap.fromTo(headingRef.current, 
+            { opacity: 0, x: '-100%' },
+            { opacity: 1, x: '0%', duration: 1.5, delay: 1, ease: 'power2.out' }
+        );
+    
+        gsap.fromTo(solutionsRef.current, 
+            { opacity: 0, y: '50px' },
+            { opacity: 1, y: '0', duration: 1.5, delay: 1.5, ease: 'power2.out' }
+        );
+    
+        gsap.fromTo(nav, 
+            { opacity: 0, x: '100%' },
+            { opacity: 1, x: '0%', duration: 1.5, delay: 2, ease: 'power2.out' }
+        );
+    
+        gsap.fromTo(logo, 
+            { rotate: 0 }, 
+            { rotate: 360, duration: 2, ease: 'power2.inOut' }
+        );
     }, []);
 
     const handleCardClick = (url) => {
@@ -61,18 +66,7 @@ const Services = () => {
             <header className="App-header">
                 <div className="header-left">
                     <img src={logo} ref={logoRef} className="App-logo" alt="logo" />
-                    <div className="header-text">
-                        <h1 className="App-heading" ref={headingRef}>
-                            <span className="heading-part heading-part-v">V</span>
-                            <span className="heading-part heading-part-s">S</span>
-                            <span className="heading-part heading-part-o">o</span>
-                            <span className="heading-part heading-part-f">f</span>
-                            <span className="heading-part heading-part-t">t</span>
-                        </h1>
-                        <h2 className="heading-part-solutions" ref={solutionsRef}>
-                            Solutions
-                        </h2>
-                    </div>
+                   
                 </div>
                 <button className="menu-button" onClick={handleMenuToggle}>
                     <ion-icon name="menu-outline"></ion-icon>
@@ -92,7 +86,7 @@ const Services = () => {
                 </Link>
             </li>
             <li ref={(el) => (listRefs.current[2] = el)}>
-            <Link to="/services">
+            <Link to="/creation">
                 <ion-icon name="settings-outline"></ion-icon>
                 <h6 className="custom-heading1">Creations</h6>
                 </Link>
@@ -122,30 +116,35 @@ const Services = () => {
             <div className="cardsss-content">
                 <h3  className='ss' >Website Development</h3>
                 <img src={serviceImage1}  className="floating-image" />
+                <p className="pp">Starts From ₹8000</p>
             </div>
         </div>
         <div className="servicesss-card" onClick={() => handleCardClick('/service2')}>
             <div className="cardsss-content">
                 <h3  className='ss'>Android App Development</h3>
                 <img src={serviceImage2} className="floating-image" />
+                <p className="pp">Starts From ₹13000</p>
             </div>
         </div>
         <div className="servicesss-card" onClick={() => handleCardClick('/service3')}>
             <div className="cardsss-content">
                 <h3  className='ss'>UI/UX Design</h3>
                 <img src={serviceImage3} className="floating-image" />
+                <p className="pp">Starts From ₹3000</p>
             </div>
         </div>
         <div className="servicesss-card" onClick={() => handleCardClick('/service4')}>
             <div className="cardsss-content">
                 <h3  className='ss'> SEO Service </h3>
                 <img src={serviceImage4}className="floating-image" />
+                <p className="pp">Starts From ₹4000</p>
             </div>
         </div>
         <div className="servicesss-card" onClick={() => handleCardClick('/service5')}>
             <div className="cardsss-content">
                 <h3  className='ss'>Digital Marketing</h3>
                 <img src={serviceImage5}  className="floating-image" />
+                <p className="pp">Starts From ₹1000</p>
             </div>
         </div>
         <div className="servicesss-card" onClick={() => handleCardClick('/service6')}>

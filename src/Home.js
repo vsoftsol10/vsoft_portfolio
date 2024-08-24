@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { Helmet } from 'react-helmet';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
 import './App.css';
@@ -60,13 +61,14 @@ stunning websites that drive results and elevate your brand." `,
 ];
 
 const cardsData = [
-  { photo: service1Image, heading: 'Website Development', content: 'We Build Interactive and Dynamic Website.' },
-  { photo: service2Image, heading: 'Android App Development', content: 'We Build and Organized App ' },
-  { photo: service3Image, heading: 'Digital Marketing', content: 'Promote your business through Social Medias.' },
-  { photo: service4Image, heading: 'SEO Service', content: 'Optimization services to improve a site.' },
-  { photo: service5Image, heading: 'UI/UX Design', content: 'Build interactive and Designs.' },
-  { photo: service6Image, heading: 'Data Entry Operator', content: 'We Transcribing data into computers and databases. ' },
+  { photo: service1Image, heading: 'Website Development', content: 'We Build Interactive and Dynamic Website.', price: ' Starts:₹5000' },
+  { photo: service2Image, heading: 'Android App Development', content: 'We Build and Organized App', price: 'Starts:₹8000' },
+  { photo: service3Image, heading: 'Digital Marketing', content: 'Promote your business through Social Medias.', price: 'Starts:₹6000' },
+  { photo: service4Image, heading: 'SEO Service', content: 'Optimization services to improve a site.', price: 'Starts:₹7000' },
+  { photo: service5Image, heading: 'UI/UX Design', content: 'Build interactive and Designs.', price: 'Starts:₹5500' },
+  { photo: service6Image, heading: 'Data Entry Operator', content: 'We Transcribing data into computers and databases.', price: 'Starts:₹4000' },
 ];
+
 
 function Home() {
   const markerRef = useRef(null);
@@ -77,8 +79,7 @@ function Home() {
   const logoRef = useRef(null);
   const headingRef = useRef(null);
   const solutionsRef = useRef(null);
-
-  
+  const priceTagRef = useRef(null);
   const cardsContainerRef = useRef(null);
  
   const handleMenuToggle = () => {
@@ -96,6 +97,8 @@ function Home() {
     const nav = navRef.current;
     const logo = logoRef.current;
     gsap.registerPlugin(ScrollTrigger);
+
+    const priceTag = priceTagRef.current;
     // Move indicator animation
     function moveIndicator(e) {
       if (marker) {
@@ -117,6 +120,8 @@ function Home() {
       }
     });
     
+   
+  
     gsap.fromTo(pageTransition, 
       { opacity: 0, scale: 0.8 }, 
       { opacity: 1, scale: 1, duration: 1.5, ease: 'power2.out' }
@@ -195,21 +200,16 @@ function Home() {
 
   return (
     <div className="App" ref={pageTransitionRef}>
+<Helmet>
+        <title>Home - VSOFT</title>
+        <meta name="description" content="Home page of My Website" />
+      </Helmet>
+
+
       <header className="App-header">
         <div className="header-left">
           <img src={logo} ref={logoRef} className="App-logo" alt="logo" />
-          <div className="header-text">
-            <h1 className="App-heading" ref={headingRef}>
-              <span className="heading-part heading-part-v">V</span>
-              <span className="heading-part heading-part-s">S</span>
-              <span className="heading-part heading-part-o">o</span>
-              <span className="heading-part heading-part-f">f</span>
-              <span className="heading-part heading-part-t">t</span>
-            </h1>
-            <h2 className="heading-part-solutions" ref={solutionsRef}>
-              Solutions
-            </h2>
-          </div>
+         
         </div>
         <button className="menu-button" onClick={handleMenuToggle}>
           <ion-icon name="menu-outline"></ion-icon>
@@ -229,7 +229,7 @@ function Home() {
                 </Link>
             </li>
             <li ref={(el) => (listRefs.current[2] = el)}>
-            <Link to="/services">
+            <Link to="/creation">
                 <ion-icon name="settings-outline"></ion-icon>
                 <h6 className="custom-heading1">Creations</h6>
                 </Link>
@@ -348,13 +348,10 @@ function Home() {
   <div className="cards-container">
     {cardsData.map((card, index) => (
       <div key={index} className="service-card">
-        <div className="card-inner">
-        <div
-                className="card-front"
-                style={{ backgroundImage: `url(${card.photo})` }}
-              >
-           
-          </div>
+       <div className="card-inner">
+          <div className="card-front" style={{ backgroundImage: `url(${card.photo})` }}>
+         
+        </div>
 
           
           <div className="card-back">

@@ -150,7 +150,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: slideInFromLeft 1s ease-out forwards;
+    animation: slideInFromLeft 1s ease-out forwards, swing 2s ease-in-out infinite;
     overflow: hidden; 
 
     transform-origin: center -20px;
@@ -160,7 +160,6 @@
     
   .about-image img {
     width: 100%;
- 
     height: auto;
     object-fit: cover; 
     border: 5px solid #f8f8f8;
@@ -209,7 +208,7 @@
     margin: 0;
     font-size: 1rem;
     text-align: justify;
-    color:rgba(80, 0, 80, 0.979); ;
+    color:rgba(80, 0, 80, 0.979); 
   }
   
   @keyframes slideInFromLeft {
@@ -223,9 +222,26 @@
     }
   }
 
-/* About.css */
-
-/* About.css */
+  @keyframes swing {
+    0% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(10deg);
+    }
+    40% {
+      transform: rotate(-8deg);
+    }
+    60% {
+      transform: rotate(5deg);
+    }
+    80% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
 
 .values {
   display: flex;
@@ -256,7 +272,7 @@
 }
 
 .values-change button {
-  background-color: rgba(10, 60, 100, 0.979);;
+  background-color: rgba(10, 60, 100, 0.979);
   color: white;
   border: none;
   border-radius: 20px;
@@ -387,4 +403,138 @@ p{
   .about-container {
     grid-template-columns: 1fr 1fr;
   }
+}/* Responsive Styles */
+/* Tablets */
+@media only screen and (max-width: 1024px) {
+  .App-header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+  }
+
+  .App-logo {
+      height: 140px;
+  }
+
+  .App-heading {
+      font-size: 1.8rem;
+  }
+
+  .menu-button {
+      display: block;
+  }
+
+  .App-nav {
+      display: none;
+  }
+
+  .App-nav.show {
+      display: block;
+  }
+
+  .banner-contents {
+      max-width: 700px;
+      height: 160px;
+  }
+
+  .about-container {
+      grid-template-columns: 1fr;
+  }
+
+  .values-container {
+      flex-direction: column;
+  }
+
+  .values-change {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .values-change button {
+      width: 100%;
+      margin: 5px 0;
+  }
+}
+
+/* Mobile Devices */
+@media only screen and (max-width: 768px) {
+  .App-header {
+      padding: 15px;
+      flex-direction: column;
+  }
+
+  .App-logo {
+      height: 100px;
+  }
+
+  .App-heading {
+      font-size: 1.5rem;
+  }
+
+  .banner-contents {
+      max-width: 600px;
+      height: 140px;
+      left: 20px;
+      bottom: 50px;
+  }
+
+  .about-container {
+      grid-template-columns: 1fr;
+  }
+
+  .about-content {
+      padding: 20px;
+  }
+
+  .values-container {
+      flex-direction: column;
+
+   
+  }
+
+  .values-change {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .values-change button {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .values-icons {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .icon-item {
+      justify-content: center;
+     text-align: justify;
+  }
+}
+
+/* Laptops */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .App-header {
+      padding: 20px;
+  }
+
+  .App-logo {
+      height: 160px;
+  }
+
+  .App-heading {
+      font-size: 2rem;
+  }
+
+  .banner-contents {
+      max-width: 800px;
+      height: 180px;
+  }
+
+  .about-container {
+      grid-template-columns: 1fr 1fr;
+
+  }
+ 
 }

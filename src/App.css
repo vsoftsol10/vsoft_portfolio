@@ -54,24 +54,6 @@
   margin: 0;
 }
 
-.heading-part-v,
-.heading-part-s,
-.heading-part-t,
-.heading-part-solutions {
-  color: var(--color-secondary);
-
-}
-
-.heading-part-o,
-.heading-part-f {
-  color: var(--color-tertiary);
-  font-family: 'Poppins', sans-serif;
-  
-}
-
-.heading-part-solutions {
-  margin-top: 15px;
-}
 .App-nav {
   display: flex;
   position: relative;
@@ -256,15 +238,10 @@ ul li:nth-child(6).active ~ #marker::before {
 }
 
 
-
-
-
-
-/* Banner Container Styles */
 .banner-container {
   position: relative;
   overflow: hidden;
-  height: 100vh; /* Adjust as needed */
+  height: 75vh; /* Adjust as needed */
  
 }
 
@@ -284,35 +261,32 @@ ul li:nth-child(6).active ~ #marker::before {
 
 
 .banner-grid {
-margin: 0%;
+  margin: 0;
   display: grid;
-  grid-template-columns: 70% 30%;
-  align-items: center; /* Vertically align the content */
-  height: 90%;
-  width: 100%; /* Ensure both columns fill the banner */
+  grid-template-columns: 70% 30%; /* Defines two columns with 70% and 30% width */
+  align-items: center; /* Vertically align content in each column */
+  height: 90vh; /* Adjust height as needed, you may use vh for viewport height */
+  width: 100%; /* Full width of the parent container */
   background: linear-gradient(
       to right, 
       rgba(255, 255, 255, 0) 60%, /* Transparent part for the image */
       rgba(255, 255, 255, 1) 60% /* White part for the gradient */
     ), 
     url('./images/vsoft Image .jpg'); 
-  background-size: contain;
-  background-position: center left; 
-  background-repeat: no-repeat; 
+  background-size: cover; /* Ensure background image covers the container */
+  background-position: center left; /* Position background image to the left */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
 }
-
 
 .banner-content {
-  margin: 0;
- position: relative;
-  text-align: center;
+  position: relative;
+  text-align: center; /* Align text to the start of the content box */
+  margin-right: 4rem; /* Margin to the right of the content box */
   border-radius: 40px;
   color: white;
-  justify-content: start;
   font-family: 'Poppins', sans-serif;
-  animation: slideInFromLeft 2s ease-out;
+  animation: slideInFromLeft 2s ease-out; /* Animation for sliding in from left */
 }
-
 
 .banner-image {
   display: flex;
@@ -322,9 +296,9 @@ margin: 0%;
 
 .banner-image img {
   width: 100%; /* Ensure the image takes up the full column width */
-  height: auto;
-  object-fit: cover;
-  margin-left: 0; /* Remove margin for better alignment */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the element */
+  margin-left: 0; /* Align image to the left */
   animation: zoomInOut 3s ease-in-out infinite; /* Apply the zoom animation */
   transition: transform 0.5s ease; /* Smooth transition for hover effect */
 }
@@ -334,23 +308,21 @@ margin: 0%;
     transform: scale(1); /* Original size */
   }
   50% {
-    transform: scale(1.1); /* Zoomed in to 120% */
+    transform: scale(1.1); /* Zoomed in to 110% */
   }
 }
 
-
-
-@keyframes fallFromTop {
+@keyframes slideInFromLeft {
   0% {
-    transform: translateY(-100vh); /* Start above the viewport */
+    transform: translateX(-100%); /* Start off the screen to the left */
     opacity: 0; /* Invisible at the start */
   }
   100% {
-    transform: translateY(0); /* End at its original position */
+    transform: translateX(0); /* End at its original position */
     opacity: 1; /* Fully visible */
   }
 }
-/* Floating effect for .secondary-heading */
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0); /* Stay in the original position */
@@ -360,10 +332,11 @@ margin: 0%;
   }
 }
 
+
 h3{
  color:rgba(80, 0, 80, 0.979); /* Dark Skyblue */
  font-size: 2rem ;
- margin: 0%;
+margin-right: 0px;
  align-items: baseline;
  
  }
@@ -372,7 +345,7 @@ h3{
   font-size: 1rem;
   color:black;
   margin-left: 100px;
-  width: 70%;
+  width: 80%;
   font-family: 'Poppins', sans-serif;
 font-weight: lighter;
   background: white;
@@ -395,7 +368,7 @@ button {
   background: var(--primary-color);
   display: flex;
   align-items: center;
-  font-size: 25px;
+  font-size: 29px;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   margin: 0 auto; /* Center the button horizontally */
@@ -443,13 +416,13 @@ button:hover {
   }
 
   .banner-grid {
-    grid-template-columns: 100%;
-    background-position: center;
+justify-items: auto;
+
   }
 
   .banner-content {
-    margin-left: 0;
-    margin-top: 20px;
+    margin-right: 0;
+    margin-top: 0px;
   }
 
   .work-ethics-container {
@@ -495,35 +468,31 @@ button:hover {
   .App-nav ul {
     flex-direction: column;
   }
-
   .banner-grid {
+    display: grid;
     grid-template-columns: 100%;
     background-position: center;
-  }
+    align-items: start; 
+  
+}
 
-  .banner-content {
-    margin-left: 0;
-    margin-top: 20px;
-  }
+.banner-content {
+    margin-left: 0; 
+    margin-top: 0px; 
+    text-align: left; 
+}
 
-  .work-ethics-container {
-    flex-direction: column;
-  }
+.banner-image img {
+    width: 100%; /* Ensure the image spans the full width */
+    height: auto; /* Maintain aspect ratio */
+}
 
-  .work-ethics-column {
-    padding: 0.5rem;
-  }
+button {
+    width: 100%; /* Full-width button */
+    font-size: 22px; /* Button font size */
+    padding: 1rem 2rem; /* Button padding */
+}
 
-  .banner-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  button {
-    width: 100%;
-    font-size: 22px;
-    padding: 1rem 2rem;
-  }
 }
 
 /* Tablets (Landscape) */
@@ -560,13 +529,6 @@ button:hover {
     margin-left: 50px;
   }
 
-  .work-ethics-container {
-    flex-direction: row;
-  }
-
-  .work-ethics-column {
-    padding: 1rem;
-  }
 
   .banner-image img {
     width: 100%;
@@ -646,7 +608,7 @@ button:hover {
   .banner-content {
     margin-left: 0;
     margin-top: 20px;
-    align-items: center;
+    align-items: start;
   }
   .banner-text {
     margin-left: 0;
@@ -768,13 +730,6 @@ button:hover {
     margin-left: 50px;
   }
 
-  .work-ethics-container {
-    flex-direction: row;
-  }
-
-  .work-ethics-column {
-    padding: 1rem;
-  }
 
   .banner-image img {
     width: 100%;
@@ -790,16 +745,15 @@ button:hover {
 .vs-process-container {
   text-align: center;
   padding: 2rem;
-  margin: 0%;
+  margin: 0;
 }
 
 .vs-process-heading {
   margin-bottom: 2rem;
-  color:  rgba(80, 0, 80, 0.979) ;
+  color: rgba(80, 0, 80, 0.979);
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
-
 }
 
 .vs-process-row {
@@ -826,7 +780,6 @@ button:hover {
   align-items: center;
   justify-content: center;
   margin-bottom: 0.5rem; /* Space between circle and name */
-
 }
 
 .vs-process-image {
@@ -839,11 +792,12 @@ button:hover {
 
 .vs-process-arrow {
   font-size: 2rem; /* Adjust size as needed */
-  color: #000; /* Arrow color */
+  color: rgba(10, 60, 100, 0.979);
   position: absolute;
-  right: -5rem; 
-  top: 40%;
+  right: -2rem; /* Adjust position */
+  top: 50%;
   transform: translateY(-50%);
+  z-index: 1; /* Ensure it appears above other content */
 }
 
 .vs-process-item:not(:last-child) .vs-process-arrow {
@@ -852,8 +806,7 @@ button:hover {
 
 .vs-process-name {
   margin-top: 2.5rem; 
-color:  rgba(80, 0, 80, 0.979);
-
+  color: rgba(80, 0, 80, 0.979);
 }
 
 .vs-process-name p {
@@ -861,11 +814,101 @@ color:  rgba(80, 0, 80, 0.979);
   padding: 0;
   color: black;
 }
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(180deg);
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  .vs-process-row {
+    flex-direction: column;
+    margin: 0%;
+  }
+
+  .vs-process-item {
+    margin-bottom: 2rem;
+  }
+
+  .vs-process-arrow {
+    position: relative;
+    right: 0;
+    top: 10px;
+    transform: rotate(90deg);
+  }
+  
+  .vs-process-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .vs-process-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .vs-process-name {
+    margin-top: 1.5rem;
+  }
+  
+  .vs-process-heading {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .vs-process-row {
+    flex-wrap: wrap;
+  }
+
+  .vs-process-item {
+    flex: 1 1 45%;
+    margin-bottom: 2rem;
+  }
+
+  .vs-process-arrow {
+    position: absolute;
+    right: -2.5rem;
+    top: 40%;
+    font-size: 1.5rem;
+  }
+
+  .vs-process-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .vs-process-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .vs-process-name {
+    margin-top: 2rem;
+  }
+  
+  .vs-process-heading {
+    font-size: 1.8rem;
+  }
+}
+
+/* Laptops and Desktops */
+@media only screen and (min-width: 1025px) {
+  .vs-process-row {
+    flex-wrap: nowrap;
+  }
+
+  .vs-process-item {
+    flex: 1 1 auto;
+  }
+
+  .vs-process-arrow {
+    font-size: 2rem;
   }
 }

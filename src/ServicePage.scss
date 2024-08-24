@@ -24,8 +24,25 @@
     margin-left: 50px;
     text-align: center;
     border-radius: 40px;
+    
    
-   
+    // For tablets (landscape)
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr); // 2 cards per row
+        gap: 15px;
+    }
+
+    // For tablets
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr); // 1 card per row
+        gap: 15px;
+    }
+
+    // For mobile devices
+    @media (max-width: 480px) {
+        grid-template-columns: repeat(1, 1fr); // 1 card per row
+        gap: 10px;
+    }
     
     
     
@@ -34,17 +51,39 @@
         box-shadow: 0 16px 8pxrgba(80, 0, 80, 0.979);
     }
     
-  
+    @media (max-width: 480px) {
+        transform: scale(1.05);
+    }
 }
 
 
 .floating-image {
     width: 70%;
     height: auto;
+    @media (max-width: 480px) {
+        width: 100%;
+    }
 }
+
+
 .ss{
     text-align: center;
     color: rgba(80, 0, 80, 0.979);
     font-weight: lighter;
     font-size: 1rem;
+    
+    @media (max-width: 480px) {
+        font-size: 0.9rem;
+    }
+}
+.pp{
+    text-align: center;
+    color: rgba(80, 0, 80, 0.979);
+    font-weight: lighter;
+    font-size: 1rem;
+    
+    @media (max-width: 480px) {
+        font-size: 0.9rem;
+    }
+
 }

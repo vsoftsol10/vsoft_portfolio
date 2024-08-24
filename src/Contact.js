@@ -35,7 +35,6 @@ const ContactForm = () => {
       'B12h1HpEd_42HbUJy' 
     )
     .then((result) => {
-      
       alert('Form submitted successfully!'); // Popup success message
       setTimeout(() => {
         navigate('/'); // Redirect to the home page after 2 seconds
@@ -46,9 +45,26 @@ const ContactForm = () => {
     });
   };
 
+  const handleBackClick = () => {
+    navigate('/'); // Redirect to the home page
+  };
+
   return (
     <div className="container">
+      
+         <div class="backBtn"  onClick={handleBackClick}>
+      <span class="line tLine"></span>
+      <span class="line mLine"></span>
+      <span class="label">Back</span>
+      <span class="line bLine"></span>
+	</div>
       <div className="form">
+      <div class="backBtns"  onClick={handleBackClick}>
+      <span class="line tLine"></span>
+      <span class="line mLine"></span>
+      <span class="label">Back</span>
+      <span class="line bLine"></span>
+	</div>
         <div className="contact-info">
           <h3 className="title">Let's get in touch</h3>
           <p className="text">VSOFT SOLUTIONS</p>
@@ -80,7 +96,7 @@ const ContactForm = () => {
             <h3 className="title">Contact us</h3>
             {successMessage && <p className="success-message">{successMessage}</p>}
             <div className="input-container">
-              <h4 className="label">Name :</h4> 
+              <h4 >Name :</h4> 
               <input
                 type="text"
                 name="name"
@@ -91,7 +107,7 @@ const ContactForm = () => {
               />
             </div>
             <div className="input-container">
-              <h4 className="label">Email :</h4>
+              <h4 >Email :</h4>
               <input
                 type="email"
                 name="email"
@@ -102,7 +118,7 @@ const ContactForm = () => {
               />
             </div>
             <div className="input-container">
-              <h4 className="label">Phone :</h4> 
+              <h4>Phone:</h4> 
               <input
                 type="tel"
                 name="phone"
@@ -113,7 +129,7 @@ const ContactForm = () => {
               />
             </div>
             <div className="input-container">
-              <h4 className="label">Services:</h4> 
+              <h4 >Services:</h4> 
               <select
                 name="service"
                 className="input"
@@ -129,7 +145,7 @@ const ContactForm = () => {
               </select>
             </div>
             <div className="input-container textarea">
-              <h4 className="label">Message:</h4> 
+              <h4 >Message:</h4> 
               <textarea
                 name="message"
                 className="input"
@@ -138,7 +154,10 @@ const ContactForm = () => {
                 autoComplete="off" // Prevents auto-filling
               ></textarea>
             </div>
-            <input type="submit" value="Send" className="btn" />
+            <div className="button-container">
+    <input type="Submit" value="Send" className="btn" />
+ 
+  </div>
           </form>
         </div>
       </div>
