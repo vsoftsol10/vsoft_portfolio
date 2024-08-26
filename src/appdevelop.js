@@ -1,11 +1,10 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import './website.css';
 import { useNavigate } from 'react-router-dom';
-import serviceImage1 from './images/web1.gif';
-import serviceImage2 from './images/web2.gif';
-import serviceImage3 from './images/web3.gif';
-import serviceImage4 from './images/web4.gif';
+import serviceImage1 from './images/appss.gif';
+
 
 const ServicePage = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
@@ -15,69 +14,23 @@ const ServicePage = () => {
   const packages = [
     {
       title: 'HOME PACKAGE',
-      price: '₹ 15,000',
+      price: '25,000 to 100,000/-',
       details: [
-        'Up to 10 Pages',
-        'Image Optimization',
-        'Responsive/Mobile Friendly',
-        'Website Security/SSL',
-        'Free Basic Hosting',
-        'Performance Tracking',
-        '1 Month FREE Website Maintenance Package',
+        'User-Friendly Interface',
+        'Real-Time Notifications',
+        'Secure Transactions',
+        'Customizable Settings',
+        'Offline Mode',
+        'In-App Messaging',
+        'Multi-Language Support',
+        'Integrated Payment Options',
+        'Location-Based Services',
+        'Social Media Integration',
+        'Note: Depends on requirements'
       ],
       image: serviceImage1,
     },
-    {
-      title: 'PRO PACKAGE',
-      price: '₹ 20,000',
-      details: [
-        'Up to 20 Pages',
-        'Image Optimization',
-        'Structure Optimization',
-        '3 Website Security',
-        'Responsive / Mobile Friendly',
-        'Website Security/SSL',
-        'FREE Basic Hosting',
-        'Performance Tracking',
-        '1 Month FREE Website Maintenance Package',
-      ],
-      image: serviceImage2,
-    },
-    {
-      title: 'E-COMMERCE PACKAGE',
-      price: '₹ 30,000',
-      details: [
-        'Up to 100 Products/Variations & 20 Pages',
-        'Image Optimization',
-        'Structure Optimizations',
-        'SEO Optimizations',
-        'E-Commerce Integration',
-        'Banners for Core Pages (5 max)',
-        'FREE Basic Hosting',
-        'Performance Tracking',
-        '1 Month FREE Website Maintenance Package',
-      ],
-      image: serviceImage3,
-    },
-    {
-      title: 'TAILORED PACKAGE',
-      price: 'Depends On Requirements',
-      details: [
-        'Unlimited Pages',
-        'Image Optimization',
-        'Structure Optimization',
-        'SEO Optimization',
-        'E-Commerce Integration',
-        'Third Party Integration',
-        'Banners for Core Pages (10 max)',
-        'Responsive / Mobile Friendly',
-        'Website Security/SSL',
-        'FREE Basic Hosting',
-        'Performance Tracking',
-        '1 Month FREE Website Maintenance Package',
-      ],
-      image: serviceImage4,
-    },
+
   ];
 
   const navigate = useNavigate();
@@ -122,7 +75,7 @@ const ServicePage = () => {
   return (
     <section className="service-section">
       <aside className="sidebarss">
-        <h2 className="hh">Website Packages</h2>
+        <h2 className="hh">APP Packages</h2>
         <ul className="sideul">
           {packages.map((pkg, index) => (
             <li

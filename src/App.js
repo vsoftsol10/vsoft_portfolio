@@ -6,6 +6,12 @@ import Contact from './Contact';
 import About from './About';
 import Services from './Services'
 import Creation from './creation'
+import Website from './website'
+import Appdevelop from './appdevelop'
+import Digital from './digital'
+import Seo from './seo'
+import Ui from './ui'
+
 function App() {
   return (
     <Router>
@@ -20,6 +26,11 @@ function App() {
            <Route path="/about" element={<About/>} />
            <Route path="/services" element={<Services/>} />
            <Route path="/creation" element={<Creation/>} />
+           <Route path="/services/website" element={<Website/>} />
+           <Route path="/services/appdevelop" element={<Appdevelop/>} />
+           <Route path="/services/digital" element={<Digital/>} />
+           <Route path="/services/seo" element={<Seo/>} />
+           <Route path="/services/ui" element={<Ui/>} />
       </Routes>
     </Router>
   );

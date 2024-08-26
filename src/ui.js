@@ -1,11 +1,10 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import './website.css';
 import { useNavigate } from 'react-router-dom';
-import serviceImage1 from './images/web1.gif';
-import serviceImage2 from './images/web2.gif';
-import serviceImage3 from './images/web3.gif';
-import serviceImage4 from './images/web4.gif';
+import serviceImage1 from './images/uiss.gif';
+import serviceImage2 from './images/ux.gif';
 
 const ServicePage = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
@@ -14,70 +13,31 @@ const ServicePage = () => {
   const detailItemsRef = useRef([]);
   const packages = [
     {
-      title: 'HOME PACKAGE',
-      price: '₹ 15,000',
-      details: [
-        'Up to 10 Pages',
-        'Image Optimization',
-        'Responsive/Mobile Friendly',
-        'Website Security/SSL',
-        'Free Basic Hosting',
-        'Performance Tracking',
-        '1 Month FREE Website Maintenance Package',
-      ],
-      image: serviceImage1,
-    },
-    {
-      title: 'PRO PACKAGE',
-      price: '₹ 20,000',
-      details: [
-        'Up to 20 Pages',
-        'Image Optimization',
-        'Structure Optimization',
-        '3 Website Security',
-        'Responsive / Mobile Friendly',
-        'Website Security/SSL',
-        'FREE Basic Hosting',
-        'Performance Tracking',
-        '1 Month FREE Website Maintenance Package',
-      ],
-      image: serviceImage2,
-    },
-    {
-      title: 'E-COMMERCE PACKAGE',
-      price: '₹ 30,000',
-      details: [
-        'Up to 100 Products/Variations & 20 Pages',
-        'Image Optimization',
-        'Structure Optimizations',
-        'SEO Optimizations',
-        'E-Commerce Integration',
-        'Banners for Core Pages (5 max)',
-        'FREE Basic Hosting',
-        'Performance Tracking',
-        '1 Month FREE Website Maintenance Package',
-      ],
-      image: serviceImage3,
-    },
-    {
-      title: 'TAILORED PACKAGE',
-      price: 'Depends On Requirements',
-      details: [
-        'Unlimited Pages',
-        'Image Optimization',
-        'Structure Optimization',
-        'SEO Optimization',
-        'E-Commerce Integration',
-        'Third Party Integration',
-        'Banners for Core Pages (10 max)',
-        'Responsive / Mobile Friendly',
-        'Website Security/SSL',
-        'FREE Basic Hosting',
-        'Performance Tracking',
-        '1 Month FREE Website Maintenance Package',
-      ],
-      image: serviceImage4,
-    },
+        "title": "UI Package",
+        "price": "Start From ₹ 5,000",
+        "details": [
+          "Initial Consultation: Discussion of project goals, target audience, and design preferences.",
+          "Wireframes: Basic wireframes for key pages or screens.",
+          "UI Design: Simple design for a small website or app, including basic layout and visual style.",
+          "Interactive Elements: Design of key UI components (e.g., buttons, forms).",
+          "Feedback and Revisions: One or two rounds of revisions based on client feedback.",
+          "Delivery: Final design files in formats such as Sketch, Figma, or Adobe XD."
+        ],
+        "image":serviceImage1
+      },
+      {
+        "title": " UX Package",
+        "price": "Start From ₹ 4,000",
+        "details": [
+          "Initial Consultation: Understanding project goals, user needs, and pain points.",
+          "User Research: Basic research methods such as user surveys or interviews.",
+          "Wireframes: Low-fidelity wireframes for key screens or pages.",
+          "User Flow: Simple user flow diagrams showing the path users take to complete key tasks.",
+          "Feedback and Revisions: One round of revisions based on initial feedback.",
+          "Delivery: Final wireframes and user flow diagrams in digital format."
+        ],
+        "image":serviceImage2
+      }
   ];
 
   const navigate = useNavigate();
@@ -122,7 +82,7 @@ const ServicePage = () => {
   return (
     <section className="service-section">
       <aside className="sidebarss">
-        <h2 className="hh">Website Packages</h2>
+        <h2 className="hh">UI/UX Packages</h2>
         <ul className="sideul">
           {packages.map((pkg, index) => (
             <li

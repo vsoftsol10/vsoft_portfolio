@@ -1,85 +1,64 @@
+
+
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import './website.css';
 import { useNavigate } from 'react-router-dom';
-import serviceImage1 from './images/web1.gif';
-import serviceImage2 from './images/web2.gif';
-import serviceImage3 from './images/web3.gif';
-import serviceImage4 from './images/web4.gif';
+import serviceImage1 from './images/posters.gif';
+import serviceImage2 from './images/logoss.gif';
+import serviceImage3 from './images/3dlogo.gif';
+import serviceImage4 from './images/pr video.gif';
+import serviceImage5 from './images/cards.gif';
 
 const ServicePage = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
   const packageDetailsRef = useRef(null);
   const imageRef = useRef(null);
   const detailItemsRef = useRef([]);
+  
   const packages = [
     {
-      title: 'HOME PACKAGE',
-      price: '₹ 15,000',
+      title: 'POSTERS',
+      price: '₹ 150 /-Each',
       details: [
-        'Up to 10 Pages',
-        'Image Optimization',
-        'Responsive/Mobile Friendly',
-        'Website Security/SSL',
-        'Free Basic Hosting',
-        'Performance Tracking',
-        '1 Month FREE Website Maintenance Package',
+        'Looking to make a powerful impression? Ourcustom-designed promotional posters arethe perfect way to grab attention and convey your message with style and impact',
       ],
       image: serviceImage1,
     },
     {
-      title: 'PRO PACKAGE',
-      price: '₹ 20,000',
-      details: [
-        'Up to 20 Pages',
-        'Image Optimization',
-        'Structure Optimization',
-        '3 Website Security',
-        'Responsive / Mobile Friendly',
-        'Website Security/SSL',
-        'FREE Basic Hosting',
-        'Performance Tracking',
-        '1 Month FREE Website Maintenance Package',
-      ],
-      image: serviceImage2,
-    },
+        title: 'BRANDMARK LOGO',
+        price: '₹ 299',
+        details: [
+          'A logo is a distinct symbol or design that represents a brand, company, organization, serving as its visual identity.',
+        ],
+        image: serviceImage2,
+      },
+      {
+        title: '3D LOGO',
+        price: '₹ 499',
+        details: [
+          'A 3D logo is a design that incorporates shading, and perspective to create a three-dimensional appearance,giving the logo a more dynamic and realisic look.',
+        ],
+        image:serviceImage3,
+      },
     {
-      title: 'E-COMMERCE PACKAGE',
-      price: '₹ 30,000',
+      title: 'PROMOTIONAL VIDEOS',
+      price: '₹ 299/-per videos',
       details: [
-        'Up to 100 Products/Variations & 20 Pages',
-        'Image Optimization',
-        'Structure Optimizations',
-        'SEO Optimizations',
-        'E-Commerce Integration',
-        'Banners for Core Pages (5 max)',
-        'FREE Basic Hosting',
-        'Performance Tracking',
-        '1 Month FREE Website Maintenance Package',
-      ],
-      image: serviceImage3,
-    },
-    {
-      title: 'TAILORED PACKAGE',
-      price: 'Depends On Requirements',
-      details: [
-        'Unlimited Pages',
-        'Image Optimization',
-        'Structure Optimization',
-        'SEO Optimization',
-        'E-Commerce Integration',
-        'Third Party Integration',
-        'Banners for Core Pages (10 max)',
-        'Responsive / Mobile Friendly',
-        'Website Security/SSL',
-        'FREE Basic Hosting',
-        'Performance Tracking',
-        '1 Month FREE Website Maintenance Package',
+        'In todays digital world  video is the most powerful tool to connect with your audience.Our custom promotional videos are designed to engage, inform, and inspire action.',
       ],
       image: serviceImage4,
     },
+    {
+      title: 'DIGITAL CARDS',
+      price: '₹ 300 to 499',
+      details: [
+        'In a world where first impressions matter, our sleek and modern digital card designs are the perfect way to showcase your brand with style and sophistication. Whether it’s for business networking, eventinvitations, or personal greetings, our digital cards are designed toleave a lasting impact',
+      ],
+      image: serviceImage5,
+    },
+    
   ];
-
   const navigate = useNavigate();
 
   const handleBackClick = () => {
@@ -122,7 +101,7 @@ const ServicePage = () => {
   return (
     <section className="service-section">
       <aside className="sidebarss">
-        <h2 className="hh">Website Packages</h2>
+        <h2 className="hh">Marketing Packages</h2>
         <ul className="sideul">
           {packages.map((pkg, index) => (
             <li
@@ -172,3 +151,4 @@ const ServicePage = () => {
 };
 
 export default ServicePage;
+

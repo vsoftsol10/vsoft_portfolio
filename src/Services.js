@@ -112,35 +112,35 @@ const Services = () => {
             <h3 className='h0'> Our Services</h3>
     <div className="servicesss-containers">
 
-        <div className="servicesss-card" onClick={() => handleCardClick('/service1')}>
+        <div className="servicesss-card" onClick={() => handleCardClick('./website')}>
             <div className="cardsss-content">
                 <h3  className='ss' >Website Development</h3>
                 <img src={serviceImage1}  className="floating-image" />
                 <p className="pp">Starts From ₹8000</p>
             </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('/service2')}>
+        <div className="servicesss-card" onClick={() => handleCardClick('./appdevelop')}>
             <div className="cardsss-content">
                 <h3  className='ss'>Android App Development</h3>
                 <img src={serviceImage2} className="floating-image" />
                 <p className="pp">Starts From ₹13000</p>
             </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('/service3')}>
+        <div className="servicesss-card" onClick={() => handleCardClick('./ui')}>
             <div className="cardsss-content">
                 <h3  className='ss'>UI/UX Design</h3>
                 <img src={serviceImage3} className="floating-image" />
                 <p className="pp">Starts From ₹3000</p>
             </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('/service4')}>
+        <div className="servicesss-card" onClick={() => handleCardClick('./seo')}>
             <div className="cardsss-content">
                 <h3  className='ss'> SEO Service </h3>
                 <img src={serviceImage4}className="floating-image" />
                 <p className="pp">Starts From ₹4000</p>
             </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('/service5')}>
+        <div className="servicesss-card" onClick={() => handleCardClick('./digital')}>
             <div className="cardsss-content">
                 <h3  className='ss'>Digital Marketing</h3>
                 <img src={serviceImage5}  className="floating-image" />
