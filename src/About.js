@@ -6,8 +6,9 @@ import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import image from './images/about2.png';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+
 import Footer from './Footer';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,7 +98,64 @@ gsap.fromTo(logo,
       yoyo: true, // Reverse the animation after each iteration
     });
 
+    gsap.fromTo('.banner-contents h1',
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 5, ease: 'power2.out' }
+    );
+   
+    gsap.registerPlugin(ScrollTrigger);
 
+    // Animate .hhss element
+    gsap.to(".hhss", {
+      scrollTrigger: {
+        trigger: ".hhss",
+        start: "top 80%",
+        end: "bottom 60%",
+        scrub: 1, // Smooth transition
+      },
+      opacity: 1, // Fade in effect
+      x: 0, // Move to original position
+      duration: 4,
+    });
+    
+   
+    gsap.to(".sdss", {
+      scrollTrigger: {
+        trigger: ".sdss", // Ensure the trigger is correct
+        start: "top 80%",
+        end: "bottom 60%",
+        scrub: 1, // Smooth transition
+      },
+      opacity: 3, // Fade in effect
+      y: 0, // Move to original position
+      duration: 4,
+    });
+    
+    gsap.to(".hh", {
+      scrollTrigger: {
+        trigger: ".hh",
+        start: "top 80%",
+        end: "bottom 60%",
+        scrub: 1,
+      },
+      opacity: 1, // Fade in effect
+      x: 0, 
+      duration: 4,
+    });
+    
+    // Animate .sd element
+    gsap.to(".sd", {
+      scrollTrigger: {
+        trigger: ".sd",
+        start: "top 80%",
+        end: "bottom 60%",
+        scrub: 1,
+      },
+      opacity: 1,
+      x: 0,
+      duration: 1,
+    });
+    
     if (activeSection === 'values') {
       const iconItems = document.querySelectorAll('.icon-item');
       iconItems.forEach((item, index) => {
@@ -114,9 +172,10 @@ gsap.fromTo(logo,
       <header className="App-header">
         <div className="header-left">
           <img src={logo} ref={logoRef} className="App-logo" alt="logo" />
-        
+
         </div>
         <button className="menu-button" onClick={handleMenuToggle}>
+                  <h4>Menu</h4>
           <ion-icon name="menu-outline"></ion-icon>
         </button>
         <nav className="App-nav" ref={navRef}>
@@ -145,6 +204,13 @@ gsap.fromTo(logo,
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <h6 className="custom-heading2">About</h6>
                 </Link>            </li>
+
+                <li ref={(el) => (listRefs.current[0] = el)}>
+            <Link to="/career">
+                <ion-icon name="home-outline"></ion-icon>
+                <h6 className="custom-heading1">Career</h6>
+                </Link>
+            </li>
                 
             <li ref={(el) => (listRefs.current[4] = el)}>
   <Link to="/contact">
@@ -157,9 +223,9 @@ gsap.fromTo(logo,
         </nav>
       </header>
 
-      <section className="banners">
-        <div className="banner-contents">
-          <h1 className="banner-headings">About Company</h1>
+      <section className="bannerss">
+        <div className="bannerss-contents">
+          <h1 className="bannerss-headings">About Company</h1>
           <CustomButton variant="contained" size="Large" onClick={handleButtonClicks}>
             More Details
           </CustomButton>
@@ -172,8 +238,9 @@ gsap.fromTo(logo,
             <img src={image} alt="About Us" />
           </div>
           <div className="about-content">
-            <h3>About Company</h3>
-            <p>
+
+            <h3 className="hhss">About Company</h3>
+            <p className="sdss">
               Vsoft is a leading global information technology, Production and
               business process services company. As the world transitions to a
               new normal, Vsoft is empowering a more resilient future for
@@ -190,8 +257,8 @@ gsap.fromTo(logo,
           <div className="values-content">
             {activeSection === 'mission' && (
               <div className="content-mission">
-                <h3>Our Mission</h3>
-                <p>
+                <h3 className="hs">Our Mission</h3>
+                <p className="sd">
                   To empower businesses to succeed in a rapidly evolving technological landscape by delivering innovative, high-quality IT products and solutions that transform industries. We are committed to excellence in production, ensuring that our products meet the highest standards and bring value to all our stakeholders.
                 </p>
               </div>
@@ -199,7 +266,7 @@ gsap.fromTo(logo,
             {activeSection === 'values' && (
               <div className="content-values">
                <div className="icon-container">
-                  <h3>Our Values</h3>
+                  <h3  className="hs">Our Values</h3>
                   <div className="icon-item">
                     <span className="icon">1</span>
                     <p>Customer Value Creation</p>

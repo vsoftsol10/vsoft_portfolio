@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.scss'; 
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="footer">
@@ -9,13 +10,24 @@ const Footer = () => {
          
             <p>
               VSOFT Solutions<br /><br />
-               Vannarpettai, Tirunelveli,<br />
-               Tamilnadu - 627002</p>
-          </div>
+               10J/2, 2nd block, Trivandrum Rd,,<br /> Vanarapettai, Tirunelveli.<br />Tamil Nadu-627002, India.     <div className="map-container">
+               <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.0625184396577!2d77.761351!3d8.6581184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba858c2b030ffaf%3A0x42860b7f14b34f1!2sVsoft%20Solutions!5e0!3m2!1sen!2sin!4v1605671234513!5m2!1sen!2sin"
+    width="100%"
+    height="100" // Adjust the height as needed
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+  ></iframe>
+            </div></p>
+           </div>
+
           <div className="footer-column links">
             <h3>Quick Links</h3>
-            
-           <p><a href="#">Support</a></p>
+            <Link to="/career">
+          <p>Career</p>
+        </Link>
+          
             <p><a href="#">Privacy Policy</a></p>
              <p><a href="#">Terms & Conditions</a></p>
     
@@ -32,19 +44,21 @@ const Footer = () => {
             </p>
             <p>
               <i className="fa fa-envelope"></i> 
-           <a href="mailto:vsoftsolutions8813@gmail.com">vsoftsolutions8813@gmail.com</a>
+           <a href="mailto:vsoftsolutions8813@gmail.com">info@thevsoft.com</a>
             </p>
           </div>
           <div className="footer-column social-icons">
 
             <h3>Social Medias</h3>
-            <div className="social-row first-row"><p> instagram   : <a href="https://www.instagram.com/YourProfile" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram"></i></a></p>
+            <div className="social-row first-row"><p> instagram   : <a href="https://www.instagram.com/thevsoft/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram"></i></a></p>
             
             </div>
        
               <div className="social-row2">
              
-             <p> Twitter  :  <a href="https://twitter.com/YourProfile" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-twitter"></i> </a></p>
+              <div className="social-row2">
+              <p>YouTube: <a href="https://youtube.com/@vsoftsolutions?feature=shared" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-youtube"></i></a></p>
+            </div>
              
               
               </div> <div className="social-row3">

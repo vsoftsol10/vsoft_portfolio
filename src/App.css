@@ -1,42 +1,64 @@
 
 
+
 :root {
   --color-primary: #000000; /* Black */
   --color-secondary: rgba(10, 60, 100, 0.979); /* Dark Skyblue */
   --color-tertiary: rgba(80, 0, 80, 0.979); /* Dark Purple */
 }
-
-.App {
-  text-align: center;
-  overflow-x: hidden; /* Prevent horizontal scrollbar during animations */
-}
-
 .App-header {
-  background-color: white;
+  background: rgba(80, 0, 80, 0.979);
+  position: sticky; /* Fixes the header to the top of the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
 }
 
 .header-left {
   display: flex;
   align-items: center;
+  position: relative;
+  background-color:  rgba(80, 0, 80, 0.979);;
 }
 
+.header-left::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px; /* Adjust the width of the circle */
+  height: 100px; /* Adjust the height of the circle */
+  background: #ffffff;
+  border-radius: none;
+  z-index: -1; /* Ensure the circle is behind the logo */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
 
 .App-logo {
-  height: 160px;
-  margin-right: 20px;
+  height: 100px;
+  width: 100px; 
+  margin-right: 2rem; /* Center the logo inside the circle */
   transition: transform 1s ease-out;
- 
+  z-index: 10; /* Ensure the logo stays on top */
 }
 
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.menu-gif {
+  width: 70px;
+  height: auto; 
+  vertical-align: middle; 
+}
+
 
 .header-text {
   display: flex;
@@ -48,502 +70,161 @@
   font-size: 2rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  
   text-transform: uppercase;
   letter-spacing: 0.4rem;
   margin: 0;
 }
+.menu-button {
+    display: none; /* Hide the menu button on desktop */
+  }
 
 .App-nav {
   display: flex;
   position: relative;
   gap: 70px;
-  align-items: center;
+  align-items: start;
+  margin-left: 0;
   padding-bottom: 10px; /* Add space for marker */
 }
 
+
+
 .App-nav ul {
-  position: relative;
   padding: 0;
-  margin: 0;
   list-style: none;
   display: flex;
   font-size: 2rem;
-}
-
-
-
-ul {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  text-transform: uppercase;
-  padding: 10px;
-  margin: 0;
-  list-style: none;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
+  justify-content: flex-end; /* Aligns the navigation to the right */
+  width: 100%; /* Ensure the ul takes the full width of the container */
 }
 
 ul li {
   list-style: none;
+  position: relative; /* For positioning the pseudo-elements */
 }
 
 ul li a {
   position: relative;
   text-decoration: none;
   display: flex;
-  align-items: center;
-  font-size: 1.6rem;
+  align-items: end;
+  font-size: 2rem;
   padding: 20px 30px;
-  z-index: 1000;
+  z-index: 1; /* Ensure it's above the pseudo-elements */
   backdrop-filter: blur(15px);
   transition: font-size 0.5s ease-in-out; /* Smooth transition for font-size */
+  color: white; /* Text color */
 }
 
-ul li a ion-icon {
-  font-size: 2rem;
-  color: var(--color-primary);
-  margin-right: 8px;
+ul li a::before,
+ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: white;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions for opacity and transform */
 }
 
-ul li.active a ion-icon {
-  opacity: 1;
+ul li a::before {
+  top: 0; /* Position the line above the text */
+  transform: scaleX(0); /* Initially hidden */
+}
+
+ul li a::after {
+  bottom: 0; /* Position the line below the text */
+  transform: scaleX(0); /* Initially hidden */
+}
+
+ul li a:hover::before,
+ul li a:hover::after {
+  transform: scaleX(1); /* Show the line */
+}
+
+ul li a:hover {
+  font-size: 2.2rem; /* Slightly increase font size on hover */
+}
+
+ul li.active a::before,
+ul li.active a::after {
+  opacity: 1; /* Ensure lines are visible when the item is active */
+  transform: scaleX(1); /* Ensure lines are fully visible when active */
 }
 
 .custom-heading1 {
-  color: var(--color-secondary);
+  color: white;
+ font-weight: lighter;
+  font-size: 1.3rem;
 }
 
 .custom-heading2 {
-  color: var(--color-tertiary);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: lighter;
 }
-
-#marker {
-  position: absolute;
-  bottom: 0; /* Align with the bottom of the nav */
-  height: 4px; /* Height of the marker */
-  background-color: var(--color-secondary); /* Marker color */
-  transition: 0.5s ease; /* Smooth transition */
-}
-
-
-#marker::before {
-  content: '';
-  position: absolute;
-margin: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 40px;
-  border-radius: 8px;
-  background:var(--color-secondary);; /* Default color */
-  
-}
-
-/* Different marker colors for active list items */
-ul li:nth-child(1).active ~ #marker::before {
-  background: var(--color-secondary);;
- 
-}
-
-ul li:nth-child(2).active ~ #marker::before {
-  background:  var(--color-tertiary);
- 
-}
-
-ul li:nth-child(3).active ~ #marker::before {
-  background:var(--color-secondary);;
- 
-}
-
-ul li:nth-child(4).active ~ #marker::before {
-  background:  var(--color-tertiary);
-
-}
-
-ul li:nth-child(5).active ~ #marker::before {
-  background:var(--color-secondary);;
- 
-}
-
-ul li:nth-child(6).active ~ #marker::before {
-  background:  var(--color-tertiary);
- 
-}
-
-.main-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
-  padding: 20px;
-}
-
-.content-left {
-  max-width: 60%;
-  font-family: 'Poppins', sans-serif;
-}
-
-
-@keyframes animateHeading {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.secondary-heading {
-  font-size: 1rem;
-  margin-top: 1rem;
-  background: rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-family: 'Poppins', sans-serif;
-  animation: animateSecondaryHeading 2s ease-in-out;
-}
-
-@keyframes animateSecondaryHeading {
-  from {
-    opacity: 0;
-    transform: translateY(5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.article {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  animation: animateArticle 2s ease-in-out;
-}
-
-@keyframes animateArticle {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 
 .banner-container {
   position: relative;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
-  height: 75vh; /* Adjust as needed */
- 
+  padding: 0rem;
+  margin-top: 1rem;
 }
 
 .banner {
-  position: absolute;
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image within the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 100%; /* Adjust based on your design needs */
   width: 100%;
-  height: 80%;
-  margin: 0%;
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  opacity: 0;
-  transition: opacity 1s ease;
-  animation: fadeInOut 12s infinite; /* Animation for fade-in and fade-out */
-}
-
-
-.banner-grid {
-  margin: 0;
-  display: grid;
-  grid-template-columns: 70% 30%; /* Defines two columns with 70% and 30% width */
-  align-items: center; /* Vertically align content in each column */
-  height: 90vh; /* Adjust height as needed, you may use vh for viewport height */
-  width: 100%; /* Full width of the parent container */
-  background: linear-gradient(
-      to right, 
-      rgba(255, 255, 255, 0) 60%, /* Transparent part for the image */
-      rgba(255, 255, 255, 1) 60% /* White part for the gradient */
-    ), 
-    url('./images/vsoft Image .jpg'); 
-  background-size: cover; /* Ensure background image covers the container */
-  background-position: center left; /* Position background image to the left */
-  background-repeat: no-repeat; /* Prevent background image from repeating */
-}
-
-.banner-content {
-  position: relative;
-  text-align: center; /* Align text to the start of the content box */
-  margin-right: 4rem; /* Margin to the right of the content box */
-  border-radius: 40px;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  animation: slideInFromLeft 2s ease-out; /* Animation for sliding in from left */
-}
-
-.banner-image {
-  display: flex;
+  align-items:start;
   justify-content: center;
-  align-items: center;
-}
-
-.banner-image img {
-  width: 100%; /* Ensure the image takes up the full column width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image covers the element */
-  margin-left: 0; /* Align image to the left */
-  animation: zoomInOut 3s ease-in-out infinite; /* Apply the zoom animation */
-  transition: transform 0.5s ease; /* Smooth transition for hover effect */
-}
-
-@keyframes zoomInOut {
-  0%, 100% {
-    transform: scale(1); /* Original size */
-  }
-  50% {
-    transform: scale(1.1); /* Zoomed in to 110% */
-  }
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%); /* Start off the screen to the left */
-    opacity: 0; /* Invisible at the start */
-  }
-  100% {
-    transform: translateX(0); /* End at its original position */
-    opacity: 1; /* Fully visible */
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0); /* Stay in the original position */
-  }
-  50% {
-    transform: translateY(-20px); /* Float 20px up */
-  }
-}
-
-
-h3{
- color:rgba(80, 0, 80, 0.979); /* Dark Skyblue */
- font-size: 2rem ;
-margin-right: 0px;
- align-items: baseline;
- 
- }
-
-.secondary-heading {
-  font-size: 1rem;
-  color:black;
-  margin-left: 100px;
-  width: 80%;
-  font-family: 'Poppins', sans-serif;
-font-weight: lighter;
-  background: white;
-  animation: float 3s ease-in-out infinite; /* Apply the floating animation */
-}
-
-
-button {
-  --primary-color: rgba(80, 0, 80, 0.979);
-  --secondary-color: white;
-  --hover-color: rgba(10, 60, 100, 0.979);
-  --arrow-width: 10px;
-  --arrow-stroke: 2px;
-
-
-  border: 0;
-
-  color: var(--secondary-color);
-  padding: 1rem 2rem;
-  background: var(--primary-color);
-  display: flex;
-  align-items: center;
-  font-size: 29px;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-  margin: 0 auto; /* Center the button horizontally */
-  width: 25%;
-  height: 3rem;
-  gap: 0.6em;
-  transition: background-color 0.37s ease; /* Smooth background color transition */
-}
-
-/* Optional: Add hover effect */
-button:hover {
-  background-color: var(--hover-color);
-}
-
-
-
-  /* Mobile Devices (Portrait) */
-
-@media only screen and (max-width: 480px) {
-  .App-header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
-
-  .App-logo {
-    height: 120px;
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .header-text {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .App-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .App-nav ul {
-    flex-direction: column;
-  }
-
-  .banner-grid {
-justify-items: auto;
-
-  }
-
-  .banner-content {
-    margin-right: 0;
-    margin-top: 0px;
-  }
-
-  .work-ethics-container {
-    flex-direction: column;
-  }
-
-  .work-ethics-column {
-    padding: 0.5rem;
-  }
-
-  .banner-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  button {
-    width: 100%;
-    font-size: 20px;
-    padding: 0.8rem 1.5rem;
-  }
-}
-
-/* Tablets (Portrait) */
-@media only screen and (max-width: 768px) {
-  .App-header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .App-logo {
-    height: 140px;
-  }
-
-  .header-text {
-    text-align: center;
-  }
-
-  .App-nav {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .App-nav ul {
-    flex-direction: column;
-  }
-  .banner-grid {
-    display: grid;
-    grid-template-columns: 100%;
-    background-position: center;
-    align-items: start; 
-  
 }
 
 .banner-content {
-    margin-left: 0; 
-    margin-top: 0px; 
-    text-align: left; 
+  text-align: center;
+  max-width: 100%; 
+  background-color: rgba(0, 0, 0, 0.5);
+ 
+}
+.banner-content h2,
+.banner-content button {
+  
+  font-weight: lighter;
+  color: white;
+  font-size: 1.2rem;
+}
+.banner-content h1{
+  color:white;
+  text-align: center;
+ 
 }
 
-.banner-image img {
-    width: 100%; /* Ensure the image spans the full width */
-    height: auto; /* Maintain aspect ratio */
+.banner-content button {
+  background-color:  rgba(80, 0, 80, 0.979); /* Primary button color, adjust as needed */
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px; /* Space above the button */
 }
 
-button {
-    width: 100%; /* Full-width button */
-    font-size: 22px; /* Button font size */
-    padding: 1rem 2rem; /* Button padding */
+.banner-content button:hover {
+  background-color:v; /* Darker shade for hover effect */
+  transform: scale(1.05); /* Slightly enlarges the button on hover */
 }
 
+.banner-content button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Adds focus ring */
 }
-
-/* Tablets (Landscape) */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .App-header {
-    flex-direction: row;
-    align-items: center;
-    padding: 15px;
-  }
-
-  .App-logo {
-    height: 150px;
-    margin-right: 20px;
-  }
-
-  .header-text {
-    text-align: center;
-  }
-
-  .App-nav {
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .App-nav ul {
-    flex-direction: row;
-  }
-
-  .banner-grid {
-    grid-template-columns: 60% 40%;
-  }
-
-  .banner-content {
-    margin-left: 50px;
-  }
-
-
-  .banner-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  button {
-    width: auto;
-    font-size: 24px;
-    padding: 1rem 2rem;
-  }
-}
-
 
 @keyframes float {
   0%, 100% {
@@ -554,196 +235,13 @@ button {
   }
 }
 
-@media (min-width: 769px) {
-  .App-nav {
-    display: flex; /* Show the nav by default on desktop */
-  }
-  
-  .menu-button {
-    display: none; /* Hide the menu button on desktop */
-  }
+
+
+.menu-button {
+  display: none; /* Hide the menu button on desktop */
 }
 
-/* Mobile Devices (Portrait) */
-@media only screen and (max-width: 480px) {
-  .App-header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
 
-  .App-logo {
-    height: 120px;
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .header-text {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .App-nav {
-    display: none; /* Hide the nav by default on mobile */
-  }
-
-  #marker{
-    display: none;
-  }
-  
-  .App-nav.show {
-    display: block; /* Show the nav when 'show' class is added */
-  }
-  
-  .menu-button {
-    display: block; /* Show the menu button on mobile */
-  }
-
- 
-
-  .banner-grid {
-    grid-template-columns: 100%;
-    background-size: cover; /* Cover the entire area on mobile */
-    background-position: center center; /* Center the image on mobile */
-  }
-
-  .banner-content {
-    margin-left: 0;
-    margin-top: 20px;
-    align-items: start;
-  }
-  .banner-text {
-    margin-left: 0;
-    text-align: center;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .banner-text {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .work-ethics-container {
-    flex-direction: column;
-  }
-
-  .work-ethics-column {
-    padding: 0.5rem;
-  }
-
-  .banner-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  button {
-    width: 100%;
-    font-size: 20px;
-    padding: 0.8rem 1.5rem;
-  }
-}
-
-/* Tablets (Portrait) */
-@media only screen and (max-width: 768px) {
-  .App-header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .App-logo {
-    height: 140px;
-  }
-
-  .header-text {
-    text-align: center;
-  }
-
-  .App-nav {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .App-nav ul {
-    flex-direction: column;
-  }
-
-  .banner-grid {
-    grid-template-columns: 100%;
-    background-position: center;
-  }
-
-  .banner-content {
-    margin-left: 0;
-    margin-top: 20px;
-  }
-
-  .work-ethics-container {
-    flex-direction: column;
-  }
-
-  .work-ethics-column {
-    padding: 0.5rem;
-  }
-
-  .banner-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  button {
-    width: 100%;
-    font-size: 22px;
-    padding: 1rem 2rem;
-  }
-}
-
-/* Tablets (Landscape) */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .App-header {
-    flex-direction: row;
-    align-items: center;
-    padding: 15px;
-  }
-
-  .App-logo {
-    height: 150px;
-    margin-right: 20px;
-  }
-
-  .header-text {
-    text-align: center;
-  }
-
-  .App-nav {
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .App-nav ul {
-    flex-direction: row;
-  }
-
-  .banner-grid {
-    grid-template-columns: 60% 40%;
-  }
-
-  .banner-content {
-    margin-left: 50px;
-  }
-
-
-  .banner-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  button {
-    width: auto;
-    font-size: 24px;
-    padding: 1rem 2rem;
-  }
-}
 .vs-process-container {
   text-align: center;
   padding: 2rem;
@@ -789,7 +287,7 @@ button {
   width: 130px; /* Adjust size as needed */
   height: 130px; /* Adjust size as needed */
   border-radius: 50%;
-  animation: rotate 10s linear infinite;
+  animation: zoomIn 30s linear infinite;
 }
 
 .vs-process-arrow {
@@ -817,100 +315,122 @@ button {
   color: black;
 }
 
-@keyframes rotate {
+@keyframes zoomIn {
   from {
-    transform: rotate(0deg);
+    transform: scale(0.5);
+    opacity: 1; 
   }
   to {
-    transform: rotate(180deg);
+    transform: scale(1.2); 
+    opacity: 1; 
   }
 }
 
-/* Mobile */
-@media only screen and (max-width: 600px) {
+/* Mobile View Adjustments */
+@media (max-width: 480px) {
+  .App-nav {
+    display: none; /* Hide the navigation bar */
+  }
+
+  .App-nav.show {
+    display: block; /* Shown when the 'show' class is added */
+  }
+
+
+  .menu-button {
+    display: block; /* Show the menu button on mobile view */
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  
+  .App-nav.show {
+    display: block;
+  }
+ 
+  /* Button Styles */
+.menu-button {
+  display: flex;
+  align-items:baseline;
+  background: transparent;
+  text-align: start;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.App-nav {
+  width: 100%;
+  top: auto; 
+  bottom: 0;
+}
+
+.App-nav ul {
+  flex-direction: column;
+}
+
+.App-nav li {
+  border-bottom: none; /* Remove border for mobile view */
+}
+
+.App-nav li a {
+  padding: 0px; /* Adjust padding for mobile view */
+}
+.App-nav {
+  width: 100%; /* Full width on mobile */
+}
+
+.App-nav li {
+  margin: 15px 0; /* Adjust margin for mobile */
+}
+  
   .vs-process-row {
-    flex-direction: column;
-    margin: 0%;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
   }
 
   .vs-process-item {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem; /* Add some space between items */
   }
 
   .vs-process-arrow {
-    position: relative;
-    right: 0;
-    top: 10px;
-    transform: rotate(90deg);
+    display: none; /* Hide arrows on mobile for simpler design */
   }
-  
+
   .vs-process-image {
-    width: 100px;
+    width: 100px; /* Adjust image size for mobile */
     height: 100px;
   }
 
   .vs-process-circle {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .vs-process-name {
-    margin-top: 1.5rem;
-  }
-  
-  .vs-process-heading {
-    font-size: 1.5rem;
-  }
-}
-
-/* Tablets */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-  .vs-process-row {
-    flex-wrap: wrap;
-  }
-
-  .vs-process-item {
-    flex: 1 1 45%;
-    margin-bottom: 2rem;
-  }
-
-  .vs-process-arrow {
-    position: absolute;
-    right: -2.5rem;
-    top: 40%;
-    font-size: 1.5rem;
-  }
-
-  .vs-process-image {
-    width: 120px;
-    height: 120px;
-  }
-
-  .vs-process-circle {
-    width: 70px;
+    width: 70px; /* Adjust circle size for mobile */
     height: 70px;
   }
 
   .vs-process-name {
-    margin-top: 2rem;
+    font-size: 1.2rem; /* Adjust text size for mobile */
+  }
+  .banner {
+    background-size: cover; 
+    background-position: center; 
+    height: 100%; 
+    width: 100%;
+    display: flex;
+    align-items:start;
+    justify-content: center;
+  }
+  .banner-container {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    padding: 0rem;
+    margin-top: 1rem;
   }
   
-  .vs-process-heading {
-    font-size: 1.8rem;
-  }
 }
 
-/* Laptops and Desktops */
-@media only screen and (min-width: 1025px) {
-  .vs-process-row {
-    flex-wrap: nowrap;
-  }
 
-  .vs-process-item {
-    flex: 1 1 auto;
-  }
-
-  .vs-process-arrow {
-    font-size: 2rem;
-  }
-}

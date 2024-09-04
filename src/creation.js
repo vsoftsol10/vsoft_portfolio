@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Creation.css';
 import './App.css'
+import lg from './images/menu.gif';
 import logo from './images/vslogo.png';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
@@ -32,14 +33,15 @@ const CustomButton = styled(Button)({
 });
 
 const Creation = () => {
+  
   const logoRef = useRef(null);
   const pageTransitionRef = useRef(null);
   const headingRef = useRef(null);
   const solutionsRef = useRef(null);
   const navRef = useRef(null);
-  const markerRef = useRef(null);
+
   const listRefs = useRef([]);
-  const productvaluesRef = useRef(null);
+  const ulRef = useRef(null);
   const sidebarRef = useRef(null);
   const detailsRef = useRef(null);
 
@@ -88,6 +90,18 @@ const Creation = () => {
       { rotate: 0 },
       { rotate: 360, duration: 2, ease: 'power2.inOut' }
     );
+
+    gsap.fromTo('.products-content h1',
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 5, ease: 'power2.out' }
+    );
+   
+    
+    gsap.fromTo(ulRef.current, 
+      { x: '-100%' }, // Starting position (offscreen to the left)
+      { x: '0%', duration: 5, delay: 0.5 } // Ending position (onscreen), with a delay for the ul
+    );
+   
   }, []);
 
   return (
@@ -98,8 +112,8 @@ const Creation = () => {
           
         </div>
         <button className="menu-button" onClick={handleMenuToggle}>
-          <ion-icon name="menu-outline"></ion-icon>
-        </button>
+  <img src={lg} alt="Menu" className="menu-gif" />
+</button>
         <nav className="App-nav" ref={navRef}>
         <ul>
             <li ref={(el) => (listRefs.current[0] = el)}>
@@ -133,7 +147,12 @@ const Creation = () => {
     <h6 className="custom-heading1">Contact</h6>
   </Link>
 </li>
-            <div id="marker" ref={markerRef}></div>
+<li ref={(el) => (listRefs.current[0] = el)}>
+            <Link to="/career">
+                <ion-icon name="home-outline"></ion-icon>
+                <h6 className="custom-heading1">Career</h6>
+                </Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -142,17 +161,19 @@ const Creation = () => {
         <div className="products-content">
           <h1 className="product-headings">Our Inventions</h1>
          
-          <CustomButton variant="contained" size="Large" onClick={() => handleProductClick('Digital Marketing')}>
+          <CustomButton   variant="contained" size="Large" onClick={() => handleProductClick('Digital Marketing')}>
             More Details
           </CustomButton></div>
       </div>
 
-      <div className="sidebar" ref={sidebarRef}>
-        <ul className="sideul">
-          <li className="sideli" onClick={() => handleProductClick('Website')}>Website</li>
+      <div className="sidebarsss" ref={sidebarRef}>
+        <ul className="sideulss"ref={ulRef} >
+          <li className="sideli" onClick={() => handleProductClick('Website')}>Websites</li>
+          <li  className="sideli" onClick={() => handleProductClick('Logo')}>Apps</li>
           <li className="sideli"  onClick={() => handleProductClick('Digital Marketing')}>Digital Marketing</li>
           <li  className="sideli" onClick={() => handleProductClick('UI/UX Design')}>UI/UX Design</li>
           <li  className="sideli" onClick={() => handleProductClick('Logo')}>Logo</li>
+
         </ul>
       </div>
 
@@ -174,8 +195,8 @@ const Creation = () => {
         )}
         {selectedProduct === 'Digital Marketing' && (
           <div className="details-content">
-            <div className="details-posters">
-              {/* Add more posters as needed */}
+            <div className="details-sposters">
+             
               <div className="details-poster">
                 <img src={poster1} alt="Digital Marketing Poster 1" className="product-image" />
              

@@ -12,7 +12,7 @@
 
 
 .products-content{
-    background-color: white;
+
     max-width: 800px;
     height: 180px;
  justify-items: left;
@@ -23,7 +23,7 @@ margin-right: 0%;
     .product-headings{
         font-size: 2rem;
    text-align: center;
-    color:black;
+    color:white;
     margin-top: 30px;
     font-weight: lighter;
     }
@@ -64,14 +64,14 @@ margin-right: 0%;
 
 .details-poster {
   animation-name: splitAndSlideFromRight; 
-  animation: scrollPosters 10s linear infinite; /* Split and slide from right animation */
+  animation: scrollPosters 16s linear infinite; /* Split and slide from right animation */
 }
 
 /* Image styling */
 .details-image img, .details-poster img {
   margin-top: 3rem;
   width: 100%;
-  height: auto;
+  height:100%;
   transition: transform 0.3s ease;
 }
 
@@ -160,32 +160,58 @@ margin-right: 0%;
 }
 
 /* Additional Styling for Sidebar */
-.sidebar {
+.sidebarsss {
   background-color: white;
   margin-top: 2rem;
   border-radius: 8px;
 }
-
-.sideul {
+.sideulss {
   list-style-type: none;
   padding: 1rem;
   background-color: #0a3c64;
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center items horizontally, adjust as needed */
+  flex-wrap: wrap; /* Wrap items if they overflow */
 }
 
 .sideli {
-  margin-top: 0.6rem;
+  margin: 0.6rem;
   text-align: center;
   cursor: pointer;
   font-weight: lighter;
   background-color: #0a3c64;
   color: white;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem; /* Adjust padding to your preference */
   border-radius: 13px;
   transition: background-color 0.3s ease;
 }
 
+
 .sideli:hover {
   background-color: #500050;
+}
+
+
+@media only screen and (max-width: 458px){
+    .sideulss {
+  list-style-type: none;
+  padding: 1rem;
+  background-color: #0a3c64;
+  display:block; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+}
+.products{
+  background: url('./images/Product.webp') ;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  
+  color: white;
+  text-align: center;
+ 
+}
+
 }
 @keyframes scrollPosters {
   0% {
@@ -201,8 +227,12 @@ margin-right: 0%;
   animation-play-state: paused;
 }
 
-/* Mobile Screens */
+
+
 @media only screen and (max-width: 768px) {
+
+
+
   .products {
     height: auto; /* Adjust height for mobile */
   }
@@ -220,4 +250,9 @@ margin-right: 0%;
     max-width: 100%; /* Full width for mobile */
     margin-top: 5rem; /* Adjust margin for mobile */
   }
+}
+
+.h6{
+  color: black;
+  font-size:xx-large;
 }

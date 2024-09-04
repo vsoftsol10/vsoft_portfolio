@@ -11,7 +11,7 @@ textarea {
   font-family: "Poppins", sans-serif;
 }
 
-.container {
+.containers {
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -82,6 +82,19 @@ form {
   background: none;
   padding: 0.6rem 1.2rem;
 color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.input {
+  width: 100%;
+  outline: none;
+  border: 2px solid #fafafa;
+  background: none;
+  padding: 0.6rem 1.2rem;
+color: black;
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
@@ -315,7 +328,7 @@ gap: 7px;
  
 }
 
-div.backBtn {
+div.backBt {
   width: 100px;
   left: 100px;
   top: 100px;
@@ -325,7 +338,7 @@ div.backBtn {
   cursor: pointer;
 }
 
-span.line {
+span.lines {
   bottom: auto;
   right: auto;
   top: auto;
@@ -340,20 +353,20 @@ span.line {
   transition: width 0.2s ease 0.1s, left 0.2s ease, transform 0.2s ease 0.3s, background-color 0.2s ease;
 }
 
-span.tLine {
+span.tLines {
   top: 0px;
 }
 
-span.mLine {
+span.mLines {
   top: 13px;
   opacity: 0;
 }
 
-span.bLine {
+span.bLines {
   top: 26px;
 }
 
-.label {
+.labels {
   position: absolute;
   left: 0px;
   top: 5px;
@@ -363,29 +376,29 @@ span.bLine {
   font-size: 1em;
 }
 
-div.backBtn:hover span.label {
+div.backBt:hover span.labels {
   left: 25px
 }
 
-div.backBtn:hover span.line {
+div.backBt:hover span.lines {
   left: -10px;
   height: 5px;
   background-color: rgba(80, 0, 80, 0.979);;
 }
 
-div.backBtn:hover span.tLine {
+div.backBt:hover span.tLines {
   width: 25px;
   transform: rotate(-45deg);
   left: -15px;
   top: 6px;
 }
 
-div.backBtn:hover span.mLine {
+div.backBt:hover span.mLines {
   opacity: 1;
   width: 30px;
 }
 
-div.backBtn:hover span.bLine {
+div.backBt:hover span.bLines {
   width: 25px;
   transform: rotate(45deg);
   left: -15px;
@@ -394,7 +407,7 @@ div.backBtn:hover span.bLine {
 
 
 
-div.backBtns {
+div.backBts {
   width: 50px;
   left: 50px;
   top: 50px;
@@ -404,7 +417,7 @@ div.backBtns {
   cursor: pointer;
 }
 
-span.line {
+span.lin {
   bottom: auto;
   right: auto;
   top: auto;
@@ -419,20 +432,20 @@ span.line {
   transition: width 0.2s ease 0.1s, left 0.2s ease, transform 0.2s ease 0.3s, background-color 0.2s ease;
 }
 
-span.tLine {
+span.tLin{
   top: 0px;
 }
 
-span.mLine {
+span.mLin {
   top: 13px;
   opacity: 0;
 }
 
-span.bLine {
+span.bLin {
   top: 26px;
 }
 
-.label {
+.labe {
   position: absolute;
   left: 0px;
   top: 5px;
@@ -442,50 +455,66 @@ span.bLine {
   font-size: 1em;
 }
 
-div.backBtns:hover span.label {
+div.backBts:hover span.labe {
   left: 25px
 }
 
-div.backBtns:hover span.line {
+div.backBts:hover span.lin {
   left: -10px;
   height: 5px;
-  background-color: rgba(80, 0, 80, 0.979);;
+  background-color: rgba(80, 0, 80, 0.979);
 }
 
-div.backBtns:hover span.tLine {
+div.backBts:hover span.tLin {
   width: 25px;
   transform: rotate(-45deg);
   left: -15px;
   top: 6px;
 }
 
-div.backBtns:hover span.mLine {
+div.backBts:hover span.mLin {
   opacity: 1;
   width: 30px;
 }
 
-div.backBtns:hover span.bLine {
+div.backBts:hover span.bLin {
   width: 25px;
   transform: rotate(45deg);
   left: -15px;
   top: 20px;
 }
 /* Hide .backBtns on larger screens */
-.backBtns {
-  display: none;
-}
 
-.backBtn {
-  display: block;
+div.backBts{
+  display: none; 
 }
-
 /* Show .backBtns and hide .backBtn on smaller screens */
-@media only screen and (max-width: 768px) {
-  .backBtn {
-    display: none;
+@media only screen and (max-width: 480px) {
+  div.backBts{
+   display: flex; 
+  }
+  title{
+    margin-top: 5rem;
   }
 
-  .backBtns {
-    display: block;
-  }
+}
+.bttn {
+  padding: 0.6rem 1.3rem;
+  background-color: #fff;
+  border: 2px solid #fafafa;
+  font-size: 0.95rem;
+gap: 7px;
+  color:  rgba(10, 60, 100, 0.979);
+  line-height: 1;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
+  width: 100%;
+}
+
+.bttn:hover {
+  background-color: rgba(10, 60, 100, 0.979);;
+  color:   rgba(10, 60, 100, 0.979);
 }

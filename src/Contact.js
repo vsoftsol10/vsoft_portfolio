@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
-import './ContactForm.css'; // Make sure this path is correct
+import { useNavigate } from 'react-router-dom'; 
+import './ContactForm.css'; 
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -50,23 +50,24 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="container">
+    <div className="containers">
       
-         <div class="backBtn"  onClick={handleBackClick}>
-      <span class="line tLine"></span>
-      <span class="line mLine"></span>
-      <span class="label">Back</span>
-      <span class="line bLine"></span>
+         <div class="backBt"  onClick={handleBackClick}>
+      <span class="lines tLines"></span>
+      <span class="lines mLines"></span>
+      <span class="labels">Back</span>
+      <span class="lines bLines"></span>
 	</div>
       <div className="form">
-      <div class="backBtns"  onClick={handleBackClick}>
-      <span class="line tLine"></span>
-      <span class="line mLine"></span>
-      <span class="label">Back</span>
-      <span class="line bLine"></span>
-	</div>
+
         <div className="contact-info">
           <h3 className="title">Let's get in touch</h3>
+          <div class="backBts"  onClick={handleBackClick}>
+      <span class="line tLin"></span>
+      <span class="line mLin"></span>
+      <span class="labe">Back</span>
+      <span class="line bLin"></span>
+	</div>
           <p className="text">VSOFT SOLUTIONS</p>
           <div className="info">
             <div className="information">
@@ -132,7 +133,7 @@ const ContactForm = () => {
               <h4 >Services:</h4> 
               <select
                 name="service"
-                className="input"
+                className="inputs"
                 value={formData.service}
                 onChange={handleChange}
               >
@@ -151,7 +152,7 @@ const ContactForm = () => {
                 className="input"
                 value={formData.message}
                 onChange={handleChange}
-                autoComplete="off" // Prevents auto-filling
+                autoComplete="off" 
               ></textarea>
             </div>
             <div className="button-container">

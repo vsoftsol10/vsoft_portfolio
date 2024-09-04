@@ -1,19 +1,18 @@
 import React, { useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import logo from './images/vslogo.png';
 import serviceImage1 from './images/web-development.gif';
 import serviceImage2 from './images/mobile-development2-2.gif';
 import serviceImage3 from './images/ui.gif';
 import serviceImage4 from './images/seo 2.gif';
-import serviceImage5 from './images/giphy.gif';
-import serviceImage6 from './images/data-entry.gif';
+import serviceImage5 from './images/giphy.png';
+import lg from './images/menu.gif';
 import './ServicePage.scss'; 
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 
 const Services = () => {
-    const navigate = useNavigate();
+  
     const pageTransitionRef = useRef(null);
     const logoRef = useRef(null);
     const headingRef = useRef(null);
@@ -53,9 +52,9 @@ const Services = () => {
         );
     }, []);
 
-    const handleCardClick = (url) => {
-        navigate(url);
-    };
+    const handleCardClick = (link) => {
+        window.location.href = link;
+      };
 
     const handleMenuToggle = () => {
         navRef.current.classList.toggle('show');
@@ -69,8 +68,8 @@ const Services = () => {
                    
                 </div>
                 <button className="menu-button" onClick={handleMenuToggle}>
-                    <ion-icon name="menu-outline"></ion-icon>
-                </button>
+  <img src={lg} alt="Menu" className="menu-gif" />
+</button>
                 <nav className="App-nav" ref={navRef}>
                 <ul>
             <li ref={(el) => (listRefs.current[0] = el)}>
@@ -104,55 +103,55 @@ const Services = () => {
     <h6 className="custom-heading1">Contact</h6>
   </Link>
 </li>
-            <div id="marker" ref={markerRef}></div>
+<li ref={(el) => (listRefs.current[0] = el)}>
+            <Link to="/career">
+                <ion-icon name="home-outline"></ion-icon>
+                <h6 className="custom-heading1">Career</h6>
+                </Link>
+            </li>
           </ul>
-                </nav>
+                </nav> 
             </header>
             <section className="servicesss">
             <h3 className='h0'> Our Services</h3>
     <div className="servicesss-containers">
 
-        <div className="servicesss-card" onClick={() => handleCardClick('./website')}>
+        <div className="servicesss-card" onClick={() => handleCardClick('./ws')}>
             <div className="cardsss-content">
                 <h3  className='ss' >Website Development</h3>
                 <img src={serviceImage1}  className="floating-image" />
                 <p className="pp">Starts From ₹8000</p>
             </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('./appdevelop')}>
+        <div className="servicesss-card" onClick={() => handleCardClick('./appsdevelop')}>
             <div className="cardsss-content">
-                <h3  className='ss'>Android App Development</h3>
+                <h3  className='ss'>App Development</h3>
                 <img src={serviceImage2} className="floating-image" />
                 <p className="pp">Starts From ₹13000</p>
             </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('./ui')}>
+        <div className="servicesss-card" onClick={() => handleCardClick('./ui2')}>
             <div className="cardsss-content">
                 <h3  className='ss'>UI/UX Design</h3>
                 <img src={serviceImage3} className="floating-image" />
                 <p className="pp">Starts From ₹3000</p>
             </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('./seo')}>
+        <div className="servicesss-card" onClick={() => handleCardClick('./seo2')}>
             <div className="cardsss-content">
                 <h3  className='ss'> SEO Service </h3>
                 <img src={serviceImage4}className="floating-image" />
                 <p className="pp">Starts From ₹4000</p>
             </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('./digital')}>
+        <div className="servicesss-card" onClick={() => handleCardClick('./digi')}>
             <div className="cardsss-content">
                 <h3  className='ss'>Digital Marketing</h3>
                 <img src={serviceImage5}  className="floating-image" />
                 <p className="pp">Starts From ₹1000</p>
             </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('/service6')}>
-            <div className="cardsss-content">
-                <h3 className='ss'>Data Entry</h3>
-                <img src={serviceImage6}  className="floating-image" />
-            </div>
-        </div>
+       
     </div>
 </section>
 

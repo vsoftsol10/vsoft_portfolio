@@ -1,14 +1,16 @@
-.service-section {
+.service-sections {
   display: flex;
   width: 100%;
-  height: 100vh; /* Optional: makes the section fill the viewport height */
+  height: 100vh;
+ /* Optional: makes the section fill the viewport height */
 }
 
 .sidebarss {
   width: 25%;
-  background-color: rgba(80, 0, 80, 0.979); 
+  background-color: rgba(80, 0, 80, 0.979); /* Dark Purple */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   color: white;
+  height: 150%;
 }
 
 .main-content {
@@ -27,9 +29,10 @@
   text-align: start;
   display: flex;
   flex-direction: column;
-  background-color: rgba(80, 0, 80, 0.979);
+  background-color: rgba(80, 0, 80, 0.979); /* Dark Purple */
   font-size: 1.4rem;
-  margin-top: 3rem;
+margin-top: 4rem;
+
 }
 
 .sideul li {
@@ -63,7 +66,7 @@
 }
 
 .service-image {
-  width: 30%;
+  width: 60%;
   height: auto;
   margin-bottom: 10px;
   animation: slideInLeft 3s ease-in-out forwards; /* Animation for image */
@@ -101,15 +104,16 @@
   margin-right: 0px;
 }
 
-.hh {
+.h {
   text-align: start;
   margin-top: 5.5rem;
+  color: white;
 }
 
 div.backBtn {
   position:absolute; /* Fix the button to the viewport */
 left: 2rem;
-  top: 2rem;
+margin-top: 1rem;
   transform: translateY(-50%); 
   width: 100px;
   background-color: #f4f4f4;
@@ -342,6 +346,8 @@ div.backBtn:hover span.bLine {
   .sideul li {
     padding: 8px;
     font-size: 1rem;
+   
+    font-style:oblique;
   }
 
   .package-title {
@@ -358,7 +364,11 @@ div.backBtn:hover span.bLine {
   }
 
   .details-list {
-    font-size: 0.75rem;
+   
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: black;
+    font-style:oblique;
   }
 
   div.backBtn {

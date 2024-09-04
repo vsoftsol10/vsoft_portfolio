@@ -40,7 +40,13 @@
             color:rgba(10, 60, 100, 0.979);
           }
         }
-
+        .map-container {
+          margin-top: 10px;
+        }
+        
+        .map-container iframe {
+          border: 0;
+        }
      
         .social-icons {
           display: flex;
@@ -87,7 +93,7 @@
     }
 
     .footer-column {
-      width: 100%; // Make each column take full width
+      width: 80%; // Make each column take full width
       margin: 5px 0; // Adjust margin for spacing between stacked columns
 
       h3 {
@@ -118,7 +124,7 @@
     }
 
     .footer-column {
-      width: 100%; // Full width for each column
+      width: 80%;
       margin: 5px 0; // Adjust margin for stacked columns
 
       h3 {

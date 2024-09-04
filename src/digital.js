@@ -60,10 +60,10 @@ const ServicePage = () => {
     
   ];
   const navigate = useNavigate();
-
   const handleBackClick = () => {
-    navigate('/services');
+    navigate(-1); // Navigate to the previous page
   };
+  
 
   useEffect(() => {
     if (selectedPackage !== null && packageDetailsRef.current) {
@@ -99,7 +99,7 @@ const ServicePage = () => {
   }, [selectedPackage]);
 
   return (
-    <section className="service-section">
+    <section className="service-sections">
       <aside className="sidebarss">
         <h2 className="hh">Marketing Packages</h2>
         <ul className="sideul">

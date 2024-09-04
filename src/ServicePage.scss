@@ -7,14 +7,14 @@
 .servicesss-containers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px; // Adjust as needed
+    gap: 50px; // Adjust as needed
     margin-top: 40px; // Add margin to separate rows if needed
 }
 
 .servicesss-card {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     background: white; // Adjust background color if needed
     border: 2px solid rgba(80, 0, 80, 0.979);
     border-radius: 30px; // Optional border-radius
@@ -42,6 +42,7 @@
     @media (max-width: 480px) {
         grid-template-columns: repeat(1, 1fr); // 1 card per row
         gap: 10px;
+        border-radius: 15px;
     }
     
     
@@ -59,9 +60,9 @@
 
 .floating-image {
     width: 70%;
-    height: auto;
+    height: 80% ;
     @media (max-width: 480px) {
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -70,20 +71,23 @@
     text-align: center;
     color: rgba(80, 0, 80, 0.979);
     font-weight: lighter;
-    font-size: 1rem;
+    font-size: 1.7rem;
     
     @media (max-width: 480px) {
-        font-size: 0.9rem;
+        font-size: 0.5rem;
     }
 }
 .pp{
     text-align: center;
     color: rgba(80, 0, 80, 0.979);
     font-weight: lighter;
-    font-size: 1rem;
+    font-size: 1.5rem;
     
     @media (max-width: 480px) {
-        font-size: 0.9rem;
+        font-size: 0.5rem;
     }
 
+}
+.h4{
+    text-align: start;
 }
