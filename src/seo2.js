@@ -10,12 +10,12 @@ import logo from './images/vslogo.png';
 import image from './images/seoback.webp';
 import './ws.css';
 import lg from './images/menu.gif';
-import poste1  from './images/web32.jpg';
-import poste2 from './images/pos.png';
-import poste3 from './images/hrms.png';
-import poste4 from './images/foods.jpg';
-import poste5 from './images/aisur.png';
-import poste6 from './images/web31.webp';
+import poste1  from './images/seo1.webp';
+import poste2 from './images/seo2.webp';
+import poste3 from './images/seo3.webp';
+import poste4 from './images/seo4.webp';
+import poste5 from './images/seo5.webp';
+import poste6 from './images/seo1.webp';
 import post3 from './images/webss8.webp';
 import post4  from './images/webss10.webp';
 

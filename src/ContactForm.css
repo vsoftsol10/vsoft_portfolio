@@ -410,7 +410,7 @@ div.backBt:hover span.bLines {
 div.backBts {
   width: 50px;
   left: 50px;
-  top: 50px;
+  top: 200px;
   background-color: #f4f4f4;
   transition: all 0.4s ease;
   position: fixed;
@@ -446,7 +446,7 @@ span.bLin {
 }
 
 .labe {
-  position: absolute;
+  position: sticky;
   left: 0px;
   top: 5px;
   width: 100%;

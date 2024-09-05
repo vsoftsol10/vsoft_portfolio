@@ -266,10 +266,7 @@ function Home() {
     <div class="container">
   <div class="row d-flex justify-content-center text-center">
   <div class="col-lg-8">
-  <h2 class="service-page-heading" style={{ 
-        textAlign: 'center',
-        marginLeft:'10rem',
-      }}>UI/UX Design Services</h2>
+  <h2 class="service-page-heading" >UI/UX Design Services</h2>
   <p class="mb-0" >
     Since 2024, our Tirunelveli-based company has been transforming user experiences with exceptional UI/UX design. We focus on creating intuitive, engaging interfaces that enhance usability, boost user satisfaction, and drive success for your digital products.
   </p>

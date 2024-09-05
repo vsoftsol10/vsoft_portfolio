@@ -10,12 +10,12 @@ import logo from './images/vslogo.png';
 import image from './images/appdeveopbackground.webp';
 import './ws.css';
 
-import poste1  from './images/web32.jpg';
-import poste2 from './images/pos.png';
-import poste3 from './images/hrms.png';
-import poste4 from './images/foods.jpg';
-import poste5 from './images/aisur.png';
-import poste6 from './images/web31.webp';
+import poste1  from './images/app1.webp';
+import poste2 from './images/app2.webp';
+import poste3 from './images/app3.webp';
+import poste4 from './images/app4.webp';
+import poste5 from './images/app5.webp';
+import poste6 from './images/app1.webp';
 import post3 from './images/webss1.webp';
 import post4  from './images/webss4.webp';
 import lg from './images/menu.gif';
@@ -347,7 +347,60 @@ function Home() {
           </div>
         
         </div>
+        <div class="carousel-outer-port">
+ 
 
+ <div class="carousel-inner-port" data-aos-delay="400" data-aos="fade-up">
+   <div class="carousel-port carousel1">
+     <div class="testimonial-carousel-top-port">
+     <h6>Social Media App</h6>
+       <img src={poste1}  class="testimonial-client-img-port" alt="loading"/>
+   
+     </div>
+   
+   </div>
+   <div class="carousel-port carousel2">
+     <div class=" testimonial-carousel-top-port">
+     <h6>Job Searching App</h6>
+     <img src={poste2}  class="testimonial-client-img-port" alt="loading"/>
+     </div>
+    
+   </div>
+   <div class="carousel-port carousel3">
+     <div class=" testimonial-carousel-top-port">
+     <h6>Employee App</h6>
+     <img src={poste3}  class="testimonial-client-img-port" alt="loading"/>
+     </div>
+   </div>
+   <div class="carousel-port carousel4">
+     <div class=" testimonial-carousel-top-port">
+     <h6>Food delivery App</h6>
+     <img src={poste4}  class="testimonial-client-img-port" alt="loading"/>
+     
+     </div>
+   
+   </div>
+   <div class="carousel-port carousel5">
+     <div class=" testimonial-carousel-top-port">
+     <h6>Logistic App</h6>
+     <img src={poste5}  class="testimonial-client-img-port" alt="loading"/>
+     
+     </div>
+    
+   </div>
+   <div class="carousel-port carousel5">
+     <div class=" testimonial-carousel-top-port">
+     <h6>Chat App</h6>
+     <img src={poste6}  class="testimonial-client-img-port" alt="loading"/>
+     
+     </div>
+    
+   </div>
+
+
+
+ </div>
+</div>
 
       </div>
 

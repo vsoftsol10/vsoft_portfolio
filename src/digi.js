@@ -10,12 +10,12 @@ import logo from './images/vslogo.png';
 import image from './images/digiback.webp';
 import './ws.css';
 
-import poste1  from './images/web32.jpg';
-import poste2 from './images/pos.png';
-import poste3 from './images/hrms.png';
-import poste4 from './images/foods.jpg';
-import poste5 from './images/aisur.png';
-import poste6 from './images/web31.webp';
+import poste1  from './images/BANNER 1.png';
+import poste2 from './images/BANNER 2.png';
+import poste3 from './images/BANNER 3.png';
+import poste4 from './images/poster1.png';
+import poste5 from './images/poster2.png';
+import poste6 from './images/poster3.png';
 import post3 from './images/webss5.webp';
 import post4  from './images/webss6.webp';
 import lg from './images/menu.gif';
@@ -264,10 +264,7 @@ function Home() {
       <div class="container">
         <div class="row d-flex justify-content-center text-center">
         <div class="col-lg-8">
-  <h2 class="service-page-heading"   style={{ 
-         marginLeft:'18rem',
-          
-          }}>Digital Marketing Services</h2>
+  <h2 class="service-page-heading"   >Digital Marketing Services </h2>
   <p class="mb-0">Since 2024, our Tirunelveli-based digital marketing company has been delivering results-driven strategies. As a trusted partner, we specialize in SEO, social media marketing, content marketing. </p>
 </div>
 

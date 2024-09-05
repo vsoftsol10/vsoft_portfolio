@@ -46,7 +46,7 @@ const ContactForm = () => {
   };
 
   const handleBackClick = () => {
-    navigate('/'); // Redirect to the home page
+    navigate(-1); // Redirect to the home page
   };
 
   return (

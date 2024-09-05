@@ -23,7 +23,7 @@ import clientimg1 from './images/logos1 (1).png';
 import clientimg2 from './images/logos1 (3).png';
 import clientimg3 from './images/logos1 (5).png';
 import clientimg4 from './images/logos1 (2).png';
-import clientimg5 from './images/vslogo.png';
+import clientimg5 from './images/logos1 (2).png';
 
 
 
@@ -324,65 +324,50 @@ function Home() {
         <div class="container-fluid service-page-detail-con-mobile">
           <div class="service-page-detail-sub1-item-wh" data-aos="fade-up" data-aos-delay="100">
             <h3>Custom web App</h3>
-            <p>Our expert team specializes in crafting tailored web applications that meet your unique business needs,
-              ensuring seamless user experiences and maximum efficiency at an affordable cost.</p>
+            <p>Our expert team specializes in crafting tailored web applications that meet your unique business needs</p>
           </div>
           <div class="service-page-detail-sub1-item-bu" data-aos="fade-up" data-aos-delay="200">
             <h3>Ecommerce platform</h3>
-            <p>As a leading web app development company, we excel in building robust ecommerce platforms powered by MERN
-              stack, delivering feature-rich solutions that drive sales and elevate your online presence.</p>
+            <p>As a leading web app development company, we delivering feature-rich solutions that drive sales and elevate your online presence.</p>
           </div>
           <div class="service-page-detail-sub1-item-wh" data-aos="fade-up" data-aos-delay="300">
             <h3>Learning management system</h3>
-            <p>As a leading web app development company, we excel in building robust ecommerce platforms powered by MERN
-              stack, delivering feature-rich solutions that drive sales and elevate your online presence.</p>
+            <p>As a leading web app development company, we delivering feature-rich solutions that drive sales and elevate your online presence.</p>
           </div>
           <div class="service-page-detail-sub1-item-bl" data-aos="fade-up" data-aos-delay="400">
             <h3>CRMS</h3>
             <p>Our CRMS solutions are meticulously crafted to streamline customer relationship management processes,
-              offering intuitive interfaces and comprehensive functionalities, making us the preferred choice for
-              startups and enterprises alike.</p>
+              offering intuitive interfaces and comprehensive functionalities</p>
           </div>
           <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="100">
             <h3>HRMS</h3>
             <p>Enhance workforce management with our HRMS solutions, tailored to automate HR processes and boost
-              productivity, ensuring seamless operations for your organization.</p>
+              productivity.</p>
           </div>
-          <div class="service-page-detail-item-bu" data-aos="fade-up" data-aos-delay="200">
-            <h3>IoT Applications</h3>
-            <p> Leverage the power of IoT with our innovative applications, connecting devices and enabling smart
-              functionalities to drive efficiency and innovation in your business operations.</p>
-          </div>
+         
           <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="300">
             <h3>Event management platform</h3>
-            <p>Simplify event planning and execution with our customizable event management platforms, empowering event
-              organizers with intuitive tools and features to deliver unforgettable experiences.</p>
+            <p>Simplify event planning and execution with our customizable event management platforms</p>
           </div>
           <div class="service-page-detail-item-bl" data-aos="fade-up" data-aos-delay="400">
             <h3>Customer support application</h3>
-            <p>Elevate customer service with our customer support applications, providing seamless communication
-              channels and efficient ticket management systems to ensure customer satisfaction.</p>
+            <p>Elevate customer service with our customer support applications.</p>
           </div>
           <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="100">
             <h3>Help desk application</h3>
             <p>Empower your support team with our help desk applications, facilitating streamlined issue resolution and
-              customer inquiries, all while maintaining cost-effectiveness and scalability.</p>
+              customer inquiries.</p>
           </div>
           <div class="service-page-detail-item-bu" data-aos="fade-up" data-aos-delay="200">
             <h3>Analytics and reporting application</h3>
             <p> Gain valuable insights into your business performance with our analytics and reporting applications,
-              offering comprehensive data analysis and visualization tools to drive informed decision-making.</p>
+             .</p>
           </div>
           <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="300">
             <h3>Booking & Reservation application</h3>
-            <p>Simplify booking processes with our intuitive booking and reservation applications, offering seamless
-              online scheduling and reservation management for various industries.</p>
+            <p>Simplify booking processes with our intuitive booking and reservation applications.</p>
           </div>
-          <div class="service-page-detail-item-bl" data-aos="fade-up" data-aos-delay="400">
-            <h3>AI Integrated web app</h3>
-            <p>Embrace the future of technology with our AI-integrated web applications, leveraging artificial
-              intelligence to deliver personalized user experiences and optimize business operations.</p>
-          </div>
+         
         </div>
 
 
@@ -402,6 +387,7 @@ function Home() {
       <div class="carousel-inner-port" data-aos-delay="400" data-aos="fade-up">
         <div class="carousel-port carousel1">
           <div class="testimonial-carousel-top-port">
+            <h6>Admin Portal</h6>
             <img src={poste1}  class="testimonial-client-img-port" alt="loading"/>
         
           </div>
@@ -409,18 +395,20 @@ function Home() {
         </div>
         <div class="carousel-port carousel2">
           <div class=" testimonial-carousel-top-port">
-           
+          <h6>Grocery Application</h6>
           <img src={poste2}  class="testimonial-client-img-port" alt="loading"/>
           </div>
          
         </div>
         <div class="carousel-port carousel3">
           <div class=" testimonial-carousel-top-port">
+          <h6>HR Portal</h6>
           <img src={poste3}  class="testimonial-client-img-port" alt="loading"/>
           </div>
         </div>
         <div class="carousel-port carousel4">
           <div class=" testimonial-carousel-top-port">
+          <h6>Food Order Application</h6>
           <img src={poste4}  class="testimonial-client-img-port" alt="loading"/>
         
           </div>
@@ -428,6 +416,7 @@ function Home() {
         </div>
         <div class="carousel-port carousel5">
           <div class=" testimonial-carousel-top-port">
+          <h6>Survillance Application</h6>
           <img src={poste5}  class="testimonial-client-img-port" alt="loading"/>
           
           </div>
@@ -435,6 +424,7 @@ function Home() {
         </div>
         <div class="carousel-port carousel5">
           <div class=" testimonial-carousel-top-port">
+          <h6>Hospital Management</h6>
           <img src={poste6}  class="testimonial-client-img-port" alt="loading"/>
           
           </div>

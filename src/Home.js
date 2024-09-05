@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { Helmet } from 'react-helmet';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -7,6 +7,7 @@ import './App.css';
 import Footer from './Footer';
 import logo from './images/vslogo.png';
 import image from './images/homeback.webp';
+
 import './card.css';
 
 import service1Image from './images/service1.jpg';
@@ -26,9 +27,10 @@ import vsProcess6 from './images/Maintance.png';
 
 const bannersData = [
   {
-    headings: "VSOFT",
-    secondaryHeading: "At V-Soft Solutions, we believe in harnessing the power of technology to drive positive change.",
+    headings: "SOFTWARE DEVELOPMENT COMPANY",
+    secondaryHeading: "We Develop Create Innovative Ideas With Passion For All Business Applications",
     buttonText: "EXPLORE",
+    secondary:"THE NEXT GENERATION ",
     image: image
   },
  
@@ -69,6 +71,8 @@ function Home() {
   const logoRef = useRef(null);
   const headingRef = useRef(null);
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   
 
   const cardsRef=useRef(null)
@@ -90,6 +94,7 @@ function Home() {
     if (cardsRef.current) {
       cardsRef.current.scrollIntoView({ behavior: 'smooth' });
     } };
+
 
     useEffect(() => {
       const marker = markerRef.current;
@@ -170,8 +175,12 @@ function Home() {
       };
     }, []);
 
+   
+
+
     useEffect(() => {
       gsap.registerPlugin(ScrollTrigger);
+   
       const bannercontentRef = document.querySelectorAll('.banner-content');
       // Animate banner content
       gsap.fromTo('.banner-content h1',
@@ -184,6 +193,7 @@ function Home() {
         { y: 0, opacity: 1, duration: 3, delay: 5, ease: 'power2.out' }
       );
       
+     
       const cards = document.querySelectorAll('.service-card');
 
       gsap.utils.toArray('.service-card').forEach((card, index) => {
@@ -288,21 +298,27 @@ function Home() {
       </header>
 
       <div className="banner-container">
-      {bannersData.map((banner, index) => (
-        <div 
-          key={index} 
-          className="banner" 
-          style={{ backgroundImage: `url(${banner.image})` }}
-          ref={(el) => (bannerRefs.current[index] = el)}
-        >
-          <div className="banner-content" ref={bannercontentRef}>
-            <h1>{banner.headings}</h1>
-            <h2>{banner.secondaryHeading}</h2>
-            <button onClick={handleButtonClicks}>{banner.buttonText}</button>
+        {bannersData.map((banner, index) => (
+          <div
+            key={index}
+            className="banner"
+            style={{ backgroundImage: `url(${banner.image})` }}
+            ref={(el) => (bannerRefs.current[index] = el)}
+          >
+            <div className="banner-content" ref={bannercontentRef}>
+            <h3 style={{
+              textAlign:'start',
+              color:'white',
+            }}>{banner.secondary}</h3>
+              <h1>{banner.headings}</h1>
+              <h2>{banner.secondaryHeading}</h2>
+          
+              <button onClick={handleButtonClicks}>{banner.buttonText}</button>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+
 
 
 

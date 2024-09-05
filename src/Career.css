@@ -1,12 +1,19 @@
-/* Career.css */
+
 
 .form-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 170vh; /* Full viewport height */
-    padding: 20px;
+    height: 150vh; /* Full viewport height */
+    background-image: url('./images/carrer.webp'); 
+    background-size: cover; 
+
+    background-position: center; 
+    background-repeat: no-repeat; 
+  background-attachment: fixed;
     box-sizing: border-box;
+  
+
   }
   
   form {
@@ -16,6 +23,8 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: white;
+  
+   
   }
   
   h2 {

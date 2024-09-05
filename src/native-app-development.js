@@ -9,7 +9,7 @@ function NativeAppDevelopment() {
   const navigate = useNavigate();
 
   const handleNavigateToForm = () => {
-    navigate('/your-form-route');
+    navigate('/contact');
   };
   const handleGoBack = () => {
     navigate(-1); 

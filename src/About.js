@@ -6,7 +6,7 @@ import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import image from './images/about2.png';
 import gsap from 'gsap';
-
+import lg from './images/menu.gif';
 import Footer from './Footer';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -175,9 +175,8 @@ gsap.fromTo(logo,
 
         </div>
         <button className="menu-button" onClick={handleMenuToggle}>
-                  <h4>Menu</h4>
-          <ion-icon name="menu-outline"></ion-icon>
-        </button>
+  <img src={lg} alt="Menu" className="menu-gif" />
+</button>
         <nav className="App-nav" ref={navRef}>
         <ul>
             <li ref={(el) => (listRefs.current[0] = el)}>

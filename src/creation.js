@@ -183,42 +183,39 @@ const Creation = () => {
             <div className="details-images">
               
               <div className="details-image">
+              <a href="https://bulletcrackers.in/" target="_blank" rel="noopener noreferrer">bulletcrackers</a>
                 <img src={image} alt="Website 1" className="product-image" />
-                <a href="https://bulletcrackers.in/" target="_blank" rel="noopener noreferrer">bulletcrackers</a>
+             
               </div>
               <div className="details-image">
+              <a href="https://thevsoft.com/" target="_blank" rel="noopener noreferrer">vsoftsolutions</a>
                 <img src={images }alt="Website 2" className="product-image" />
-                <a href="https://thevsoft.com/" target="_blank" rel="noopener noreferrer">vsoftsolutions</a>
-              </div>
-            </div>
-          </div>
-        )}
-        {selectedProduct === 'Digital Marketing' && (
-          <div className="details-content">
-            <div className="details-sposters">
-             
-              <div className="details-poster">
-                <img src={poster1} alt="Digital Marketing Poster 1" className="product-image" />
-             
-              </div>
-              <div className="details-poster">
-                <img src={poster2} alt="Digital Marketing Poster 2" className="product-image" />
-              
-              </div>
-              <div className="details-poster">
-                <img src={poster3} alt="Digital Marketing Poster 2" className="product-image" />
               
               </div>
             </div>
           </div>
         )}
+      {selectedProduct === 'Digital Marketing' && (
+         <div className="details-content">
+         <div className="details-posters">
+         <div className="details-poster">
+<img src={poster1} alt="Digital Marketing Poster 1" className="product-image" />
+</div>
+<div className="details-poster">
+<img src={poster2} alt="Digital Marketing Poster 2" className="product-image" />
+</div>
+<div className="details-poster">
+<img src={poster3} alt="Digital Marketing Poster 3" className="product-image" />
+</div>
+         </div>
+       </div> 
+      )}
         {selectedProduct === 'UI/UX Design' && (
           <div className="details-content">
             <div className="details-posters">
            
               <div className="details-poster">
                 <img src={posters1} alt="UI/UX Design Poster 1" className="product-image" />
-         
               </div>
               <div className="details-poster">
                 <img src={posters2}  alt="UI/UX Design Poster 2" className="product-image" />

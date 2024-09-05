@@ -94,7 +94,7 @@
   font-size: 1.5rem;
   color: rgba(80, 0, 80, 0.979);
   background-color: white;
-  text-align: justify;
+  text-align: center;
 
   width: 60%;
   margin-left: 14rem;
@@ -589,32 +589,32 @@
     }
   
     .service-page-detail-sub1-item-bl {
-      height: 220px;
+      height: 150px;
       width: 236px;
     }
   
     .service-page-detail-item-bl {
-      height: 220px;
+      height: 150px;
       width: 237px;
     }
   
     .service-page-detail-sub1-item-bu {
-      height: 220px;
+      height: 150px;
       width: 236px;
     }
   
     .service-page-detail-item-bu {
-      height: 220px;
+      height: 150px;
       width: 237px;
     }
   
     .service-page-detail-sub1-item-wh {
-      height: 220px;
+      height: 150px;
       width: 236px;
     }
   
     .service-page-detail-item-wh {
-      height: 220px;
+      height: 150px;
       width: 237px;
     }
   
@@ -692,33 +692,33 @@
     }
   
     .service-page-detail-sub1-item-bl {
-      height: 220px;
-      width: 75vw;
+      height: 150px;
+      width: 236px;
     }
   
     .service-page-detail-item-bl {
-      height: 220px;
-      width: 75vw;
+      height: 150px;
+      width: 237px;
     }
   
     .service-page-detail-sub1-item-bu {
-      height: 220px;
-      width: 75vw;
+      height: 150px;
+      width: 236px;
     }
   
     .service-page-detail-item-bu {
-      height: 220px;
-      width: 75vw;
+      height: 150px;
+      width: 237px;
     }
   
     .service-page-detail-sub1-item-wh {
-      height: 220px;
-      width: 75vw;
+      height: 150px;
+      width: 236px;
     }
   
     .service-page-detail-item-wh {
-      height: 220px;
-      width: 75vw;
+      height: 150px;
+      width: 237px;
     }
   }
   
@@ -830,9 +830,11 @@
   
   .testimonial-client-img {
     width: 60px;
-    height: 60px;
+    height: 40px;
+    position: absolute;
+    background-position: cover;
     border-radius: 50%;
-    margin: 0px 20px 0px 0px;
+   justify-items: auto;
   }
   
   .testimonial-second-div {
@@ -1280,7 +1282,7 @@
       width: 40vw;
       height: 22.5vw;
       margin-bottom: 25px;
-      object-fit: cover;
+      
       border-radius: 10px;
     }
   }
@@ -1499,6 +1501,17 @@
       width: 93vw;
       height: 90px;
     }
+
+    .carousel-inner-port {
+
+
+
+
+      width: 100%;
+      height: 10%;
+      display: flex;
+      overflow-x: hidden;
+    }
   
     .client-container h2 {
       font-size: 14px;
@@ -1653,5 +1666,9 @@
   }
 }
 
+.h6{
+  text-align: center;
+  font-size: 2rem;
 
+}
 

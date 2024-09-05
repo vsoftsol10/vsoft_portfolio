@@ -47,7 +47,7 @@ function Cross() {
         <div className="cards">
           <h3>Limitations</h3>
            <ul>
-            <li><i className="fas fa-check red-tick"></i> Lower performance</li>
+            <li> <i className="fas fa-check red-tick"></i> Lower performance</li>
             <li><i className="fas fa-check red-tick"></i> Limited access to features</li>
             <li><i className="fas fa-check red-tick"></i> Design consistency challenges</li>
           </ul>
