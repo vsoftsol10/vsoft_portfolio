@@ -19,11 +19,7 @@ import poste6 from './images/poster3.png';
 import post3 from './images/webss5.webp';
 import post4  from './images/webss6.webp';
 import lg from './images/menu.gif';
-import clientimg1 from './images/logos1 (1).png';
-import clientimg2 from './images/logos1 (3).png';
-import clientimg3 from './images/logos1 (5).png';
-import clientimg4 from './images/logos1 (2).png';
-import clientimg5 from './images/vslogo.png';
+
 import Footer from './Footer';
 
 
@@ -198,12 +194,20 @@ function Home() {
                 <h6 className="custom-heading1">Vsflows</h6>
                 </Link>
             </li>
-            <li ref={(el) => (listRefs.current[1] = el)}>
-            <Link to="/services">
-                <ion-icon name="add-circle-outline"></ion-icon>
-                <h6 className="custom-heading2">Services</h6>
-                </Link>
-            </li>
+            <li ref={(el) => (listRefs.current[1] = el)} className="dropdown">
+    <Link to="/services">
+        <ion-icon name="add-circle-outline"></ion-icon>
+        <h6 className="custom-heading2">Services</h6>
+    </Link>
+    <div className="dropdown-content">
+        <Link to="/ws">Website  Development</Link>
+        <Link to="/appsdevelop">App Development</Link>
+        <Link to="/digi">Digital Marketing</Link>
+        <Link to="/seo">Seo Services</Link>
+        <Link to="/ui">UI/UX Designs</Link>
+    </div>
+</li>
+
             <li ref={(el) => (listRefs.current[2] = el)}>
             <Link to="/creation">
                 <ion-icon name="settings-outline"></ion-icon>
@@ -377,7 +381,7 @@ function Home() {
    
 <div class="testimonial-container-port" data-aos-delay="200" data-aos="fade-up">
     
-      <h5 class="services-details-page-heading" > Digital Marketing</h5>
+      <h5 class="services-details-page-heading" > Our Client</h5>
     </div>
 
 
@@ -430,25 +434,11 @@ function Home() {
 
       </div>
     </div>
-   <h5 class="services-details-page-heading" >  Our Clients</h5>
-    <div class="client-container" data-aos-delay="200">
-  <div class="d-flex align-items-center justify-content-around w-100 h-100">
- 
-    
-    <div class="d-flex client-img-con justify-content-evenly align-items-center font-medium text-lg text-black">
-      <div class="client-img-wrapper" id="marquee">
-        <img src={clientimg1} alt class="client-img1" />
-        <img src={clientimg2} alt class="client-img2" />
-        <img src={clientimg3} alt class="client-img3" />
-        <img src={clientimg4} alt class="client-img4" />
-        <img src={clientimg5} alt class="client-img5" />
-      </div>
-    </div>
-  </div>
-  <div class="client-sub-con bg-green-400 absolute z-0">
    
-  </div>
-</div>
+    
+    
+   
+
 
 
 

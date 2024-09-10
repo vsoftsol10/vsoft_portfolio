@@ -40,7 +40,7 @@ const Footer = () => {
             </p>
             <p>
               <i className="fa fa-globe"></i> 
-           <a href="http://www.vsoftsolutions.in.net" target="_blank" rel="noopener noreferrer">www.vsoftsolutions.in.net</a>
+           <a href="http://www.vsoftsolutions.in.net" target="_blank" rel="noopener noreferrer">www.thevsoft.com</a>
             </p>
             <p>
               <i className="fa fa-envelope"></i> 

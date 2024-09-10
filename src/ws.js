@@ -22,14 +22,15 @@ import lg from './images/menu.gif';
 import clientimg1 from './images/logos1 (1).png';
 import clientimg2 from './images/logos1 (3).png';
 import clientimg3 from './images/logos1 (5).png';
-import clientimg4 from './images/logos1 (2).png';
-import clientimg5 from './images/logos1 (2).png';
+import clientimg4 from './images/logo6.png';
+import clientimg5 from './images/logo5.png';
+import clientimg6 from './images/logos1 (1).png';
 
 
 
 const bannersData = [
   {
-    headings: "Web Application Development",
+    headings: "Website  Development",
     secondaryHeading: "At V-Soft Solutions, Our innovative approach streamlines the development process, enhancing efficiency and delivering robust web applications that meet our client's needs and drive their success.",
     buttonText: "EXPLORE",
     image: image,
@@ -184,6 +185,17 @@ function Home() {
         <div className="header-left">
           <img src={logo} ref={logoRef} className="App-logo" alt="logo" />  
         </div>
+        <div>
+  <p style={{ color: 'white', margin: 0 }}>
+    <a href="tel:+919095422237" style={{ textDecoration: 'none', color: 'inherit' }}>
+      <i className="fa fa-phone" style={{ height: '4rem', width: '4rem' }}></i>
+    </a>
+    <a href="mailto:vsoftsolutions8813@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
+      <i className="fa fa-envelope" style={{ height: '4rem', width: '4rem' }}></i>
+    </a>
+  </p>
+
+</div>
         <button className="menu-button" onClick={handleMenuToggle}>
   <img src={lg} alt="Menu" className="menu-gif" />
 </button>
@@ -254,7 +266,7 @@ function Home() {
       <div class="container">
         <div class="row d-flex justify-content-center text-center">
           <div class="col-lg-8">
-            <h2 class="service-page-heading" >Web Application Development Company</h2>
+            <h2 class="service-page-heading" >Website  Development Company</h2>
             <p class="mb-0" >Since 2024, our Tirunelveli-based web application development company
               has been crafting innovative solutions for Enterprises. As a trusted offshore development partner, we
               specialize in creating custom web applications tailored to your unique business needs. Join us in
@@ -267,108 +279,98 @@ function Home() {
 
 <div class="services-details-page-parent" id="solutions">
         <h5 class="services-details-page-heading" > --Solutions--</h5>
-        <div class="container-fluid service-page-detail-con ">
-          <div class="service-page-detail-sub2">
-            <div class="service-page-detail-item1" data-aos="fade-up" data-aos-delay="500">
-            <img src={post3}  />
-            </div>
-            <div class="service-page-detail-item-bl" data-aos="fade-up" data-aos-delay="100">
-              <h3>HRMS</h3>
-              <p> Tailored to automate HR processes and boost
-                productivity</p>
-            </div>
-            <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="200">
-              <h3>IoT Applications</h3>
-              <p> Connecting devices and enabling smart
-                functionalities to drive efficiency and innovation in your business operations.</p>
-            </div>
-            <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="300">
-              <h3>Event management platform</h3>
-              <p> Empowering
-                event organizers with intuitive tools and features to deliver unforgettable experiences.</p>
-            </div>
-            <div class="service-page-detail-item-bu" data-aos="fade-up" data-aos-delay="400">
-              <h3>Customer support application</h3>
-              <p> Providing seamless communication
-                channels and efficient ticket management systems to ensure customer satisfaction.</p>
-            </div>
-          </div>
-          <div class="service-page-detail-sub3">
-            <div class="service-page-detail-item-bu" data-aos="fade-up" data-aos-delay="100">
-              <h3>Help desk application</h3>
-              <p>Empower your support team with our help desk applications, facilitating streamlined issue resolution
-                and customer inquiries</p>
-            </div>
-            <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="200">
-              <h3>Analytics and reporting application</h3>
-              <p> Gain valuable insights into your business performance with our analytics and reporting applications
-              </p>
-            </div>
-            <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="300">
-              <h3>Booking & Reservation application</h3>
-              <p>Simplify booking processes with our intuitive booking and reservation applications</p>
-            </div>
-            <div class="service-page-detail-item-bl" data-aos="fade-up" data-aos-delay="400">
-              <h3>AI Integrated web app</h3>
-              <p>Embrace the future of technology with our AI-integrated web applications</p>
-            </div>
-            <div class="service-page-detail-item1" data-aos="fade-up" data-aos-delay="500">
-            <img src={post4} />
-            </div>
-          </div>
-        </div>
+        <div class="container-fluid service-page-detail-con">
+  <div class="service-page-detail-sub2">
+    <div class="service-page-detail-item1" data-aos="fade-up" data-aos-delay="500">
+      <img src={post3} />
+    </div>
+    <div class="service-page-detail-item-bl" data-aos="fade-up" data-aos-delay="100">
+      <h3>Corporate Website Development</h3>
+      <p> Tailored to automate workflows and boost productivity, helping your business achieve its goals.</p>
+    </div>
+    <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="200">
+      <h3>IoT-Integrated Websites</h3>
+      <p> Connecting devices through smart functionalities, enabling seamless IoT integration into your business operations.</p>
+    </div>
+    <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="300">
+      <h3>Event Management Websites</h3>
+      <p>Empowering event organizers with intuitive features to manage and deliver unforgettable events seamlessly.</p>
+    </div>
+    <div class="service-page-detail-item-bu" data-aos="fade-up" data-aos-delay="400">
+      <h3>Customer Support Websites</h3>
+      <p>Providing efficient ticket management systems and communication tools to enhance customer satisfaction.</p>
+    </div>
+  </div>
+  <div class="service-page-detail-sub3">
+    <div class="service-page-detail-item-bu" data-aos="fade-up" data-aos-delay="100">
+      <h3>Help Desk Websites</h3>
+      <p>Empower your support team with streamlined tools for efficient issue resolution and customer inquiry handling.</p>
+    </div>
+    <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="200">
+      <h3>Analytics and Reporting Websites</h3>
+      <p>Gain valuable insights into your business performance with our tailored analytics and reporting websites.</p>
+    </div>
+    <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="300">
+      <h3>Booking & Reservation Websites</h3>
+      <p>Simplify booking processes with intuitive reservation systems, improving user experience and management.</p>
+    </div>
+    <div class="service-page-detail-item-bl" data-aos="fade-up" data-aos-delay="400">
+      <h3>AI-Integrated Websites</h3>
+      <p>Embrace the future of technology with websites enhanced by AI integration for a cutting-edge user experience.</p>
+    </div>
+    <div class="service-page-detail-item1" data-aos="fade-up" data-aos-delay="500">
+      <img src={post4} />
+    </div>
+  </div>
+</div>
+
 
 
 
 
         <div class="container-fluid service-page-detail-con-mobile">
-          <div class="service-page-detail-sub1-item-wh" data-aos="fade-up" data-aos-delay="100">
-            <h3>Custom web App</h3>
-            <p>Our expert team specializes in crafting tailored web applications that meet your unique business needs</p>
-          </div>
-          <div class="service-page-detail-sub1-item-bu" data-aos="fade-up" data-aos-delay="200">
-            <h3>Ecommerce platform</h3>
-            <p>As a leading web app development company, we delivering feature-rich solutions that drive sales and elevate your online presence.</p>
-          </div>
-          <div class="service-page-detail-sub1-item-wh" data-aos="fade-up" data-aos-delay="300">
-            <h3>Learning management system</h3>
-            <p>As a leading web app development company, we delivering feature-rich solutions that drive sales and elevate your online presence.</p>
-          </div>
-          <div class="service-page-detail-sub1-item-bl" data-aos="fade-up" data-aos-delay="400">
-            <h3>CRMS</h3>
-            <p>Our CRMS solutions are meticulously crafted to streamline customer relationship management processes,
-              offering intuitive interfaces and comprehensive functionalities</p>
-          </div>
-          <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="100">
-            <h3>HRMS</h3>
-            <p>Enhance workforce management with our HRMS solutions, tailored to automate HR processes and boost
-              productivity.</p>
-          </div>
-         
-          <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="300">
-            <h3>Event management platform</h3>
-            <p>Simplify event planning and execution with our customizable event management platforms</p>
-          </div>
-          <div class="service-page-detail-item-bl" data-aos="fade-up" data-aos-delay="400">
-            <h3>Customer support application</h3>
-            <p>Elevate customer service with our customer support applications.</p>
-          </div>
-          <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="100">
-            <h3>Help desk application</h3>
-            <p>Empower your support team with our help desk applications, facilitating streamlined issue resolution and
-              customer inquiries.</p>
-          </div>
-          <div class="service-page-detail-item-bu" data-aos="fade-up" data-aos-delay="200">
-            <h3>Analytics and reporting application</h3>
-            <p> Gain valuable insights into your business performance with our analytics and reporting applications,
-             .</p>
-          </div>
-          <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="300">
-            <h3>Booking & Reservation application</h3>
-            <p>Simplify booking processes with our intuitive booking and reservation applications.</p>
-          </div>
-         
-        </div>
+  <div class="service-page-detail-sub1-item-wh" data-aos="fade-up" data-aos-delay="100">
+    <h3>Custom Website Development</h3>
+    <p>Our expert team specializes in creating bespoke websites tailored to your business needs, ensuring a unique online presence.</p>
+  </div>
+  <div class="service-page-detail-sub1-item-bu" data-aos="fade-up" data-aos-delay="200">
+    <h3>Ecommerce Website Development</h3>
+    <p>We build feature-rich ecommerce websites that enhance your sales, providing a seamless shopping experience for your customers.</p>
+  </div>
+  <div class="service-page-detail-sub1-item-wh" data-aos="fade-up" data-aos-delay="300">
+    <h3>Educational Website Development</h3>
+    <p>Our team delivers engaging and interactive educational platforms, perfect for schools, universities, and online learning providers.</p>
+  </div>
+  <div class="service-page-detail-sub1-item-bl" data-aos="fade-up" data-aos-delay="400">
+    <h3>Corporate Website Development</h3>
+    <p>We create corporate websites designed to enhance your brand image and effectively communicate with your target audience.</p>
+  </div>
+  <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="100">
+    <h3>Portfolio Website Development</h3>
+    <p>Showcase your work with a stunning portfolio website that highlights your skills and projects in the best possible way.</p>
+  </div>
+  <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="300">
+    <h3>Event Website Development</h3>
+    <p>Our event websites are designed to streamline planning and registration, offering customized solutions for any type of event.</p>
+  </div>
+  <div class="service-page-detail-item-bl" data-aos="fade-up" data-aos-delay="400">
+    <h3>Customer Support Website</h3>
+    <p>Enhance your customer service by providing comprehensive support via a dedicated customer support website.</p>
+  </div>
+  <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="100">
+    <h3>Help Desk Website</h3>
+    <p>We create user-friendly help desk websites that facilitate efficient issue resolution and customer inquiries management.</p>
+  </div>
+  <div class="service-page-detail-item-bu" data-aos="fade-up" data-aos-delay="200">
+    <h3>Analytics and Reporting Website</h3>
+    <p>Gain deep insights into your business data with our powerful analytics and reporting websites, designed to provide clear and actionable reports.</p>
+  </div>
+  <div class="service-page-detail-item-wh" data-aos="fade-up" data-aos-delay="300">
+    <h3>Booking & Reservation Website</h3>
+    <p>We create intuitive booking and reservation websites that simplify the reservation process for both you and your customers.</p>
+  </div>
+</div>
+
 
 
       </div>
@@ -377,7 +379,7 @@ function Home() {
    
 <div class="testimonial-container-port" data-aos-delay="200" data-aos="fade-up">
     
-      <h5 class="services-details-page-heading" >  Web App Development</h5>
+      <h5 class="services-details-page-heading" >  Website Devement </h5>
     </div>
 
 
@@ -447,6 +449,7 @@ function Home() {
         <img src={clientimg3} alt class="client-img3" />
         <img src={clientimg4} alt class="client-img4" />
         <img src={clientimg5} alt class="client-img5" />
+        <img src={clientimg6} alt class="client-img5" />
       </div>
     </div>
   </div>

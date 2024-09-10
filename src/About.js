@@ -191,12 +191,19 @@ gsap.fromTo(logo,
                 <h6 className="custom-heading2">Services</h6>
                 </Link>
             </li>
-            <li ref={(el) => (listRefs.current[2] = el)}>
-            <Link to="/services">
-                <ion-icon name="settings-outline"></ion-icon>
-                <h6 className="custom-heading1">Creations</h6>
-                </Link>
-            </li>
+            <li ref={(el) => (listRefs.current[1] = el)} className="dropdown">
+    <Link to="/services">
+        <ion-icon name="add-circle-outline"></ion-icon>
+        <h6 className="custom-heading2">Services</h6>
+    </Link>
+    <div className="dropdown-content">
+        <Link to="/ws">Website  Development</Link>
+        <Link to="/appsdevelop">App Development</Link>
+        <Link to="/digi">Digital Marketing</Link>
+        <Link to="/seo">Seo Services</Link>
+        <Link to="/ui">UI/UX Designs</Link>
+    </div>
+</li>
 
             <li ref={(el) => (listRefs.current[3] = el)}>
             <Link to="/about">

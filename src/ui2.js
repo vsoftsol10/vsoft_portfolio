@@ -248,9 +248,10 @@ function Home() {
           }}
           ref={(el) => (bannerRefs.current[index] = el)}
         >
-          <div className="banners-contents" ref={bannercontentRef}>
+          <div className="banners-contents" ref={bannercontentRef}
+          style={{textAlign:'start'}}>
             <h1 style={{ 
-           color:'black',
+           color:'white',
           }}  >{banner.headings}</h1>
             <h2    style={{ 
           opacity:44,}} >{banner.secondaryHeading}</h2>

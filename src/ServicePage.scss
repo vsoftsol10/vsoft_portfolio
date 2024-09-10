@@ -7,8 +7,8 @@
 .servicesss-containers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px; // Adjust as needed
-    margin-top: 40px; // Add margin to separate rows if needed
+    gap: 50px; 
+    margin-top: 40px; 
 }
 
 .servicesss-card {
@@ -17,14 +17,15 @@
     justify-items: center;
     background: white; // Adjust background color if needed
     border: 2px solid rgba(80, 0, 80, 0.979);
-    border-radius: 30px; // Optional border-radius
+    border-radius: 10px; // Optional border-radius
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
     margin-left: 50px;
     text-align: center;
     border-radius: 40px;
-    
+    width: 60%;
+    height: 100%;
    
     // For tablets (landscape)
     @media (max-width: 1024px) {
@@ -34,13 +35,13 @@
 
     // For tablets
     @media (max-width: 768px) {
-        grid-template-columns: repeat(1, 1fr); // 1 card per row
+        grid-template-columns: repeat(1, 1fr); 
         gap: 15px;
     }
 
     // For mobile devices
     @media (max-width: 480px) {
-        grid-template-columns: repeat(1, 1fr); // 1 card per row
+        grid-template-columns: repeat(1, 1fr); 
         gap: 10px;
         border-radius: 15px;
     }

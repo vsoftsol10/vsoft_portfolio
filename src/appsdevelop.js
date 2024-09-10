@@ -30,8 +30,8 @@ import { convertLength } from '@mui/material/styles/cssUtils';
 
 const bannersData = [
   {
-    headings: "Android  Application Development",
-    secondaryHeading: "At V-Soft Solutions,Our innovative approach streamlines the development process, enhancing efficiency and delivering high-quality android applications that meet our client's needs and drive their success.",
+    headings: "Application Development",
+    secondaryHeading: "At V-Soft Solutions,Our innovative approach streamlines the development process, enhancing efficiency and delivering high-quality applications that meet our client's needs and drive their success.",
     buttonText: "EXPLORE",
     image: image,
 
@@ -202,12 +202,20 @@ function Home() {
                 <h6 className="custom-heading1">Vsflows</h6>
                 </Link>
             </li>
-            <li ref={(el) => (listRefs.current[1] = el)}>
-            <Link to="/services">
-                <ion-icon name="add-circle-outline"></ion-icon>
-                <h6 className="custom-heading2">Services</h6>
-                </Link>
-            </li>
+            <li ref={(el) => (listRefs.current[1] = el)} className="dropdown">
+    <Link to="/services">
+        <ion-icon name="add-circle-outline"></ion-icon>
+        <h6 className="custom-heading2">Services</h6>
+    </Link>
+    <div className="dropdown-content">
+        <Link to="/ws">Website  Development</Link>
+        <Link to="/appsdevelop">App Development</Link>
+        <Link to="/digi">Digital Marketing</Link>
+        <Link to="/seo">Seo Services</Link>
+        <Link to="/ui">UI/UX Designs</Link>
+    </div>
+</li>
+
             <li ref={(el) => (listRefs.current[2] = el)}>
             <Link to="/creation">
                 <ion-icon name="settings-outline"></ion-icon>
@@ -261,8 +269,8 @@ function Home() {
       <div class="container">
         <div class="row d-flex justify-content-center text-center">
           <div class="col-lg-8">
-            <h2 class="service-page-heading" >Android Application Development Company</h2>
-            <p class="mb-0" >Since 2024, our Tirunelveli-basedandroid app development company has been crafting innovative solutions for Android. As a trusted offshore development partner, we specialize in creating custom android applications tailored to your unique business needs. Join us in shaping the future of mobile technology using React-Native.</p>
+            <h2 class="service-page-heading" > Application Development Company</h2>
+            <p class="mb-0" >Since 2024, our Tirunelveli-basedandroid app development company has been crafting innovative solutions for Android and IOS. As a trusted offshore development partner, we specialize in creating custom android applications tailored to your unique business needs. Join us in shaping the future of mobile technology using React-Native and Swift</p>
           </div>
         </div>
       </div>

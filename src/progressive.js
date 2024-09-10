@@ -9,9 +9,7 @@ function Cross() {
   const [selectedButton, setSelectedButton] = useState(null);
   const navigate = useNavigate();
 
-  const handleButtonClick = (buttonIndex) => {
-    setSelectedButton(buttonIndex);
-  };
+
 
   const handleNavigateToForm = () => {
     navigate('/contact');

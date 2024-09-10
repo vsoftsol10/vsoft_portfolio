@@ -380,3 +380,22 @@ div.backBtn:hover span.bLine {
   .label {
     font-size: 0.8em;
   }}
+
+.default-banner{
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    display: flex;
+  
+
+}
+
+.banner-heading{
+  text-align: center;
+}
+
+.banner-subheading{
+  text-align: start;
+}

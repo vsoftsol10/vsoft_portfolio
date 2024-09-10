@@ -1,27 +1,33 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { Link } from 'react-router-dom';
-
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './website.css';
 import { useNavigate } from 'react-router-dom';
 import serviceImage1 from './images/web1.gif';
 import serviceImage2 from './images/web2.gif';
 import serviceImage3 from './images/web3.gif';
 import serviceImage4 from './images/web4.gif';
-import logo from './images/vslogo.png';
+import  image from './images/web111.webp'; 
 
 const ServicePage = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
   const packageDetailsRef = useRef(null);
   const imageRef = useRef(null);
   const detailItemsRef = useRef([]);
-  const markerRef = useRef(null);
-  const listRefs = useRef([]);
+  const  bannercontentRef= useRef(null);
+
   const bannerRefs = useRef([]);
-  const pageTransitionRef = useRef(null);
-  const navRef = useRef(null);
-  const logoRef = useRef(null);
-  const headingRef = useRef(null);
+
+  const bannersData = [
+    {
+      headings: "Welcome to VSoft Solutions",
+      secondaryHeading: "Tailored Web Solutions for Every Need",
+      buttonText: "EXPLORE",
+      image: image,
+  
+    },
+   
+  ];
   const packages = [
     {
       title: 'Home Package',
@@ -38,7 +44,7 @@ const ServicePage = () => {
       image: serviceImage1,
     },
     {
-      title: 'Pro  Package',
+      title: 'Pro Package',
       price: '₹ 20,000',
       details: [
         'Up to 20 Pages',
@@ -52,22 +58,6 @@ const ServicePage = () => {
         '1 Month FREE Website Maintenance Package',
       ],
       image: serviceImage2,
-    },
-    {
-      title: 'E-Commerce Package',
-      price: '₹ 30,000',
-      details: [
-        'Up to 100 Products/Variations & 20 Pages',
-        'Image Optimization',
-        'Structure Optimizations',
-        'SEO Optimizations',
-        'E-Commerce Integration',
-        'Banners for Core Pages (5 max)',
-        'FREE Basic Hosting',
-        'Performance Tracking',
-        '1 Month FREE Website Maintenance Package',
-      ],
-      image: serviceImage3,
     },
     {
       title: 'Tailored Package',
@@ -88,116 +78,83 @@ const ServicePage = () => {
       ],
       image: serviceImage4,
     },
+    {
+      title: 'E-Commerce Package',
+      price: '₹ 30,000',
+      details: [
+        'Up to 100 Products/Variations & 20 Pages',
+        'Image Optimization',
+        'Structure Optimizations',
+        'SEO Optimizations',
+        'E-Commerce Integration',
+        'Banners for Core Pages (5 max)',
+        'FREE Basic Hosting',
+        'Performance Tracking',
+        '1 Month FREE Website Maintenance Package',
+      ],
+      image: serviceImage3,
+    },
   ];
 
   const navigate = useNavigate();
-  const handleMenuToggle = () => {
-    if (window.innerWidth <= 568) { // Check if the screen width is 768px or less
-      navRef.current.classList.toggle('show');
-      
-     
-    }
-  };
+
+ 
   const handleBackClick = () => {
     navigate(-1); 
   };
 
   useEffect(() => {
     if (selectedPackage !== null && packageDetailsRef.current) {
-      // Reset any previous animations
       gsap.set(packageDetailsRef.current, { autoAlpha: 0, x: -100 });
       gsap.set(imageRef.current, { autoAlpha: 0, x: 100 });
       gsap.set(detailItemsRef.current, { autoAlpha: 0, y: 50 });
 
-      // Animate the package details container
       gsap.to(packageDetailsRef.current, {
         autoAlpha: 1,
         x: 0,
         duration: 1,
       });
 
-      // Animate the image from the right
       gsap.to(imageRef.current, {
         autoAlpha: 1,
         x: 0,
         duration: 1,
-        delay: 0.5, // slight delay for better timing with details
+        delay: 0.5,
       });
 
-      // Animate each detail item from the bottom with staggered timing
       gsap.to(detailItemsRef.current, {
         autoAlpha: 1,
         y: 0,
         duration: 0.7,
         stagger: 0.3,
-        delay: 1, // delay to ensure it starts after the image
+        delay: 1,
       });
     }
   }, [selectedPackage]);
-  const marker = markerRef.current;
-  const banners = bannerRefs.current;
-  const list = listRefs.current;
-  const pageTransition = pageTransitionRef.current;
-  const nav = navRef.current;
-  const logo = logoRef.current;
-  const heading = headingRef.current;
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const bannercontentRef = document.querySelectorAll('.banners-contents');
+    // Animate banner content
+    gsap.fromTo('.banners-contents h1',
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 5, ease: 'power2.out' }
+    );
+  
+    gsap.fromTo('.banners-contents h2',
+      { y: 100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 3, delay: 5, ease: 'power2.out' }
+    );
 
+    
+    return () => {
+      gsap.killTweensOf('.banners-contents h1');
+      gsap.killTweensOf('.banners-contents h2');
+   
+    };
+  }, []);
 
-  const bannercontentRef = document.querySelectorAll('.banner-content');
-
-
-
-  // Move indicator animation
-  function moveIndicator(e) {
-    if (marker) {
-      gsap.to(marker, { left: e.target.offsetLeft, width: e.target.offsetWidth, duration: 0.5 });
-    }
-  }
-
-  function activeLink(e) {
-    list.forEach((item) => {
-      if (item) item.classList.remove('active');
-    });
-    e.target.closest('li').classList.add('active');
-  }
-
-  list.forEach((item) => {
-    if (item) {
-      item.addEventListener('mousemove', moveIndicator);
-      item.addEventListener('mouseover', activeLink);
-    }
-  });
-
-
-
-  gsap.fromTo(pageTransition, 
-    { opacity: 0, scale: 0.8 }, 
-    { opacity: 1, scale: 1, duration: 1.5, ease: 'power2.out' }
-  );
-
-  // Logo rotation animation
-  gsap.fromTo(logo, 
-    { rotate: 0 }, 
-    { rotate: 360, duration: 2, ease: 'power2.inOut' }
-  );
-
-  // Heading animations
-  gsap.fromTo(heading, 
-    { opacity: 0, y: '100%' },
-    { opacity: 1, y: '0%', duration: 1.5, delay: 1, ease: 'power2.out' }
-  );
-
-
-
-  // Navigation animation
-  gsap.fromTo(nav, 
-    { opacity: 0, x: '100%' },
-    { opacity: 1, x: '0%', duration: 1.5, delay: 2, ease: 'power2.out' }
-  );
   return (
-
-        
     <section className="service-sections">
       <aside className="sidebarss">
         <h2 className="hh">Website Packages</h2>
@@ -213,14 +170,49 @@ const ServicePage = () => {
           ))}
         </ul>
       </aside>
+      
       <div className="backBtn" onClick={handleBackClick}>
         <span className="line tLine"></span>
         <span className="line mLine"></span>
         <span className="label">Back</span>
         <span className="line bLine"></span>
       </div>
+      
       <main className="main-content">
-        {selectedPackage !== null && (
+        {selectedPackage === null ? (
+              <div className="banner-containers"  style={{ 
+                backgroundImage: `url(${image})`,
+                backgroundSize: 'contain',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                height: '200%',
+                width: '110%',
+                display: 'flex',
+                alignItems: 'start',
+                justifyContent: 'start'
+
+              }}>
+              {bannersData.map((banner, index) => (
+                <div 
+                  key={index} 
+                  className="banners" 
+                 
+                  ref={(el) => (bannerRefs.current[index] = el)}
+                >
+                  <div className="banners-contents" style={{
+                   
+                   borderRadius:'30px',
+                  }} ref={bannercontentRef}>
+                    <h1 style={{color:'white',}}>{banner.headings}</h1>
+                    <h2  style={{color:'black',backgroundColor: 'rgba(255, 255, 255, 1)',}}>{banner.secondaryHeading}</h2>
+                    <button onClick={() => setSelectedPackage(0)}>
+          {banner.buttonText}
+        </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+        ) : (
           <div className="package-details active" ref={packageDetailsRef}>
             <h3 className="package-title">{packages[selectedPackage].title}</h3>
             <div className="image-container">
@@ -248,7 +240,6 @@ const ServicePage = () => {
         )}
       </main>
     </section>
-
   );
 };
 
