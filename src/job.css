@@ -1,0 +1,256 @@
+.job-list {
+   display: flex;
+  gap: 3rem; 
+  width: 100%;
+  height: 800%;
+ 
+    
+  }
+  body {
+  
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; 
+  }
+.bannersss {
+    width: 100%;
+    height: 530px; 
+    background-image: url('./images/careers.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+    text-align:start;
+    margin-bottom: 0%;
+    font-size: 24px; 
+    font-weight: bold;
+  }
+  
+  .banner-contents {
+
+    padding: 20px;
+  
+   
+  }
+ 
+.job-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.job-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.job-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.apply-button {
+  background-color: #500050;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: #750075;
+}
+
+  .bts{
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: rgba(80, 0, 80, 0.979);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 3rem;
+  }
+  
+  .job-card button:hover {
+    background-color: #007bff;
+  }
+.jobsh1{
+    color:black;
+    text-align: center;
+} .Jobsh2{
+   color: black;
+   text-align: center; 
+}
+
+
+.sticky-back {
+  position: fixed;
+  bottom: 250px;
+  left: 10px;
+}
+
+.sticky-back button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 12rem;
+  height: 3rem;
+  border-radius: 25px;
+  margin-bottom: 150%;
+  margin-right: 3rem;
+}
+
+.sticky-back button:hover {
+  background-color: #0056b3;
+}
+
+/* job.css */
+.courses {
+  font-family: Arial, sans-serif;
+}
+
+
+
+.course-h1 {
+  margin: 0;
+}
+
+.course-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.course-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(50% - 20px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.3s;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.course-card.highlight {
+  background-color:#0056b3 ;
+  border-color: rgba(80, 0, 80, 0.979);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.course-card:hover {
+  transform: scale(1.02);
+}
+
+.course-title {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.icon-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: black;
+}
+
+.apply-button {
+  background-color: rgba(80, 0, 80, 0.979);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.apply-button:hover {
+  background-color: #45a049;
+}
+
+.sticky-back {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+.bannerssss {
+  width: 100%;
+  height: 530px; 
+  background-image: url('./images/courses.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color:black; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  text-align:center;
+  margin-bottom: 0%;
+  font-size: 24px; 
+  font-weight: bold;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+}
+
+.popup-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color:rgba(80, 0, 80, 0.979);;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background-color: rgba(80, 0, 80, 0.979);;
+}

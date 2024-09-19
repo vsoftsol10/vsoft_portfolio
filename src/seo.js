@@ -76,6 +76,9 @@ const ServicePage = () => {
   ];
 
   const navigate = useNavigate();
+  const handleContactClick = () => {
+    navigate('/contact'); 
+  };
 
   const handleBackClick = () => {
     navigate(-1); // Navigate to the previous page
@@ -200,6 +203,7 @@ const ServicePage = () => {
               </li>
             ))}
           </ul>
+          <button className="contact-button" onClick={handleContactClick}>Contact Us</button>
         </div>
       )}
     </main>

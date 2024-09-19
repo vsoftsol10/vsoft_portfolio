@@ -399,3 +399,19 @@ div.backBtn:hover span.bLine {
 .banner-subheading{
   text-align: start;
 }
+
+.contact-button {
+  padding: 10px 20px;
+  background-color: rgba(80, 0, 80, 0.979);;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 4rem;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #0056b3;
+}

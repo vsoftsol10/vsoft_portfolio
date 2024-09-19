@@ -23,10 +23,6 @@ import vsProcess4 from './images/testing.png';
 import vsProcess5 from './images/launch.png';
 import vsProcess6 from './images/Maintance.png';
 
-import poste1  from './images/BANNE1.png';
-import poste2 from './images/BANNE2.png';
-import poste3 from './images/BANNE3.png';
-import poste4 from './images/BANNE4.png';
 
 
 const bannersData = [
@@ -434,11 +430,13 @@ function Home() {
 
 <div class="card-containers">
   <div class="card card1">
-    <div class="card-text">SEO Services</div>
+    
   </div>
+  <div class="card-text">SEO Services</div>
   <div class="card card2">
-    <div class="card-text">UI/UX Design</div>
+   
   </div>
+  <div class="card-text">UI/UX Design</div>
 </div>
 
 

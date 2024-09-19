@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import lg from './images/menu.gif';
 import image from './images/career.webp';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import logo from './images/vslogo.png';
 import { storage, ref, uploadBytes, getDownloadURL } from "./firebase"; // Ensure this is correctly configured
 import emailjs from "emailjs-com";
@@ -44,13 +44,13 @@ const JobApplicationForm = ({ visible, onClose }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const [showSkillsDropdown, setShowSkillsDropdown] = useState(false);
-  const navigate = useNavigate();
+ 
   const programmingSkills = [
     "JavaScript", "Python", "Java", "C++", "Ruby", "PHP", "C#", "Swift", "Go", "HTML", "CSS", "React", "Node.js", "Kotlin", "Figma", "Angular", "Not Applicable",
   ];
 
   const positions = [
-    "Web Developer", "App Developer", "Digital Marketer", "Data Entry","Intern","Paid Intern",
+    "Frontend", "Backend", "Full Stack", "UI/UX","Digital Marketing","App Development",
   ];
 
   const handleChange = (e) => {
@@ -191,10 +191,10 @@ const JobApplicationForm = ({ visible, onClose }) => {
         <button className="close-button" onClick={onClose}>Close</button>
         <h2 style={{
           color:'black',
-        }}>Job Application Form</h2>
+        }}>Course Training and Internship Form</h2>
         <form onSubmit={handleSubmit}>
           <label>
-            Position:
+           Courses and InternShip:
             <select name="position" value={formData.position} onChange={handleChange} required>
               {positions.map((pos) => (
                 <option key={pos} value={pos.toLowerCase()}>
@@ -271,6 +271,7 @@ const Career = () => {
   const headingRef = useRef(null);
   const solutionsRef = useRef(null);
   const navRef = useRef(null);
+  const navigate = useNavigate();
   const bannerRefs = useRef([]);
   const handleMenuToggle = () => {
     if (window.innerWidth <= 568) { // Check if the screen width is 768px or less
@@ -278,6 +279,16 @@ const Career = () => {
       
      
     }}
+
+    const handleMenuToggles = () => {
+      navigate('/jobs')
+     }
+     const handleMenuToggls = () => {
+      navigate('/course')
+     }
+     const handleMenuTogglss = () => {
+      navigate('/intern')
+     }
   
   useEffect(() => {
     const pageTransition = pageTransitionRef.current;
@@ -419,9 +430,10 @@ const Career = () => {
       <li><i className="fas fa-check red-tick"></i> Mentorship from experienced professionals</li>
       <li><i className="fas fa-check red-tick"></i> Opportunity to work on real-world projects</li>
       <li><i className="fas fa-check red-tick"></i> Flexible  Training hours</li>
-      <button onClick={handleShowForm}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)} style={{
+     
+    </ul>
+    <button onClick={handleMenuToggls}
+    style={{
 
        backgroundColor: isHovered ? ' rgba(10, 60, 100, 0.979)' : 'white',
        color: isHovered ? 'white' : 'black',
@@ -435,7 +447,7 @@ const Career = () => {
        transform: isHovered ? 'scale(1.05)' : 'scale(1)',
 
       }}>Apply Now</button>
-    </ul>
+  
   </div>
   <div className="cards">
     <h3>InternShip</h3>
@@ -445,9 +457,8 @@ const Career = () => {
       <li><i className="fas fa-check red-tick"></i> Networking opportunities with industry leaders and Practical Tasks</li>
       <li><i className="fas fa-check red-tick"></i> Potential for full-time employment</li>
     </ul>
-    <button onClick={handleShowForm}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)} style={{
+    <button onClick={handleMenuTogglss}
+    style={{
 
        backgroundColor: isHovered ? ' rgba(10, 60, 100, 0.979)' : 'white',
        color: isHovered ? 'white' : 'black',
@@ -470,9 +481,8 @@ const Career = () => {
       <li><i className="fas fa-check red-tick"></i> Positive and inclusive work environment</li>
       <li><i className="fas fa-check red-tick"></i> Opportunities for advancement and growth</li>
     </ul>
-    <button onClick={handleShowForm}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)} style={{
+    <button onClick={handleMenuToggles}
+    style={{
 
        backgroundColor: isHovered ? ' rgba(10, 60, 100, 0.979)' : 'white',
        color: isHovered ? 'white' : 'black',

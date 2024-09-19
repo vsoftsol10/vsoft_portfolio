@@ -23,6 +23,11 @@ import Cross from './cross';
 import Contactform from './cross2';
 import Hybrid from './hybrid';
 import Progressive from './progressive';
+import Jobs from './jobs';
+import Jobss from './Jobsapplication';
+import Job from './course';
+import Jo from './intern';
+import Jobsss from './courses';
 function App() {
   return (
     <Router>
@@ -54,6 +59,11 @@ function App() {
            <Route path="/cross" element={<Cross/>} />
            <Route path="/hybrid" element={<Hybrid/>} />
            <Route path="/progressive" element={<Progressive/>} />
+           <Route path="/jobs" element={<Jobs/>} />
+           <Route path="/course" element={<Job/>} />
+           <Route path="/courses" element={<Jobsss/>} />
+           <Route path="/jobsapplication" element={<Jobss/>} />
+           <Route path="/intern" element={<Jo/>} />
       </Routes>
     </Router>
   );

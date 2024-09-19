@@ -43,6 +43,11 @@ const ServicePage = () => {
     navigate(-1); // Navigate to the previous page
   };
 
+
+  const handleContactClick = () => {
+    navigate('/contact'); 
+  };
+  
   const bannersData = [
     {
       headings: "Welcome to VSoft Solutions",
@@ -191,6 +196,7 @@ const ServicePage = () => {
               </li>
             ))}
           </ul>
+          <button className="contact-button" onClick={handleContactClick}>Contact Us</button>
         </div>
       )}
     </main>

@@ -34,6 +34,9 @@ const ServicePage = () => {
     },
    
   ];
+  const handleContactClick = () => {
+    navigate('/contact'); 
+  };
 
 
   const packages = [
@@ -225,6 +228,7 @@ const ServicePage = () => {
               </li>
             ))}
           </ul>
+          <button className="contact-button" onClick={handleContactClick}>Contact Us</button>
         </div>
       )}
     </main>

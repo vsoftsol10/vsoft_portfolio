@@ -50,7 +50,9 @@ const ServicePage = () => {
   const  bannercontentRef= useRef(null);
 
 
-
+  const handleContactClick = () => {
+    navigate('/contact'); 
+  };
   const bannerRefs = useRef([]);
  const bannersData = [
   {
@@ -214,6 +216,7 @@ margin:'0'
               </li>
             ))}
           </ul>
+          <button className="contact-button" onClick={handleContactClick}>Contact Us</button>
         </div>
       )}
     </main>

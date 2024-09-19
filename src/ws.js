@@ -152,7 +152,7 @@ function Home() {
     useEffect(() => {
       gsap.registerPlugin(ScrollTrigger);
       const bannercontentRef = document.querySelectorAll('.banners-contents');
-      // Animate banner content
+    
       gsap.fromTo('.banners-contents h1',
         { y: 100, opacity: 0 },
         { y: 0, opacity: 1, duration: 5, ease: 'power2.out' }

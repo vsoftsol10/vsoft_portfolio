@@ -203,8 +203,8 @@ function Home() {
         <Link to="/ws">Website  Development</Link>
         <Link to="/appsdevelop">App Development</Link>
         <Link to="/digi">Digital Marketing</Link>
-        <Link to="/seo">Seo Services</Link>
-        <Link to="/ui">UI/UX Designs</Link>
+        <Link to="/seo2">Seo Services</Link>
+        <Link to="/ui2">UI/UX Designs</Link>
     </div>
 </li>
 

@@ -64,10 +64,10 @@ const ContactForm = () => {
             onChange={handleChange}
           >
             <option value="">Select a package</option>
-            <option value="Basic Website">Basic Website</option>
-            <option value="Standard Website">Standard Website</option>
-            <option value="Advanced Website">Advanced Website</option>
-            <option value="Premium Website">Premium Website</option>
+            <option value="Basic Website">Home Package </option>
+            <option value="Standard Website">Pro Package </option>
+            <option value="Advanced Website">E-Commerce</option>
+            <option value="Premium Website">Tailored Package</option>
             <option value="All Packages">All Packages</option>
           </select>
         </div>
@@ -84,8 +84,8 @@ const ContactForm = () => {
             onChange={handleChange}
           >
             <option value="">Select a package</option>
-            <option value="Basic App">Basic App</option>
-            <option value="Advanced App">Advanced App</option>
+            <option value="Basic App">Home Package</option>
+            <option value="Advanced App">Advanced Package</option>
             <option value="All Packages">All Packages</option>
           </select>
         </div>
