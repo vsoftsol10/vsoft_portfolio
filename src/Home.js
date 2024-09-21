@@ -37,27 +37,6 @@ const bannersData = [
 ];
 
 
-const cardsData = [
-  { photo: service1Image,  style: {
-    position: 'absolute',
-top:'0px',
-    left: '40px',
-    color: 'black',
-    fontSize: '1.5rem',
-    fontWeight: 'bold',
-    background: 'rgba(0, 0, 0, 0.0)'
-  
-  } ,name : 'Web Development',link: '/ws' },
-  { photo: service2Image,  name : 'APP Development', link: '/appsdevelop' },
-  { photo: service3Image,   style: {
-    top:'0px',
-    color:'black',
-    background: 'rgba(0, 0, 0, 0.0)'
-  
-  },name : 'Digital Marketing', link: '/digi' },
-
-
-];
 
 
 
@@ -194,43 +173,13 @@ function Home() {
       );
       
      
-      const cards = document.querySelectorAll('.service-card');
-
-      gsap.utils.toArray('.service-card').forEach((card, index) => {
-        // Determine row
-        const isFirstRow = index < 3;  // Cards with index 0, 1, 2 are in the first row
-        const isSecondRow = index >= 3; // Cards with index 3, 4 are in the second row
-      
-        // Calculate starting X position
-        const xStart = isFirstRow ? '-50px' : '0px'; 
-        // Determine card animation properties
-        gsap.fromTo(card,
-          {
-            opacity: 0,
-            x: xStart
-          },
-          {
-            opacity: 1,
-            x: 0,
-            duration: 1, // Adjust the duration as needed
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: card,
-              start: 'top 80%',
-              end: 'bottom 20%',
-              scrub: true,
-              markers: false
-            }
-          }
-        );
-       
-      });
+    
       
       
       return () => {
         gsap.killTweensOf('.banner-content h1');
         gsap.killTweensOf('.banner-content h2');
-        gsap.killTweensOf(cards);
+       
       };
     }, []);
     
@@ -327,7 +276,7 @@ function Home() {
             <div className="banner-content" ref={bannercontentRef}>
             <h3 style={{
               textAlign:'start',
-              color:'white',
+              color:'black',
             }}>{banner.secondary}</h3>
               <h1>{banner.headings}</h1>
               <h2>{banner.secondaryHeading}</h2>
@@ -401,43 +350,59 @@ function Home() {
       </div>
     </div>
   </div>
-
-
-  <div className="Servisess">
-  <h2>Our Services</h2>
-  <div className="cards-container" ref={cardsRef}>
-    {cardsData.map((card, index) => (
-      <div
-        key={index}
-        className="service-card"
-        onClick={() => handleCardClick(card.link)}
-        style={{ gridArea: `card${index + 1}` }} // Assign grid area for each card
-      >
-        <div className="card-inner">
-          <div className="card-front" style={{ backgroundImage: `url(${card.photo})` }}  styles={card.style}>
-            <div className="card-name" style={card.style} >
-              {card.name}
-            </div>
-          </div>
-        
-        </div>
-      </div>
-    ))}
+  <h2 style={{color: ' rgba(80, 0, 80, 0.979)',
+    fontSize:'2rem'
+  }}>Our Services</h2>
+<div className="card-containers">
+  <div className="cardsss">
+    <Link to="/ws" className="card card1">
+      <div className="card-content"></div>
+      <h3 className='cls'>Web Development</h3>
+    </Link>
   </div>
 
- 
-</div>
-
-<div class="card-containers">
-  <div class="card card1">
-    
+  <div className="cardsss">
+    <Link to="/appsdevelop" className="card card2">
+      <div className="card-content"></div>
+      <h3>App Development</h3>
+    </Link>
   </div>
-  <div class="card-text">SEO Services</div>
-  <div class="card card2">
+
+  <div className="cardsss">
+    <Link to="/digi" className="card card3">
+      <div className="card-content"></div>
+      <h3>Digital Marketing</h3>
+    </Link>
+  </div>
+
+  <div className="cardsss" >
+    <Link to="/seo2" className="card card4" style={{
    
+    marginTop:'3rem',
+  }}>
+      <div className="card-content"></div>
+      <h3>SEO Services</h3>
+    </Link>
   </div>
-  <div class="card-text">UI/UX Design</div>
+
+  <div className="cardsss" >
+    <Link to="/ui" className="card card5"  style={{
+    marginTop:'3rem',
+  }} >
+      <div className="card-content"></div>
+      <h3>UI/UX Design</h3>
+   
+    </Link>
+  </div>
+
+
 </div>
+
+
+
+
+
+
 
 
     

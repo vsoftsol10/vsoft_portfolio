@@ -165,7 +165,7 @@ const ServicePage = () => {
                 }} ref={bannercontentRef}>
                   <h1 style={{color:'black',}}>{banner.headings}</h1>
                   <h2  style={{color:'black',}}>{banner.secondaryHeading}</h2>
-                  <button onClick={() => setSelectedPackage(0)}>
+                  <button onClick={() => setSelectedPackage(0)} style={{ textAlign: 'center'}}>
         {banner.buttonText}
       </button>
                 </div>

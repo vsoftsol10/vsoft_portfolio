@@ -196,7 +196,7 @@ ul li.active a::after {
 .banner-content button {
   
   font-weight: lighter;
-  color: white;
+  color:white;
   font-size: 1.2rem;
 }
 .banner-content h1{
@@ -422,7 +422,7 @@ ul li.active a::after {
     width: 100%;
     display: flex;
     align-items:start;
-    justify-content: center;
+    justify-content: start;
   }
   .banner-container {
     position: relative;
@@ -431,6 +431,11 @@ ul li.active a::after {
     overflow: hidden;
     padding: 0rem;
     margin-top: 1rem;
+  }
+  .banner-content{
+    text-align: start;
+    width: 50%;
+
   }
   
 }
@@ -476,3 +481,6 @@ ul li.active a::after {
   display: block;
 }
 
+.h3{
+  font-size: 1rem;
+}

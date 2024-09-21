@@ -254,10 +254,10 @@ function Home() {
         backgroundPosition:convertLength }}
           ref={(el) => (bannerRefs.current[index] = el)}
         >
-          <div className="banners-contents" ref={bannercontentRef}>
+          <div className="banners-contents" style={{ textAlign: 'center'}} ref={bannercontentRef}>
             <h1>{banner.headings}</h1>
             <h2>{banner.secondaryHeading}</h2>
-            <button  onClick={handleButtonClick}>{banner.buttonText}</button>
+            <button  onClick={handleButtonClick}  >{banner.buttonText}</button>
           </div>
         </div>
       ))}

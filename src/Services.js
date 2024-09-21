@@ -191,11 +191,12 @@ const cardss =useRef(null);
                   }}
                 >
                   <div className="banners-contents" style={{
-                   
+                   justifyContent:'start',
                    borderRadius:'30px',
+                   textAlign:'start',
                   }} ref={bannercontentRef}>
-                    <h1 style={{color:'white',}}>{banner.headings}</h1>
-                    <h2  style={{color:'white',}}>{banner.secondaryHeading}</h2>
+                    <h1 className='hsss' style={{color:'white',margin:'0',}}>{banner.headings}</h1>
+                    <h2   className='hsss' style={{color:'black',}}>{banner.secondaryHeading}</h2>
                     <button onClick={() => cardss.current.scrollIntoView({ behavior: 'smooth' })}>
   {banner.buttonText}
 </button>
