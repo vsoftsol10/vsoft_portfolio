@@ -393,7 +393,7 @@ function Home() {
 
         <div className="cardsss">
           <Link
-            to="/ui#banner-containers"
+            to="/ui2#banner-containers"
             className="card card5"
             style={{
               marginTop: "3rem",

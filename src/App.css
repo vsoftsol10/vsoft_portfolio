@@ -14,7 +14,7 @@ body {
   position: sticky; /* Fixes the header to the top of the viewport */
   top: 0;
   left: 0;
-  width: 110%;
+  width: 100%;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -380,6 +380,9 @@ ul li.active a::after {
   .App-nav {
     display: none; /* Hide the navigation bar */
   }
+.App-header{
+	 width: 110%;
+}
 
   .App-nav.show {
     display: block; /* Shown when the 'show' class is added */
