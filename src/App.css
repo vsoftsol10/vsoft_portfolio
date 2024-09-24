@@ -467,13 +467,13 @@ ul li.active a::after {
     font-size: 1.2rem; /* Adjust text size for mobile */
   }
   .banner {
-    background-size: cover; 
+    background-size:contain; 
     background-position: center; 
     height: 100%; 
     width: 100%;
     display: flex;
-    align-items:start;
-    justify-content: start;
+    align-items:center;
+    justify-content: center;
   }
   .banner-container {
     position: relative;

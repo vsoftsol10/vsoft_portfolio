@@ -24,9 +24,7 @@ const Footer = () => {
 
           <div className="footer-column links">
             <h3>Quick Links</h3>
-            <Link to="/career">
-          <p>Career</p>
-        </Link>
+           
           
             <p><a href="#">Privacy Policy</a></p>
              <p><a href="#">Terms & Conditions</a></p>

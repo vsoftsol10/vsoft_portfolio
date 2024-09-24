@@ -1,11 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import logo from './images/vslogo.png';
-import serviceImage1 from './images/web-development.gif';
-import serviceImage2 from './images/mobile-development2-2.gif';
-import serviceImage3 from './images/ui.gif';
-import serviceImage4 from './images/seo 2.gif';
-import serviceImage5 from './images/giphy.png';
+
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import image from './images/services.webp';
 import lg from './images/menu.gif';
@@ -218,52 +214,61 @@ const cardss =useRef(null);
               ))}
             </div>
             <div className="servicesss">
-            <h3 className='ho'> Our Services</h3>
-    <div className="servicesss-containers" ref={cardss}>
-
-        <div className="servicesss-card" onClick={() => handleCardClick('./ws')}>
-            <div className="cardsss-content">
-                <h3  className='ss' >Website Development</h3>
-                <img src={serviceImage1}  className="floating-image" />
-                <p className="pp">Starts From ₹8000</p>
+            <section>
+      <div className="row">
+        <div className="col-md-4 col-sm-6 col-xs-12">
+          <div className="card">
+            <div className="cover item-a">
+              <h1>AppDevelopment<br /> Start From ₹ 13000</h1>
+             
+              <div className="card-back">
+                <Link to="/appdevelopment">View detail</Link>
+              </div>
             </div>
+          </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('./appsdevelop')}>
-            <div className="cardsss-content">
-                <h3  className='ss'>App Development</h3>
-                <img src={serviceImage2} className="floating-image" />
-                <p className="pp">Starts From ₹13000</p>
+        <div className="col-md-4 col-sm-6 col-xs-12">
+          <div className="card">
+            <div className="cover item-b">
+            <h1>WebDevelopment<br /> Start From ₹ 8000</h1>
+              <div className="card-back">
+                <Link to="/ws">View Details</Link>
+              </div>
             </div>
+          </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('./ui2')}>
-            <div className="cardsss-content" style={{
-    marginTop:'3rem'}} >
-                <h3  className='ss'>UI/UX Design</h3>
-                <img src={serviceImage3} className="floating-image" />
-                <p className="pp">Starts From ₹3000</p>
+        <div className="col-md-4 col-sm-6 col-xs-12">
+          <div className="card">
+            <div className="cover item-c">
+            <h1>Digital Marketing<br /> Start From ₹ 5000</h1>
+              <div className="card-back">
+                <Link to="digi">View Details</Link>
+              </div>
             </div>
+          </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('./seo2')} style={{
-          marginLeft:' 20rem'
-        }}>
-            <div className="cardsss-content"   style={{
-    marginTop:'3rem'}}>
-                <h3  className='ss'> SEO Service </h3>
-                <img src={serviceImage4}className="floating-image" />
-                <p className="pp">Starts From ₹4000</p>
+        <div className="col-md-4 col-sm-6 col-xs-12">
+          <div className="card">
+            <div className="cover item-D">
+            <h1>SEO Service<br /> Start From ₹ 5000</h1>
+              <div className="card-back">
+                <Link to="digi">View Details</Link>
+              </div>
             </div>
+          </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('./digi')} style={{
-          marginLeft:' 20rem'
-        }}>
-            <div className="cardsss-content">
-                <h3  className='ss'>Digital Marketing</h3>
-                <img src={serviceImage5}  className="floating-image" />
-                <p className="pp">Starts From ₹1000</p>
+        <div className="col-md-4 col-sm-6 col-xs-12">
+          <div className="card">
+            <div className="cover item-E">
+            <h1>UI/UX DESIGN<br /> Start From ₹ 5300</h1>
+              <div className="card-back">
+                <Link to="digi">View Details</Link>
+              </div>
             </div>
+          </div>
         </div>
-       
-    </div>
+      </div>
+    </section>
 </div>
 
 <Footer />

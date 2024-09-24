@@ -501,7 +501,7 @@ const Career = () => {
             <li ref={(el) => (listRefs.current[0] = el)}>
               <Link to="/career">
                 <ion-icon name="home-outline"></ion-icon>
-                <h6 className="custom-heading1">Career</h6>
+                <h6 className="custom-heading1">IT Training & Career</h6>
               </Link>
             </li>
           </ul>
