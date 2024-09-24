@@ -13,7 +13,7 @@ const CourseList = () => {
       description: 'Learn to build and design responsive and interactive user interfaces.',
       skills: 'HTML, CSS, JavaScript, React, Angular',
       duration: '3 months',
-      location: 'Online',
+      location: 'Online/Offline',
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const CourseList = () => {
       description: 'Master server-side development and database management.',
       skills: 'Node.js, Express, MongoDB, SQL, Python',
       duration: '3 months',
-      location: 'Online',
+      location: 'Online/Offline',
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ const CourseList = () => {
       description: 'Become proficient in both frontend and backend technologies.',
       skills: 'HTML, CSS, JavaScript, React, Node.js, Express, MongoDB',
       duration: '6 months',
-      location: 'Online',
+      location: 'Online/Offline',
     },
     {
       id: 4,

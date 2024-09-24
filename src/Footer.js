@@ -6,14 +6,14 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-row">
-          <div className="footer-column about">
+          <div className="footer-column abouts">
          
             <p>
               VSOFT Solutions<br /><br />
-               10J/2, 2nd block, Trivandrum Rd,,<br /> Vanarapettai, Tirunelveli.<br />Tamil Nadu-627002, India.     <div className="map-container">
+               10J/2, 2nd block, Trivandrum Rd,<br /> Vanarapettai, Tirunelveli.<br />Tamil Nadu-627002, India.     <div className="map-container">
                <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.0625184396577!2d77.761351!3d8.6581184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba858c2b030ffaf%3A0x42860b7f14b34f1!2sVsoft%20Solutions!5e0!3m2!1sen!2sin!4v1605671234513!5m2!1sen!2sin"
-    width="100%"
+    width="80%"
     height="100" // Adjust the height as needed
     style={{ border: 0 }}
     allowFullScreen

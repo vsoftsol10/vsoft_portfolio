@@ -14,7 +14,7 @@ textarea {
 .containers {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 125vh;
   padding: 2rem;
   background-color: #fafafa;
   overflow: hidden;
@@ -517,4 +517,28 @@ gap: 7px;
 .bttn:hover {
   background-color: rgba(10, 60, 100, 0.979);;
   color:   rgba(10, 60, 100, 0.979);
+}
+
+@media (max-width: 768px) {
+
+  .contact-form, .contact-info 
+  {
+    width: 100%;
+  }
+  .contact-info .title {
+    text-align: center;
+  }
+  .contact-form form {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .contact-form, .contact-info 
+  {
+    width: 100%;
+    padding: 1rem 1rem;
+  }
 }

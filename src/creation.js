@@ -9,16 +9,25 @@ import Button from '@mui/material/Button';
 import gsap from 'gsap';
 import image from './images/website1.jpg';
 import images from './images/website2.jpg';
-import poster1 from './images/BANNER 1.png';
-import poster2 from './images/BANNER 2.png';
-import poster3 from './images/BANNER 3.png';
-import posters1 from './images/poster1.png';
-import posters2 from './images/poster2.png';
-import posters3 from './images/poster3.png';
+import imagess from './images/web33.jpg';
+import imagesss from './images/website5.jpg';
+import poster1 from './images/BANNER 1.webp';
+import poster2 from './images/BANNER 2.webp';
+import poster3 from './images/BANNER 3.webp';
+import posters1 from './images/poster1.webp';
+import posters2 from './images/poster2.webp';
+import posters3 from './images/poster3.webp';
+import posters4 from './images/poster4.webp';
 import poste1 from './images/logos1 (1).png';
 import poste2 from './images/logos1 (5).png';
 import poste3 from './images/logos1 (3).png';
 import poste4 from './images/logos1 (4).png';
+import postee1 from './images/app1.webp';
+import postee2 from './images/app2.webp';
+import postee3 from './images/app3.webp';
+import postee4 from './images/app4.webp';
+import postee5 from './images/app5.webp';
+import postee6 from './images/app1.webp';
 import Footer from './Footer';
 const CustomButton = styled(Button)({
   backgroundColor: 'rgba(80, 0, 80, 0.979)',
@@ -110,20 +119,33 @@ const Creation = () => {
         <div className="header-left">
           <img src={logo} ref={logoRef} className="App-logo" alt="logo" />
           <div>
-  <p style={{ color: 'white', margin: 0 }}>
-    <a href="tel:+919095422237" style={{ textDecoration: 'none', color: 'inherit' }}>
-      <i className="fa fa-phone" style={{ height: '4rem', width: '4rem' }}></i>
-    </a>
-    <a href="mailto:vsoftsolutions8813@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
-      <i className="fa fa-envelope" style={{ height: '4rem', width: '4rem' }}></i>
-    </a>
-  </p>
-
-</div>
+            <p style={{ color: "white", margin: 0 }}>
+              <a
+                href="tel:+919095422237"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <i
+                  className="fa fa-phone"
+                  style={{ height: "4rem", width: "4rem" }}
+                ></i>
+              </a>
+              <a
+                href="mailto:vsoftsolutions8813@gmail.com"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <i
+                  className="fa fa-envelope"
+                  style={{ height: "4rem", width: "4rem" }}
+                ></i>
+              </a>
+            </p>
+            <button className="menu-button" onClick={handleMenuToggle}>
+          <img src={lg} alt="Menu" className="menu-gif" />
+        </button>
+          </div>
+      
         </div>
-        <button className="menu-button" onClick={handleMenuToggle}>
-  <img src={lg} alt="Menu" className="menu-gif" />
-</button>
+      
         <nav className="App-nav" ref={navRef}>
         <ul>
             <li ref={(el) => (listRefs.current[0] = el)}>
@@ -142,7 +164,7 @@ const Creation = () => {
         <Link to="/appsdevelop">App Development</Link>
         <Link to="/digi">Digital Marketing</Link>
         <Link to="/seo">Seo Services</Link>
-        <Link to="/ui">UI/UX Designs</Link>
+        <Link to="/ui2">UI/UX Designs</Link>
     </div>
 </li>
 
@@ -187,7 +209,7 @@ const Creation = () => {
       <div className="sidebarsss" ref={sidebarRef}>
         <ul className="sideulss"ref={ulRef} >
           <li className="sideli" onClick={() => handleProductClick('Website')}>Websites</li>
-          <li  className="sideli" onClick={() => handleProductClick('Logo')}>Applications</li>
+          <li  className="sideli" onClick={() => handleProductClick('Apps')}>Applications</li>
           <li className="sideli"  onClick={() => handleProductClick('Digital Marketing')}>Digital Marketing</li>
           <li  className="sideli" onClick={() => handleProductClick('UI/UX Design')}>UI/UX Design</li>
           <li  className="sideli" onClick={() => handleProductClick('Logo')}>Logo</li>
@@ -201,14 +223,25 @@ const Creation = () => {
             <div className="details-images">
               
               <div className="details-image">
-              <a href="https://bulletcrackers.in/" target="_blank" rel="noopener noreferrer">bulletcrackers</a>
+              <a href="https://bulletcrackers.in/" target="_blank" rel="noopener noreferrer">Bulletcrackers</a>
                 <img src={image} alt="Website 1" className="product-image" />
              
               </div>
               <div className="details-image">
               <a href="https://thevsoft.com/" target="_blank" rel="noopener noreferrer">vsoftsolutions</a>
                 <img src={images }alt="Website 2" className="product-image" />
+                
               
+              </div>
+              <div className="details-image">
+              <a href="https://anichadigitalinfra.com//" target="_blank" rel="noopener noreferrer">AnichaDigitals</a>
+                <img src={imagess} alt="Website 3" className="product-image" />
+             
+              </div>
+              <div className="details-image">
+              <a href="https://campuzone.com/" target="_blank" rel="noopener noreferrer">campuzone</a>
+                <img src={imagesss} alt="Website 3" className="product-image" />
+             
               </div>
             </div>
           </div>
@@ -225,6 +258,7 @@ const Creation = () => {
 <div className="details-poster">
 <img src={poster3} alt="Digital Marketing Poster 3" className="product-image" />
 </div>
+
          </div>
        </div> 
       )}
@@ -240,6 +274,9 @@ const Creation = () => {
               </div>
               <div className="details-poster">
                 <img src={posters3}  alt="UI/UX Design Poster 2" className="product-image" />
+              </div>
+              <div className="details-poster">
+                <img src={posters4}  alt="UI/UX Design Poster 2" className="product-image" />
               </div>
             </div>
           </div>
@@ -260,6 +297,37 @@ const Creation = () => {
               </div>
               <div className="details-poster">
                 <img src={poste4}  alt="UI/UX Design Poster 2" className="product-image" />
+              </div>
+            </div>
+          </div>
+        )}
+          {selectedProduct === 'Apps' && (
+          <div className="details-content">
+            <div className="details-posters">
+           
+              <div className="details-poster">
+                <img src={postee1} alt="UI/UX Design Poster 1" className="product-image" />
+         <h1 style={{color :'black',textAlign:'center'}}> Chat App</h1>
+              </div>
+              <div className="details-poster">
+                <img src={postee2}  alt="UI/UX Design Poster 2" className="product-image" />
+                <h1 style={{color :'black',textAlign:'center'}}>  Job App</h1>
+              </div>
+              <div className="details-poster">
+                <img src={postee3}  alt="UI/UX Design Poster 2" className="product-image" />
+                <h1 style={{color :'black',textAlign:'center'}}> HRMS App </h1>
+              </div>
+              <div className="details-poster">
+                <img src={postee4}  alt="UI/UX Design Poster 2" className="product-image" />
+                <h1 style={{color :'black',textAlign:'center'}}>Food Delivery App </h1>
+              </div>
+              <div className="details-poster">
+                <img src={postee5}  alt="UI/UX Design Poster 2" className="product-image" />
+                <h1 style={{color :'black',textAlign:'center'}}> </h1>
+              </div>
+              <div className="details-poster">
+                <img src={postee6}  alt="UI/UX Design Poster 2" className="product-image" />
+                <h1 style={{color :'black',textAlign:'center'}}> Chat App</h1>
               </div>
             </div>
           </div>

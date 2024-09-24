@@ -48,6 +48,7 @@ margin-right: 0%;
   gap: 1rem; 
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .details-image, .details-poster {
@@ -56,6 +57,7 @@ margin-right: 0%;
   cursor: pointer;
   width: 100%;
   animation-duration: 1s;
+  object-fit: contain;
 }
 
 .details-image {
@@ -72,6 +74,7 @@ margin-right: 0%;
   margin-top: 3rem;
   width: 100%;
   height:80%;
+  object-fit: contain;
   transition: transform 3s ease;
 }
 
@@ -96,6 +99,7 @@ margin-right: 0%;
   white-space: nowrap; /* Use nowrap for horizontal scrolling */
   scroll-behavior: smooth;
   padding: 1rem;
+  object-fit: contain;
 }
 
 .details-poster {
@@ -103,6 +107,8 @@ margin-right: 0%;
   width: 350px; /* Set a fixed width for each poster */
   height: auto;
   margin-right: 1rem;
+  
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
@@ -134,6 +140,8 @@ margin-right: 0%;
 
 .details-image {
   animation: slideInFromLeft 1s ease-out;
+  object-fit: contain; 
+
 }
 .aa{
   font-size: 3rem;
@@ -182,6 +190,7 @@ margin-right: 0%;
   margin: 0.6rem;
   text-align: center;
   cursor: pointer;
+  font-size: 1.5rem;
   font-weight: lighter;
   background-color: #0a3c64;
   color: white;
@@ -242,12 +251,15 @@ margin-right: 0%;
   }
 
   .details-images, .details-posters {
-    grid-template-columns: repeat(1, 1fr); /* 1 column layout */
+    grid-template-columns: repeat(1, 1fr);
+    object-fit: contain; 
   }
 
   .details-poster {
     width: 100%; 
     margin-right: 0;
+    object-fit: contain; 
+
   }
 
   .products-content {

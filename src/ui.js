@@ -158,7 +158,7 @@ const ServicePage = () => {
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
               height: '200%',
-              width: '110%',
+              width: '100%',
               display: 'flex',
               alignItems: 'start',
               justifyContent: 'start'
@@ -173,11 +173,11 @@ const ServicePage = () => {
                 style={{
                  
               justifyContent: 'start',
-              marginLeft:'10rem',
+              // marginLeft:'10rem',
                 }}
               >
                 <div className="banners-contents" style={{
-                  textAlign:'start',
+                  textAlign:'center',
                  
                  borderRadius:'30px',
                 }} ref={bannercontentRef}>

@@ -415,3 +415,31 @@ div.backBtn:hover span.bLine {
 .contact-button:hover {
   background-color: #0056b3;
 }
+
+
+@media (max-width: 768px) {
+
+ 
+  
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+.detail-item {
+  font-size: 10px;
+}
+.contact-button {
+  margin: 5px;
+  font-size: 15px;
+  text-align: center;
+}
+.banner-containers{
+  width: 100%;
+  height: 100%;
+}
+.sideul {
+  margin-top: 3rem;
+}
+
+}
+

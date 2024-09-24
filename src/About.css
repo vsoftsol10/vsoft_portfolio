@@ -314,8 +314,7 @@
   }
 
   .about-image, .about-content {
-    max-width: 100%;
-
+    max-width: 120%;
     box-shadow: none;
   }
 
@@ -352,7 +351,7 @@
 
   .icon-item {
     width: 100%;
-    justify-content: center;
+    justify-content:start;
     margin-bottom: 10px;
   }
 }

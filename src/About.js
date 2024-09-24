@@ -172,11 +172,34 @@ gsap.fromTo(logo,
       <header className="App-header">
         <div className="header-left">
           <img src={logo} ref={logoRef} className="App-logo" alt="logo" />
-
+          <div>
+            <p style={{ color: "white", margin: 0 }}>
+              <a
+                href="tel:+919095422237"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <i
+                  className="fa fa-phone"
+                  style={{ height: "4rem", width: "4rem" }}
+                ></i>
+              </a>
+              <a
+                href="mailto:vsoftsolutions8813@gmail.com"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <i
+                  className="fa fa-envelope"
+                  style={{ height: "4rem", width: "4rem" }}
+                ></i>
+              </a>
+            </p>
+            <button className="menu-button" onClick={handleMenuToggle}>
+          <img src={lg} alt="Menu" className="menu-gif" />
+        </button>
+          </div>
+      
         </div>
-        <button className="menu-button" onClick={handleMenuToggle}>
-  <img src={lg} alt="Menu" className="menu-gif" />
-</button>
+    
         <nav className="App-nav" ref={navRef}>
         <ul>
             <li ref={(el) => (listRefs.current[0] = el)}>
@@ -185,12 +208,7 @@ gsap.fromTo(logo,
                 <h6 className="custom-heading1">Vsflows</h6>
                 </Link>
             </li>
-            <li ref={(el) => (listRefs.current[1] = el)}>
-            <Link to="/services">
-                <ion-icon name="add-circle-outline"></ion-icon>
-                <h6 className="custom-heading2">Services</h6>
-                </Link>
-            </li>
+           
             <li ref={(el) => (listRefs.current[1] = el)} className="dropdown">
     <Link to="/services">
         <ion-icon name="add-circle-outline"></ion-icon>
@@ -271,7 +289,7 @@ gsap.fromTo(logo,
             )}
             {activeSection === 'values' && (
               <div className="content-values">
-               <div className="icon-container">
+               <div className="icon-containers">
                   <h3  className="hs">Our Values</h3>
                   <div className="icon-item">
                     <span className="icon">1</span>

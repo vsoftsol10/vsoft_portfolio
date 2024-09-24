@@ -186,19 +186,32 @@ function Home() {
           <img src={logo} ref={logoRef} className="App-logo" alt="logo" />  
         </div>
         <div>
-  <p style={{ color: 'white', margin: 0 }}>
-    <a href="tel:+919095422237" style={{ textDecoration: 'none', color: 'inherit' }}>
-      <i className="fa fa-phone" style={{ height: '4rem', width: '4rem' }}></i>
-    </a>
-    <a href="mailto:vsoftsolutions8813@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
-      <i className="fa fa-envelope" style={{ height: '4rem', width: '4rem' }}></i>
-    </a>
-  </p>
-
-</div>
-        <button className="menu-button" onClick={handleMenuToggle}>
-  <img src={lg} alt="Menu" className="menu-gif" />
-</button>
+            <p style={{ color: "white", margin: 0 }}>
+              <a
+                href="tel:+919095422237"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <i
+                  className="fa fa-phone"
+                  style={{ height: "4rem", width: "4rem" }}
+                ></i>
+              </a>
+              <a
+                href="mailto:vsoftsolutions8813@gmail.com"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <i
+                  className="fa fa-envelope"
+                  style={{ height: "4rem", width: "4rem" }}
+                ></i>
+              </a>
+            </p>
+            <button className="menu-button" onClick={handleMenuToggle}>
+          <img src={lg} alt="Menu" className="menu-gif" />
+        </button>
+          </div>
+      
+  
 
         <nav className="App-nav"ref={navRef}>
           <ul>
@@ -208,12 +221,19 @@ function Home() {
                 <h6 className="custom-heading1">Vsflows</h6>
                 </Link>
             </li>
-            <li ref={(el) => (listRefs.current[1] = el)}>
-            <Link to="/services">
-                <ion-icon name="add-circle-outline"></ion-icon>
-                <h6 className="custom-heading2">Services</h6>
-                </Link>
-            </li>
+            <li ref={(el) => (listRefs.current[1] = el)} className="dropdown">
+    <Link to="/services">
+        <ion-icon name="add-circle-outline"></ion-icon>
+        <h6 className="custom-heading2">Services</h6>
+    </Link>
+    <div className="dropdown-content">
+        <Link to="/ws">Website  Development</Link>
+        <Link to="/appsdevelop">App Development</Link>
+        <Link to="/digi">Digital Marketing</Link>
+        <Link to="/seo">Seo Services</Link>
+        <Link to="/ui2">UI/UX Designs</Link>
+    </div>
+</li>
             <li ref={(el) => (listRefs.current[2] = el)}>
             <Link to="/creation">
                 <ion-icon name="settings-outline"></ion-icon>
@@ -243,12 +263,12 @@ function Home() {
         </nav>
       </header>
 
-      <div className="banner-containers">
+      <div className="banner-containers" id="banner-containers" >
       {bannersData.map((banner, index) => (
         <div 
           key={index} 
           className="banners" 
-          style={{ backgroundImage: `url(${banner.image})` }}
+          style={{ backgroundImage: `url(${banner.image})`,  textAlign:'center',}}
           ref={(el) => (bannerRefs.current[index] = el)}
         >
           <div className="banners-contents" ref={bannercontentRef}>

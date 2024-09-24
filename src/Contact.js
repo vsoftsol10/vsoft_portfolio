@@ -141,6 +141,7 @@ const ContactForm = () => {
       </div>
       <div className="form">
         <div className="contact-info">
+       
           <h3 className="title">Let's get in touch</h3>
           <p className="text">VSOFT SOLUTIONS</p>
           <div className="info">

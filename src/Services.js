@@ -104,20 +104,33 @@ const cardss =useRef(null);
                 <div className="header-left">
                     <img src={logo} ref={logoRef} className="App-logo" alt="logo" />
                     <div>
-  <p style={{ color: 'white', margin: 0 }}>
-    <a href="tel:+919095422237" style={{ textDecoration: 'none', color: 'inherit' }}>
-      <i className="fa fa-phone" style={{ height: '4rem', width: '4rem' }}></i>
-    </a>
-    <a href="mailto:vsoftsolutions8813@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
-      <i className="fa fa-envelope" style={{ height: '4rem', width: '4rem' }}></i>
-    </a>
-  </p>
-
-</div>
+            <p style={{ color: "white", margin: 0 }}>
+              <a
+                href="tel:+919095422237"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <i
+                  className="fa fa-phone"
+                  style={{ height: "4rem", width: "4rem" }}
+                ></i>
+              </a>
+              <a
+                href="mailto:vsoftsolutions8813@gmail.com"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <i
+                  className="fa fa-envelope"
+                  style={{ height: "4rem", width: "4rem" }}
+                ></i>
+              </a>
+            </p>
+            <button className="menu-button" onClick={handleMenuToggle}>
+          <img src={lg} alt="Menu" className="menu-gif" />
+        </button>
+          </div>
+      
                 </div>
-                <button className="menu-button" onClick={handleMenuToggle}>
-  <img src={lg} alt="Menu" className="menu-gif" />
-</button>
+         
                 <nav className="App-nav" ref={navRef}>
                 <ul>
             <li ref={(el) => (listRefs.current[0] = el)}>
@@ -136,10 +149,9 @@ const cardss =useRef(null);
         <Link to="/appsdevelop">App Development</Link>
         <Link to="/digi">Digital Marketing</Link>
         <Link to="/seo">Seo Services</Link>
-        <Link to="/ui">UI/UX Designs</Link>
+        <Link to="/ui2">UI/UX Designs</Link>
     </div>
 </li>
-
             <li ref={(el) => (listRefs.current[2] = el)}>
             <Link to="/creation">
                 <ion-icon name="settings-outline"></ion-icon>
@@ -186,17 +198,17 @@ const cardss =useRef(null);
                     width: '100%',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'start',
+                    justifyContent: 'center',
     
                   }}
                 >
                   <div className="banners-contents" style={{
                    justifyContent:'start',
                    borderRadius:'30px',
-                   textAlign:'start',
+                   textAlign:'center',
                   }} ref={bannercontentRef}>
-                    <h1 className='hsss' style={{color:'white',margin:'0',}}>{banner.headings}</h1>
-                    <h2   className='hsss' style={{color:'black',}}>{banner.secondaryHeading}</h2>
+                    <h1 className='hsss' style={{color:'white',margin:'0', }}>{banner.headings}</h1>
+                    <h2   className='hsss' style={{color:'black',fontSize:'2rem'}}>{banner.secondaryHeading}</h2>
                     <button onClick={() => cardss.current.scrollIntoView({ behavior: 'smooth' })}>
   {banner.buttonText}
 </button>
@@ -206,7 +218,7 @@ const cardss =useRef(null);
               ))}
             </div>
             <div className="servicesss">
-            <h3 className='h0'> Our Services</h3>
+            <h3 className='ho'> Our Services</h3>
     <div className="servicesss-containers" ref={cardss}>
 
         <div className="servicesss-card" onClick={() => handleCardClick('./ws')}>
@@ -224,20 +236,26 @@ const cardss =useRef(null);
             </div>
         </div>
         <div className="servicesss-card" onClick={() => handleCardClick('./ui2')}>
-            <div className="cardsss-content">
+            <div className="cardsss-content" style={{
+    marginTop:'3rem'}} >
                 <h3  className='ss'>UI/UX Design</h3>
                 <img src={serviceImage3} className="floating-image" />
                 <p className="pp">Starts From ₹3000</p>
             </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('./seo2')}>
-            <div className="cardsss-content">
+        <div className="servicesss-card" onClick={() => handleCardClick('./seo2')} style={{
+          marginLeft:' 20rem'
+        }}>
+            <div className="cardsss-content"   style={{
+    marginTop:'3rem'}}>
                 <h3  className='ss'> SEO Service </h3>
                 <img src={serviceImage4}className="floating-image" />
                 <p className="pp">Starts From ₹4000</p>
             </div>
         </div>
-        <div className="servicesss-card" onClick={() => handleCardClick('./digi')}>
+        <div className="servicesss-card" onClick={() => handleCardClick('./digi')} style={{
+          marginLeft:' 20rem'
+        }}>
             <div className="cardsss-content">
                 <h3  className='ss'>Digital Marketing</h3>
                 <img src={serviceImage5}  className="floating-image" />
