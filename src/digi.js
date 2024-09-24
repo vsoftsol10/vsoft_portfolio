@@ -19,6 +19,12 @@ import poste6 from './images/poster3.webp';
 import post3 from './images/webss5.webp';
 import post4  from './images/webss6.webp';
 import lg from './images/menu.gif';
+import clientimg1 from './images/logos1 (1).png';
+import clientimg2 from './images/logos1 (3).png';
+import clientimg3 from './images/logos1 (5).png';
+import clientimg4 from './images/logo6.png';
+import clientimg5 from './images/logo5.png';
+import clientimg6 from './images/logos1 (1).png';
 
 import Footer from './Footer';
 
@@ -403,61 +409,26 @@ function Home() {
 
 
    
-<div class="testimonial-container-port" data-aos-delay="200" data-aos="fade-up">
-    
-      <h5 class="services-details-page-heading" > Our Client</h5>
-    </div>
-
-
-    <div class="carousel-outer-port">
+<h5 class="services-details-page-heading" >  Our Clients</h5>
+    <div class="client-container" data-aos-delay="200">
+  <div class="d-flex align-items-center justify-content-around w-100 h-100">
  
-
-      <div class="carousel-inner-port" data-aos-delay="400" data-aos="fade-up">
-        <div class="carousel-port carousel1">
-          <div class="testimonial-carousel-top-port">
-            <img src={poste1}  class="testimonial-client-img-port" alt="loading"/>
-        
-          </div>
-        
-        </div>
-        <div class="carousel-port carousel2">
-          <div class=" testimonial-carousel-top-port">
-           
-          <img src={poste2}  class="testimonial-client-img-port" alt="loading"/>
-          </div>
-         
-        </div>
-        <div class="carousel-port carousel3">
-          <div class=" testimonial-carousel-top-port">
-          <img src={poste3}  class="testimonial-client-img-port" alt="loading"/>
-          </div>
-        </div>
-        <div class="carousel-port carousel4">
-          <div class=" testimonial-carousel-top-port">
-          <img src={poste4}  class="testimonial-client-img-port" alt="loading"/>
-        
-          </div>
-        
-        </div>
-        <div class="carousel-port carousel5">
-          <div class=" testimonial-carousel-top-port">
-          <img src={poste5}  class="testimonial-client-img-port" alt="loading"/>
-          
-          </div>
-         
-        </div>
-        <div class="carousel-port carousel5">
-          <div class=" testimonial-carousel-top-port">
-          <img src={poste6}  class="testimonial-client-img-port" alt="loading"/>
-          
-          </div>
-         
-        </div>
-
-
-
+    
+    <div class="d-flex client-img-con justify-content-evenly align-items-center font-medium text-lg text-black">
+      <div class="client-img-wrapper" id="marquee">
+        <img src={clientimg1} alt class="client-img1" />
+        <img src={clientimg2} alt class="client-img2" />
+        <img src={clientimg3} alt class="client-img3" />
+        <img src={clientimg4} alt class="client-img4" />
+        <img src={clientimg5} alt class="client-img5" />
+        <img src={clientimg6} alt class="client-img5" />
       </div>
     </div>
+  </div>
+  <div class="client-sub-con bg-green-400 absolute z-0">
+   
+  </div>
+</div>
    
     
     

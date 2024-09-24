@@ -22,9 +22,9 @@ import post4  from './images/webss12.webp';
 import clientimg1 from './images/logos1 (1).png';
 import clientimg2 from './images/logos1 (3).png';
 import clientimg3 from './images/logos1 (5).png';
-import clientimg4 from './images/logos1 (2).png';
-import clientimg5 from './images/vslogo.png';
-
+import clientimg4 from './images/logo6.png';
+import clientimg5 from './images/logo5.png';
+import clientimg6 from './images/logos1 (1).png';
 
 
 

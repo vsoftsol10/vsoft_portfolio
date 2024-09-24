@@ -18,12 +18,12 @@ import poste5 from "./images/seo5.webp";
 import poste6 from "./images/seo1.webp";
 import post3 from "./images/webss8.webp";
 import post4 from "./images/webss10.webp";
+import clientimg1 from './images/logos1 (1).png';
+import clientimg2 from './images/logos1 (3).png';
+import clientimg3 from './images/logos1 (5).png';
+import clientimg4 from './images/logo6.png';
+import clientimg5 from './images/logo5.png';
 
-import clientimg1 from "./images/logos1 (1).png";
-import clientimg2 from "./images/logos1 (3).png";
-import clientimg3 from "./images/logos1 (5).png";
-import clientimg4 from "./images/logos1 (2).png";
-import clientimg5 from "./images/vslogo.png";
 
 const bannersData = [
   {
