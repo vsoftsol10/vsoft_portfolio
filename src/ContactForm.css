@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 body,
 input,
 textarea {
@@ -14,7 +13,7 @@ textarea {
 .containers {
   position: relative;
   width: 100%;
-  min-height: 125vh;
+  min-height: 100vh;
   padding: 2rem;
   background-color: #fafafa;
   overflow: hidden;
@@ -40,16 +39,12 @@ textarea {
   position: relative;
 }
 
-
-
-
-
 .contact-form:before {
   content: "";
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: rgba(80, 0, 80, 0.979);;
+  background-color: rgba(80, 0, 80, 0.979);
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
@@ -81,7 +76,7 @@ form {
   border: 2px solid #fafafa;
   background: none;
   padding: 0.6rem 1.2rem;
-color: white;
+  color: white;
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
@@ -94,7 +89,7 @@ color: white;
   border: 2px solid #fafafa;
   background: none;
   padding: 0.6rem 1.2rem;
-color: black;
+  color: black;
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
@@ -127,7 +122,8 @@ textarea.input {
 .input-container.textarea label {
   top: 1rem;
   transform: translateY(0);
-}.button-container {
+}
+.button-container {
   display: flex;
   gap: 10px;
 }
@@ -137,8 +133,8 @@ textarea.input {
   background-color: #fff;
   border: 2px solid #fafafa;
   font-size: 0.95rem;
-gap: 7px;
-  color:  rgba(10, 60, 100, 0.979);
+  gap: 7px;
+  color: rgba(10, 60, 100, 0.979);
   line-height: 1;
   border-radius: 5px;
   outline: none;
@@ -149,10 +145,9 @@ gap: 7px;
 }
 
 .btn:hover {
-  background-color: rgba(10, 60, 100, 0.979);;
-  color:   rgba(10, 60, 100, 0.979);
+  background-color: rgba(10, 60, 100, 0.979);
+  color: rgba(10, 60, 100, 0.979);
 }
-
 
 .input-container span {
   position: absolute;
@@ -193,10 +188,9 @@ gap: 7px;
 
 .success-message {
   color: white; /* Success message color */
-  font-weight:400;
+  font-weight: 400;
   margin-bottom: 15px;
 }
-
 
 .input-container.focus label {
   top: 0;
@@ -226,7 +220,6 @@ gap: 7px;
   text-align: left;
 }
 
-
 .contact-info .text {
   color: rgba(80, 0, 80, 0.979);
   font-weight: 400;
@@ -250,13 +243,13 @@ gap: 7px;
 .information p {
   margin-left: 0.7rem;
   font-size: 1rem;
-  color:black;
+  color: black;
 }
 
 .information a {
   margin-left: 0.7rem;
   font-size: 1rem;
-  color: rgba(80, 0, 80, 0.979);;
+  color: rgba(80, 0, 80, 0.979);
 }
 
 .social-media {
@@ -265,18 +258,18 @@ gap: 7px;
 
 .social-media p {
   font-size: 1rem;
-  color: rgba(80, 0, 80, 0.979);;
+  color: rgba(80, 0, 80, 0.979);
   margin-bottom: 0.7rem;
 }
 
 .social-icons a {
-  color: rgba(80, 0, 80, 0.979);;
+  color: rgba(80, 0, 80, 0.979);
   font-size: 3rem;
   margin-right: 3rem;
 }
 
 .social-icons a:hover {
-  color:  rgba(10, 60, 100, 0.979);
+  color: rgba(10, 60, 100, 0.979);
 }
 
 .social-icons a i {
@@ -307,13 +300,11 @@ gap: 7px;
   color: #fff;
 }
 
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  
   .form {
     grid-template-columns: 1fr;
-    gap: 0.5rem; 
+    gap: 0.5rem;
   }
 
   .contact-form,
@@ -321,11 +312,10 @@ gap: 7px;
     width: 80%;
   }
   .social-icons a {
-    color: rgba(80, 0, 80, 0.979);;
+    color: rgba(80, 0, 80, 0.979);
     font-size: 0.8rem;
     margin-right: 3rem;
   }
- 
 }
 
 div.backBt {
@@ -343,14 +333,15 @@ span.lines {
   right: auto;
   top: auto;
   left: auto;
-  background-color: rgba(80, 0, 80, 0.979);;
+  background-color: rgba(80, 0, 80, 0.979);
   border-radius: 10px;
   width: 100%;
   left: 0px;
   height: 2px;
   display: block;
   position: absolute;
-  transition: width 0.2s ease 0.1s, left 0.2s ease, transform 0.2s ease 0.3s, background-color 0.2s ease;
+  transition: width 0.2s ease 0.1s, left 0.2s ease, transform 0.2s ease 0.3s,
+    background-color 0.2s ease;
 }
 
 span.tLines {
@@ -377,13 +368,13 @@ span.bLines {
 }
 
 div.backBt:hover span.labels {
-  left: 25px
+  left: 25px;
 }
 
 div.backBt:hover span.lines {
   left: -10px;
   height: 5px;
-  background-color: rgba(80, 0, 80, 0.979);;
+  background-color: rgba(80, 0, 80, 0.979);
 }
 
 div.backBt:hover span.tLines {
@@ -405,8 +396,6 @@ div.backBt:hover span.bLines {
   top: 20px;
 }
 
-
-
 div.backBts {
   width: 50px;
   left: 50px;
@@ -422,17 +411,18 @@ span.lin {
   right: auto;
   top: auto;
   left: auto;
-  background-color: rgba(80, 0, 80, 0.979);;
+  background-color: rgba(80, 0, 80, 0.979);
   border-radius: 10px;
   width: 100%;
   left: 0px;
   height: 2px;
   display: block;
   position: absolute;
-  transition: width 0.2s ease 0.1s, left 0.2s ease, transform 0.2s ease 0.3s, background-color 0.2s ease;
+  transition: width 0.2s ease 0.1s, left 0.2s ease, transform 0.2s ease 0.3s,
+    background-color 0.2s ease;
 }
 
-span.tLin{
+span.tLin {
   top: 0px;
 }
 
@@ -456,7 +446,7 @@ span.bLin {
 }
 
 div.backBts:hover span.labe {
-  left: 25px
+  left: 25px;
 }
 
 div.backBts:hover span.lin {
@@ -485,26 +475,25 @@ div.backBts:hover span.bLin {
 }
 /* Hide .backBtns on larger screens */
 
-div.backBts{
-  display: none; 
+div.backBts {
+  display: none;
 }
 /* Show .backBtns and hide .backBtn on smaller screens */
 @media only screen and (max-width: 480px) {
-  div.backBts{
-   display: flex; 
+  div.backBts {
+    display: flex;
   }
-  title{
+  title {
     margin-top: 5rem;
   }
-
 }
 .bttn {
   padding: 0.6rem 1.3rem;
   background-color: #fff;
   border: 2px solid #fafafa;
   font-size: 0.95rem;
-gap: 7px;
-  color:  rgba(10, 60, 100, 0.979);
+  gap: 7px;
+  color: rgba(10, 60, 100, 0.979);
   line-height: 1;
   border-radius: 5px;
   outline: none;
@@ -515,14 +504,13 @@ gap: 7px;
 }
 
 .bttn:hover {
-  background-color: rgba(10, 60, 100, 0.979);;
-  color:   rgba(10, 60, 100, 0.979);
+  background-color: rgba(10, 60, 100, 0.979);
+  color: rgba(10, 60, 100, 0.979);
 }
 
 @media (max-width: 768px) {
-
-  .contact-form, .contact-info 
-  {
+  .contact-form,
+  .contact-info {
     width: 100%;
   }
   .contact-info .title {
@@ -536,9 +524,15 @@ gap: 7px;
 
 /* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
-  .contact-form, .contact-info 
-  {
+  .contact-form,
+  .contact-info {
     width: 100%;
     padding: 1rem 1rem;
+  }
+  .contact-info .text {
+    text-align: start;
+  }
+  .containers {
+    padding: 1rem;
   }
 }

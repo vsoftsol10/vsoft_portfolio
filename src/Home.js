@@ -10,6 +10,9 @@ import image from "./images/homeback.webp";
 
 import "./card.css";
 
+import service1Image from "./images/service1.jpg";
+import service2Image from "./images/service2.jpg";
+import service3Image from "./images/service3.jpg";
 import lg from "./images/menu.gif";
 
 import vsProcess1 from "./images/requirement.png";
@@ -193,13 +196,11 @@ function Home() {
                 ></i>
               </a>
             </p>
-            <button className="menu-button" onClick={handleMenuToggle}>
+          </div>
+        </div>
+        <button className="menu-button" onClick={handleMenuToggle}>
           <img src={lg} alt="Menu" className="menu-gif" />
         </button>
-          </div>
-      
-        </div>
-       
 
         <nav className="App-nav" ref={navRef}>
           <ul>
@@ -265,7 +266,7 @@ function Home() {
               <h3
                 style={{
                   textAlign: "start",
-                  color: "white",
+                  color: "black",
                 }}
               >
                 {banner.secondary}
@@ -358,21 +359,21 @@ function Home() {
       </h2>
       <div className="card-containers">
         <div className="cardsss">
-          <Link to="/ws#banner-containers" className="card card1">
+          <Link to="/ws" className="card card1">
             <div className="card-content"></div>
-            <h3>Web Development</h3>
+            <h3 className="cls">Web Development</h3>
           </Link>
         </div>
 
         <div className="cardsss">
-          <Link to="/appsdevelop#banner-containers" className="card card2">
+          <Link to="/appsdevelop" className="card card2">
             <div className="card-content"></div>
             <h3>App Development</h3>
           </Link>
         </div>
 
         <div className="cardsss">
-          <Link to="/digi#banner-containers" className="card card3">
+          <Link to="/digi" className="card card3">
             <div className="card-content"></div>
             <h3>Digital Marketing</h3>
           </Link>
@@ -380,7 +381,7 @@ function Home() {
 
         <div className="cardsss">
           <Link
-            to="/seo2#banner-containers"
+            to="/seo2"
             className="card card4"
             style={{
               marginTop: "3rem",
@@ -393,7 +394,7 @@ function Home() {
 
         <div className="cardsss">
           <Link
-            to="/ui#banner-containers"
+            to="/ui"
             className="card card5"
             style={{
               marginTop: "3rem",

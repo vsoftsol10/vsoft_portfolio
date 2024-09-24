@@ -12,14 +12,14 @@
       width: 100%;
       height: auto;
       background-color: inherit; 
-     
  
 
 
     
 
       .footer-column {
-       
+        flex: 1; // Ensure columns have a minimum width
+        margin: 2px; // Space between columns
 
         h3 {
          justify-content: center;
@@ -33,7 +33,7 @@
           color: white;
           font-size: 15px;
           text-decoration: none;
-          text-align:start;
+          text-align: justify;
           margin-top: 28px;
 
           &:hover {
@@ -89,7 +89,7 @@
   @media (max-width: 768px) {
     .footer-row {
       flex-direction: column; // Stack columns on top of each other
-      align-items: start; // Center align the columns
+      align-items: center; // Center align the columns
     }
 
     .footer-column {
@@ -121,61 +121,30 @@
     .footer-row {
       flex-direction: column; // Stack columns vertically
       align-items: center; // Center align the columns
-      margin-left: 0.5rem;
     }
 
     .footer-column {
       width: 100%;
       margin: 5px 0; // Adjust margin for stacked columns
-      margin-left: 0.5rem;
+
       h3 {
         font-size: 14px; // Smaller font size for h3 on mobile
         text-align: center;
-        margin-left: 0.5rem;
       }
 
       p, a {
         font-size: 13px; // Smaller font size for p and a on mobile
         margin-top: 10px; // Adjust top margin for spacing
-        margin-left: 0.5rem;
       }
 
       .social-icons a {
         font-size: 2rem; // Smaller icon size on mobile
-       
-        margin-left: 0.5rem; margin-right: 4px; // Less space between icons on mobile
+        margin-right: 4px; // Less space between icons on mobile
       }
     }
 
     .footer-bottom {
-     
-      margin-left: 0.5rem; font-size: 10px; // Adjust font size for footer-bottom on mobile
+      font-size: 10px; // Adjust font size for footer-bottom on mobile
     }
-  }
-}
-@media (max-width: 465px) {
- 
-
-
-  .about {
-    text-align: center;
-    margin-left: 1rem;
-    p {
-      font-size: 14px;
-     
-      margin-left: 0.5rem; margin: 0;
-    }
-
-    .map-container {
-      iframe {
-       
-        margin-left: 0.5rem;
-        height: 150px; // Reduce the height for mobile
-      }
-    }
-  }
-  .footer-bottom{
-    margin-left: 1rem;
-
   }
 }

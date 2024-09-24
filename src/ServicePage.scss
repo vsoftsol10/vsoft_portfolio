@@ -2,12 +2,12 @@
     color: rgba(10, 60, 100, 0.979);
     text-align: center;
 }
+
 .servicesss-containers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px; 
     margin-top: 40px; 
-    justify-items: center; /* Center cards within each column */
 }
 
 /* For mobile devices */
@@ -16,55 +16,69 @@
         grid-template-columns: repeat(1, 1fr);
         gap: 50px;
         margin-top: 40px;
-        justify-items: center; /* Center items horizontally */
-        align-items: center; /* Center items vertically */
-        justify-content: center; /* Center the entire grid */
+        align-items: center;
+        text-align: center;justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    /* Optional: If you want to center the entire grid within its parent */
+    justify-content: center; 
+        // margin-left: 7rem;
     }
 }
+
 .servicesss-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
+    background: white; /* Adjust background color if needed */
     border: 2px solid rgba(80, 0, 80, 0.979);
-    border-radius: 40px;
+    border-radius: 40px; /* Optional border-radius */
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 80%;
-    height: 99%;
-    margin-left: 0; /* Default for all cards */
-}
-
-/* Desktop or larger screens */
-@media (min-width: 768px) {
-    .servicesss-card:nth-child(4),
-    .servicesss-card:nth-child(5) {
-        margin-left: 20rem; /* Apply margin-left only to 4th and 5th cards on larger screens */
+    width: 60%;
+    height: 100%;
+    @media (max-width: 480px) {
+        .servicesss-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            background: white; /* Adjust background color if needed */
+            border: 2px solid rgba(80, 0, 80, 0.979);
+            border-radius: 40px; /* Optional border-radius */
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            height: 100%;}
+        
     }
-}
+    /* For tablets (landscape) */
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+        gap: 15px;
+    }
 
-/* Mobile view (max-width: 480px) */
-@media (max-width: 480px) {
-    .servicesss-containers {
-        grid-template-columns: 1fr; /* Single column layout on mobile */
-        gap: 20px; 
-        /* Smaller gap between cards */
+    /* For tablets */
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 15px;
+    }
+
+    &:hover {
+        // transform: scale(1.2);
+        box-shadow: 0 16px 8px rgba(80, 0, 80, 0.979); /* Added space */
     }
     
-    .servicesss-card {
-        margin-left: 0 !important; /* Remove all margins on mobile view */
-        width: 70%;
-       
-        height: 99%; 
+    @media (max-width: 480px) {
+        // transform: scale(1.05);
+        width: 80%;
     }
 }
 
-
-
 .floating-image {
-    width: 80%;
-    height: 50%;
+    width: 100%;
+    height: 80%;
     
     @media (max-width: 480px) {
         width: 100%;
@@ -78,7 +92,7 @@
     font-size: 1.7rem;
     
     @media (max-width: 480px) {
-        font-size: 1.7rem;
+        font-size: 0.5rem;
     }
 }
 
@@ -89,19 +103,16 @@
     font-size: 1.5rem;
     
     @media (max-width: 480px) {
-        font-size: 1.7rem;
+        font-size: 0.5rem;
     }
 }
-
 
 .h4 {
     text-align: start;
 
 }
 
-.ho{
-    font-size: 2.5rem;
-}
+
 
 
 
@@ -114,15 +125,12 @@
 /* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
     .hsss{
-    font-size: 1.5rem;
-    }
-    .ho{
-        font-size: 2rem;
+    font-size: 1rem;
     }
    .testimonial-carousel-top-port img {
     object-fit: cover;
     width: 400px;
-    height: 400px;
+    height: 200px;
    }
 
 }

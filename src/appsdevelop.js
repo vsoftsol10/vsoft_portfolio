@@ -19,7 +19,11 @@ import poste6 from './images/app1.webp';
 import post3 from './images/webss1.webp';
 import post4  from './images/webss4.webp';
 import lg from './images/menu.gif';
-
+import clientimg1 from './images/logos1 (1).png';
+import clientimg2 from './images/logos1 (3).png';
+import clientimg3 from './images/logos1 (5).png';
+import clientimg4 from './images/logos1 (2).png';
+import clientimg5 from './images/vslogo.png';
 import { convertLength } from '@mui/material/styles/cssUtils';
 
 
@@ -186,32 +190,9 @@ function Home() {
           <img src={logo} ref={logoRef} className="App-logo" alt="logo" />  
         </div>
       
-        <div>
-            <p style={{ color: "white", margin: 0 }}>
-              <a
-                href="tel:+919095422237"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                <i
-                  className="fa fa-phone"
-                  style={{ height: "4rem", width: "4rem" }}
-                ></i>
-              </a>
-              <a
-                href="mailto:vsoftsolutions8813@gmail.com"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                <i
-                  className="fa fa-envelope"
-                  style={{ height: "4rem", width: "4rem" }}
-                ></i>
-              </a>
-            </p>
-            <button className="menu-button" onClick={handleMenuToggle}>
-          <img src={lg} alt="Menu" className="menu-gif" />
-        </button>
-          </div>
-      
+        <button className="menu-button" onClick={handleMenuToggle}>
+  <img src={lg} alt="Menu" className="menu-gif" />
+</button>
 
         <nav className="App-nav"ref={navRef}>
           <ul>
@@ -231,7 +212,7 @@ function Home() {
         <Link to="/appsdevelop">App Development</Link>
         <Link to="/digi">Digital Marketing</Link>
         <Link to="/seo">Seo Services</Link>
-        <Link to="/ui2">UI/UX Designs</Link>
+        <Link to="/ui">UI/UX Designs</Link>
     </div>
 </li>
 
@@ -380,7 +361,7 @@ function Home() {
  <div class="carousel-inner-port" data-aos-delay="400" data-aos="fade-up">
    <div class="carousel-port carousel1">
      <div class="testimonial-carousel-top-port">
-     <h6 className="imgss">Social Media App</h6>
+     <h6>Social Media App</h6>
        <img src={poste1}  class="testimonial-client-img-port" alt="loading"/>
    
      </div>
@@ -388,20 +369,20 @@ function Home() {
    </div>
    <div class="carousel-port carousel2">
      <div class=" testimonial-carousel-top-port">
-     <h6 className="imgss">Job Searching App</h6>
+     <h6>Job Searching App</h6>
      <img src={poste2}  class="testimonial-client-img-port" alt="loading"/>
      </div>
     
    </div>
    <div class="carousel-port carousel3">
      <div class=" testimonial-carousel-top-port">
-     <h6 className="imgss">Employee App</h6>
+     <h6>Employee App</h6>
      <img src={poste3}  class="testimonial-client-img-port" alt="loading"/>
      </div>
    </div>
    <div class="carousel-port carousel4">
      <div class=" testimonial-carousel-top-port">
-     <h6 className="imgss">Food delivery App</h6>
+     <h6>Food delivery App</h6>
      <img src={poste4}  class="testimonial-client-img-port" alt="loading"/>
      
      </div>
@@ -409,7 +390,7 @@ function Home() {
    </div>
    <div class="carousel-port carousel5">
      <div class=" testimonial-carousel-top-port">
-     <h6 className="imgss">Logistic App</h6>
+     <h6>Logistic App</h6>
      <img src={poste5}  class="testimonial-client-img-port" alt="loading"/>
      
      </div>
@@ -417,7 +398,7 @@ function Home() {
    </div>
    <div class="carousel-port carousel5">
      <div class=" testimonial-carousel-top-port">
-     <h6 className="imgss">Chat App</h6>
+     <h6>Chat App</h6>
      <img src={poste6}  class="testimonial-client-img-port" alt="loading"/>
      
      </div>

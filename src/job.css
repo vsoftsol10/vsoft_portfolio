@@ -1,42 +1,36 @@
 .job-list {
-   display: flex;
-  gap: 3rem; 
+  display: flex;
+  gap: 3rem;
   width: 100%;
   height: 800%;
- 
-    
-  }
-  body {
-  
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif; 
-  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 .bannersss {
-    width: 100%;
-    height: 530px; 
-    background-image: url('./images/careers.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: flex-end;
-    justify-content: start;
-    text-align:start;
-    margin-bottom: 0%;
-    font-size: 24px; 
-    font-weight: bold;
-  }
-  
-  .banner-contents {
+  width: 100%;
+  height: 530px;
+  background-image: url("./images/careers.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: flex-end;
+  justify-content: start;
+  text-align: start;
+  margin-bottom: 0%;
+  font-size: 24px;
+  font-weight: bold;
+}
 
-    padding: 20px;
-  
-   
-  }
- 
+.banner-contents {
+  padding: 20px;
+}
+
 .job-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -76,28 +70,28 @@
   background-color: #750075;
 }
 
-  .bts{
-    margin-top: 10px;
-    padding: 10px;
-    border: none;
-    background-color: rgba(80, 0, 80, 0.979);
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 3rem;
-  }
-  
-  .job-card button:hover {
-    background-color: #007bff;
-  }
-.jobsh1{
-    color:black;
-    text-align: center;
-} .Jobsh2{
-   color: black;
-   text-align: center; 
+.bts {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background-color: rgba(80, 0, 80, 0.979);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 3rem;
 }
 
+.job-card button:hover {
+  background-color: #007bff;
+}
+.jobsh1 {
+  color: black;
+  text-align: center;
+}
+.Jobsh2 {
+  color: black;
+  text-align: center;
+}
 
 .sticky-back {
   position: fixed;
@@ -128,8 +122,6 @@
   font-family: Arial, sans-serif;
 }
 
-
-
 .course-h1 {
   margin: 0;
 }
@@ -152,11 +144,10 @@
   position: relative;
   overflow: hidden;
   text-align: center;
-
 }
 
 .course-card.highlight {
-  background-color:#0056b3 ;
+  background-color: #0056b3;
   border-color: rgba(80, 0, 80, 0.979);
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -200,19 +191,19 @@
 }
 .bannerssss {
   width: 100%;
-  height: 530px; 
-  background-image: url('./images/courses.webp');
+  height: 530px;
+  background-image: url("./images/courses.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color:black; 
+  color: black;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
-  justify-content:center;
-  text-align:center;
+  justify-content: center;
+  text-align: center;
   margin-bottom: 0%;
-  font-size: 24px; 
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -244,7 +235,7 @@
 .popup-content button {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color:rgba(80, 0, 80, 0.979);;
+  background-color: rgba(80, 0, 80, 0.979);
   color: white;
   border: none;
   border-radius: 5px;
@@ -252,48 +243,45 @@
 }
 
 .popup-content button:hover {
-  background-color: rgba(80, 0, 80, 0.979);;
+  background-color: rgba(80, 0, 80, 0.979);
 }
 
-
 @media (max-width: 768px) {
-
-  .popup-content{
-  
+  .popup-content {
     height: 400px;
     overflow-y: scroll;
   }
 
   .bannersss {
     background-size: contain;
- 
   }
-
 }
 
 /* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
-  .course-h1{
+  .course-h1 {
     font-size: 1rem;
   }
 
   .bannersss {
     width: 100%;
-    height: 40vh; 
+    height: 40vh;
 
-    font-size: 24px; 
+    font-size: 24px;
     background-size: contain;
- 
   }
   .sticky-back button {
- width: 100%;
- height: 100%;
+    width: 100%;
+    height: 100%;
+    margin-right: 0px;
+    bottom: 0%;
+    margin-bottom: 0px;
   }
-  .course-card{
+  .course-card {
     width: 100%;
   }
 
-  .popup-content{
+  .popup-content {
     width: 100%;
     height: 400px;
     overflow-y: scroll;

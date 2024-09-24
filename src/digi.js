@@ -10,12 +10,12 @@ import logo from './images/vslogo.png';
 import image from './images/digiback.webp';
 import './ws.css';
 
-import poste1  from './images/BANNER 1.webp';
-import poste2 from './images/BANNER 2.webp';
-import poste3 from './images/BANNER 3.webp';
-import poste4 from './images/poster1.webp';
-import poste5 from './images/poster2.webp';
-import poste6 from './images/poster3.webp';
+import poste1  from './images/BANNER 1.png';
+import poste2 from './images/BANNER 2.png';
+import poste3 from './images/BANNER 3.png';
+import poste4 from './images/poster1.png';
+import poste5 from './images/poster2.png';
+import poste6 from './images/poster3.png';
 import post3 from './images/webss5.webp';
 import post4  from './images/webss6.webp';
 import lg from './images/menu.gif';
@@ -180,35 +180,11 @@ function Home() {
       <header className="App-header">
         <div className="header-left">
           <img src={logo} ref={logoRef} className="App-logo" alt="logo" />  
-          <div>
-            <p style={{ color: "white", margin: 0 }}>
-              <a
-                href="tel:+919095422237"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                <i
-                  className="fa fa-phone"
-                  style={{ height: "4rem", width: "4rem" }}
-                ></i>
-              </a>
-              <a
-                href="mailto:vsoftsolutions8813@gmail.com"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                <i
-                  className="fa fa-envelope"
-                  style={{ height: "4rem", width: "4rem" }}
-                ></i>
-              </a>
-            </p>
-            <button className="menu-button" onClick={handleMenuToggle}>
-          <img src={lg} alt="Menu" className="menu-gif" />
-        </button>
-          </div>
-      
         </div>
       
-    
+        <button className="menu-button" onClick={handleMenuToggle}>
+  <img src={lg} alt="Menu" className="menu-gif" />
+</button>
 
         <nav className="App-nav"ref={navRef}>
           <ul>

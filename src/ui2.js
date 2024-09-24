@@ -186,34 +186,11 @@ function Home() {
       <header className="App-header">
         <div className="header-left">
           <img src={logo} ref={logoRef} className="App-logo" alt="logo" />  
-          <div>
-            <p style={{ color: "white", margin: 0 }}>
-              <a
-                href="tel:+919095422237"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                <i
-                  className="fa fa-phone"
-                  style={{ height: "4rem", width: "4rem" }}
-                ></i>
-              </a>
-              <a
-                href="mailto:vsoftsolutions8813@gmail.com"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                <i
-                  className="fa fa-envelope"
-                  style={{ height: "4rem", width: "4rem" }}
-                ></i>
-              </a>
-            </p>
-            <button className="menu-button" onClick={handleMenuToggle}>
-          <img src={lg} alt="Menu" className="menu-gif" />
-        </button>
-          </div>
-      
         </div>
       
+        <button className="menu-button" onClick={handleMenuToggle}>
+  <img src={lg} alt="Menu" className="menu-gif" />
+</button>
         <nav className="App-nav"ref={navRef}>
           <ul>
             <li ref={(el) => (listRefs.current[0] = el)} >
@@ -222,20 +199,12 @@ function Home() {
                 <h6 className="custom-heading1">Vsflows</h6>
                 </Link>
             </li>
-        
-            <li ref={(el) => (listRefs.current[1] = el)} className="dropdown">
-    <Link to="/services">
-        <ion-icon name="add-circle-outline"></ion-icon>
-        <h6 className="custom-heading2">Services</h6>
-    </Link>
-    <div className="dropdown-content">
-        <Link to="/ws">Website  Development</Link>
-        <Link to="/appsdevelop">App Development</Link>
-        <Link to="/digi">Digital Marketing</Link>
-        <Link to="/seo2">Seo Services</Link>
-        <Link to="/ui2">UI/UX Designs</Link>
-    </div>
-</li>
+            <li ref={(el) => (listRefs.current[1] = el)}>
+            <Link to="/services">
+                <ion-icon name="add-circle-outline"></ion-icon>
+                <h6 className="custom-heading2">Services</h6>
+                </Link>
+            </li>
             <li ref={(el) => (listRefs.current[2] = el)}>
             <Link to="/creation">
                 <ion-icon name="settings-outline"></ion-icon>
@@ -265,9 +234,7 @@ function Home() {
         </nav>
       </header>
 
-      <div className="banner-containers" style={{
-        textAlign:'center',
-      }}>
+      <div className="banner-containers">
       {bannersData.map((banner, index) => (
         <div 
           key={index} 
@@ -277,14 +244,12 @@ function Home() {
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            opacity: 1,
-
-            textAlign:'center', 
+            opacity: 1, // Adjust the opacity of the background image
           }}
           ref={(el) => (bannerRefs.current[index] = el)}
         >
           <div className="banners-contents" ref={bannercontentRef}
-          style={{textAlign:'center'}}>
+          style={{textAlign:'start'}}>
             <h1 style={{ 
            color:'white',
           }}  >{banner.headings}</h1>

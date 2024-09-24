@@ -448,14 +448,12 @@ const Career = () => {
                 ></i>
               </a>
             </p>
-            <button className="menu-button" onClick={handleMenuToggle}>
-          <img src={lg} alt="Menu" className="menu-gif" />
-        </button>
           </div>
-      
         </div>
 
-        
+        <button className="menu-button" onClick={handleMenuToggle}>
+          <img src={lg} alt="Menu" className="menu-gif" />
+        </button>
         <nav ref={navRef} className="App-nav">
           <ul>
             <li ref={(el) => (listRefs.current[0] = el)}>
@@ -474,7 +472,7 @@ const Career = () => {
                 <Link to="/appsdevelop">App Development</Link>
                 <Link to="/digi">Digital Marketing</Link>
                 <Link to="/seo">Seo Services</Link>
-                <Link to="/ui2">UI/UX Designs</Link>
+                <Link to="/ui">UI/UX Designs</Link>
               </div>
             </li>
 

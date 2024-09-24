@@ -168,35 +168,11 @@ function Home() {
       <header className="App-header">
         <div className="header-left">
           <img src={logo} ref={logoRef} className="App-logo" alt="logo" />
-          <div>
-            <p style={{ color: "white", margin: 0 }}>
-              <a
-                href="tel:+919095422237"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                <i
-                  className="fa fa-phone"
-                  style={{ height: "4rem", width: "4rem" }}
-                ></i>
-              </a>
-              <a
-                href="mailto:vsoftsolutions8813@gmail.com"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                <i
-                  className="fa fa-envelope"
-                  style={{ height: "4rem", width: "4rem" }}
-                ></i>
-              </a>
-            </p>
-            <button className="menu-button" onClick={handleMenuToggle}>
-          <img src={lg} alt="Menu" className="menu-gif" />
-        </button>
-          </div>
-      
         </div>
 
-        
+        <button className="menu-button" onClick={handleMenuToggle}>
+          <img src={lg} alt="Menu" className="menu-gif" />
+        </button>
 
         <nav className="App-nav" ref={navRef}>
           <ul>
