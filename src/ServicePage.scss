@@ -5,6 +5,9 @@
     @media (max-width: 468px){
         height: auto;
     }
+    @media (max-width: 768px){
+        height: auto;
+    }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
@@ -25,9 +28,13 @@ section {
         grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
         gap: 20px; /* Space between cards */
         align-items: center;
-        height: 100vh;
+        // height: 100vh;
 
         @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr); /* 1 column layout for mobile view */
+            gap: 20px; /* Space between cards on mobile */
+        }
+           @media (max-width: 568px) {
             grid-template-columns: repeat(1, 1fr); /* 1 column layout for mobile view */
             gap: 20px; /* Space between cards on mobile */
         }
@@ -67,6 +74,22 @@ section {
             }
         }
     }
+
+    @media (max-width: 576px) {
+        height: 200px !important;
+        width: 100%;
+        margin: 20px 0;
+        perspective: 700px;
+    }
+
+
+    @media (max-width: 768px) {
+        height: 300px !important;
+        width: 100%;
+        margin: 20px 0;
+        perspective: 900px;
+    }
+
 
     .cover {
         position: absolute;
@@ -150,6 +173,36 @@ section {
             font-size: 2rem;
             transform: translateZ(0px);
         }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.2em;
+                left: 10px;
+                bottom: 5px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1em;
+                left: 10px;
+                bottom: 5px;
+            }
+         
+    
+            .price {
+                font-size: 1rem;
+                left: 10px;
+                top: 5px;
+            }
+    
+            &:before {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+
     }
 
     .card-back {
@@ -183,4 +236,7 @@ section {
             }
         }
     }
+
+
+    
 }

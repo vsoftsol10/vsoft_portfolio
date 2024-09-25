@@ -176,7 +176,7 @@ function Home() {
               >
                 <i
                   className="fa fa-phone"
-                  style={{ height: "4rem", width: "4rem" }}
+                  style={{ height: "2rem", width: "2rem" }}
                 ></i>
               </a>
               <a
@@ -185,18 +185,15 @@ function Home() {
               >
                 <i
                   className="fa fa-envelope"
-                  style={{ height: "4rem", width: "4rem" }}
+                  style={{ height: "2rem", width: "2rem" }}
                 ></i>
               </a>
             </p>
             <button className="menu-button" onClick={handleMenuToggle}>
-          <img src={lg} alt="Menu" className="menu-gif" />
-        </button>
+              <img src={lg} alt="Menu" className="menu-gif" />
+            </button>
           </div>
-      
         </div>
-
-        
 
         <nav className="App-nav" ref={navRef}>
           <ul>
@@ -243,7 +240,7 @@ function Home() {
             <li ref={(el) => (listRefs.current[0] = el)}>
               <Link to="/career">
                 <ion-icon name="home-outline"></ion-icon>
-                <h6 className="custom-heading1">Career</h6>
+                <h6 className="custom-heading1"> IT Training & Career</h6>
               </Link>
             </li>
           </ul>

@@ -435,7 +435,7 @@ const Career = () => {
               >
                 <i
                   className="fa fa-phone"
-                  style={{ height: "4rem", width: "4rem" }}
+                  style={{ height: "2rem", width: "2rem" }}
                 ></i>
               </a>
               <a
@@ -444,18 +444,16 @@ const Career = () => {
               >
                 <i
                   className="fa fa-envelope"
-                  style={{ height: "4rem", width: "4rem" }}
+                  style={{ height: "2rem", width: "2rem" }}
                 ></i>
               </a>
             </p>
             <button className="menu-button" onClick={handleMenuToggle}>
-          <img src={lg} alt="Menu" className="menu-gif" />
-        </button>
+              <img src={lg} alt="Menu" className="menu-gif" />
+            </button>
           </div>
-      
         </div>
 
-        
         <nav ref={navRef} className="App-nav">
           <ul>
             <li ref={(el) => (listRefs.current[0] = el)}>
