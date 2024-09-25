@@ -1,7 +1,8 @@
 .servicesss {
     color: rgba(10, 60, 100, 0.979);
-    text-align: center;
-    height: 150vh;
+
+
+    height: 120vh;
     @media (max-width: 468px){
         height: auto;
     }
@@ -28,6 +29,8 @@ section {
         grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
         gap: 20px; /* Space between cards */
         align-items: center;
+        border-radius: 20px;
+
         // height: 100vh;
 
         @media (max-width: 768px) {
@@ -40,14 +43,21 @@ section {
         }
     }
 }
+.col-md-4 col-sm-6 col-xs-12{
+    border-radius: 20px;
+ 
+}
 
 .card {
     position: relative;
-    height: 400px;
-    width: 100%;
-    margin: 10px 0;
+    height: 290px;
+    width: 90%;
+    border-radius: 20px;
+    perspective: 1200px;
+   margin-top: 3rem;
     transition: ease all $transition-time;
     perspective: 1200px;
+
 
     &:hover {
         .cover {
@@ -101,6 +111,7 @@ section {
         background-position: center center;
         background-repeat: no-repeat;
 
+
         &:before {
             content: '';
             position: absolute;
@@ -130,49 +141,45 @@ section {
 
         &.item-a {
             background-image: url('./images/mobile-development2-2.gif');
-           
+            background-size: 100% 80%; 
+         
         }
 
         &.item-b {
             background-image: url('./images/web-development.gif');
+            background-size: 100% 70%; 
         }
 
         &.item-c {
             background-image: url('./images/giphy.png');
+            background-size: 100% 80%; 
         }
         &.item-E{
             background-image: url('./images/ui.gif');
+            background-size: 100% 70%;
         }
         &.item-D{
-            background-image: url('./images/seo 2.gif');
+           
+         background-image: url('./images/seo 2.gif');
+         background-size: 100% 70%;
         }
 
 
         h1 {
-            font-weight: 600;
+         
             position: absolute;
             bottom: 0px;
-            left: 50px;
-            color: black;
+        
+            color:  rgba(10, 60, 100, 0.979);
             transform-style: preserve-3d;
             transition: ease all $transition-time;
             z-index: 3;
-            font-size: 2em;
+          
+            left: 30%;
+            font-size: 1rem;
             transform: translateZ(0px);
-        }
-
-        .price {
-            font-weight: 200;
-            position: absolute;
-            top: 0px;
-            left: 50px;
-            color: black;
-            transform-style: preserve-3d;
-            transition: ease all $transition-time;
-            z-index: 4;
-            font-size: 2rem;
-            transform: translateZ(0px);
-        }
+          }
+     
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.2em;
@@ -183,8 +190,8 @@ section {
 
         @media (max-width: 576px) {
             h1 {
-                font-size: 1em;
-                left: 10px;
+                font-size: 1.2rem;
+                left: 80px;
                 bottom: 5px;
             }
          
@@ -209,7 +216,7 @@ section {
         position: absolute;
         height: 100%;
         width: 100%;
-        background: rgba(80, 0, 80, 0.979);
+        background:white;
         transform-style: preserve-3d;
         transition: ease all $transition-time;
         transform: translateZ(-1px);
@@ -221,8 +228,8 @@ section {
             transform-style: preserve-3d;
             transition: ease transform $transition-time, ease background 0.5s;
             transform: translateZ(-1px) rotateY(-180deg);
-            background: transparent;
-            border: 1px solid white;
+            background-color:  rgba(80, 0, 80, 0.979);
+            border: 1px solid black;
             font-weight: 200;
             font-size: 1.3em;
             color: white;

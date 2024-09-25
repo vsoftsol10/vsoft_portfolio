@@ -223,13 +223,17 @@ const Services = () => {
         ))}
       </div>
       <div className="servicesss">
+      <h1 style={{textAlign:'center',
+        marginTop:'2rem',
+      }}> OUR SERVICES</h1>
         <section>
           <div className="row">
+            
             <div className="col-md-4 col-sm-6 col-xs-12">
               <div className="card">
                 <div className="cover item-a">
                   <h1>
-                    AppDevelopment
+                    App Development
                     <br /> Start From ₹ 13000
                   </h1>
 
@@ -243,8 +247,8 @@ const Services = () => {
               <div className="card">
                 <div className="cover item-b">
                   <h1>
-                    WebDevelopment
-                    <br /> Start From ₹ 8000
+                    Web Development
+                    <br />   Start From ₹ 8000
                   </h1>
                   <div className="card-back">
                     <Link to="/ws">View Details</Link>
@@ -257,7 +261,7 @@ const Services = () => {
                 <div className="cover item-c">
                   <h1>
                     Digital Marketing
-                    <br /> Start From ₹ 5000
+                    <br />  Start From ₹ 5000
                   </h1>
                   <div className="card-back">
                     <Link to="digi">View Details</Link>
@@ -282,7 +286,7 @@ const Services = () => {
               <div className="card">
                 <div className="cover item-E">
                   <h1>
-                    UI/UX DESIGN
+                     UI/UX DESIGN
                     <br /> Start From ₹ 5300
                   </h1>
                   <div className="card-back">

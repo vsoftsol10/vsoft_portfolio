@@ -33,8 +33,8 @@ body {
 
 .job-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns:  repeat(2, 1fr);
+  gap: 50px;
   padding: 20px;
 }
 
@@ -278,10 +278,21 @@ body {
   .course-card {
     width: 100%;
   }
+  .jobsh1 {
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+  }
 
   .popup-content {
     width: 100%;
     height: 400px;
     overflow-y: scroll;
   }
+  .job-card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    padding: 20px;
+}
 }
