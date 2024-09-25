@@ -44,7 +44,7 @@ section {
     }
 }
 .col-md-4 col-sm-6 col-xs-12{
-    border-radius: 20px;
+    border-radius: 10px 10px 0 0;
  
 }
 
@@ -52,7 +52,7 @@ section {
     position: relative;
     height: 290px;
     width: 90%;
-    border-radius: 20px;
+    border-radius: 10px 10px 0 0;
     perspective: 1200px;
    margin-top: 3rem;
     transition: ease all $transition-time;
@@ -110,7 +110,7 @@ section {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-
+        border-radius: 10px 10px 0 0;
 
         &:before {
             content: '';
@@ -122,6 +122,7 @@ section {
             right: 20px;
             bottom: 20px;
             z-index: 2;
+            border-radius: 10px 10px 0 0;
             transition: ease all $transition-time;
             transform-style: preserve-3d;
             transform: translateZ(0px);
@@ -136,7 +137,7 @@ section {
             bottom: 0px;
             z-index: 2;
             transition: ease all 1.3s;
-         
+            border-radius: 10px 10px 0 0;
         }
 
         &.item-a {
@@ -222,6 +223,7 @@ section {
         transform: translateZ(-1px);
         display: flex;
         align-items: center;
+        border-radius: 10px 10px 0 0;
         justify-content: center;
 
         a {

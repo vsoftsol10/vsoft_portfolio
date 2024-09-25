@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
+import { Link, useNavigate } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Link } from "react-router-dom";
+
 import "./App.css";
 import Footer from "./Footer";
 import logo from "./images/vslogo.png";
@@ -43,17 +44,18 @@ function Home() {
 
   const cardsRef = useRef(null);
   const bannercontentRef = useRef(null);
-
+  const navigate = useNavigate();
   const handleMenuToggle = () => {
     if (window.innerWidth <= 568) {
       // Check if the screen width is 768px or less
       navRef.current.classList.toggle("show");
     }
   };
-
-  const handleCardClick = (link) => {
-    window.location.href = link;
+  const handleLinkClick = (path) => {
+    window.scrollTo(0, 0);
+    navigate(path);
   };
+  
   const handleButtonClicks = () => {
     if (cardsRef.current) {
       cardsRef.current.scrollIntoView({ behavior: "smooth" });
@@ -139,6 +141,9 @@ function Home() {
   }, []);
 
   useEffect(() => {
+
+
+    window.scrollTo(0, 0);
     gsap.registerPlugin(ScrollTrigger);
 
     const bannercontentRef = document.querySelectorAll(".banner-content");
@@ -154,7 +159,8 @@ function Home() {
       { y: 100, opacity: 0 },
       { y: 0, opacity: 1, duration: 3, delay: 5, ease: "power2.out" }
     );
-
+  
+  
     return () => {
       gsap.killTweensOf(".banner-content h1");
       gsap.killTweensOf(".banner-content h2");
@@ -355,53 +361,41 @@ function Home() {
         Our Services
       </h2>
       <div className="card-containers">
-        <div className="cardsss">
-          <Link to="/ws#banner-containers" className="card card1">
-            <div className="card-content"></div>
-            <h3>Web Development</h3>
-          </Link>
-        </div>
-
-        <div className="cardsss">
-          <Link to="/appsdevelop#banner-containers" className="card card2">
-            <div className="card-content"></div>
-            <h3>App Development</h3>
-          </Link>
-        </div>
-
-        <div className="cardsss">
-          <Link to="/digi#banner-containers" className="card card3">
-            <div className="card-content"></div>
-            <h3>Digital Marketing</h3>
-          </Link>
-        </div>
-
-        <div className="cardsss">
-          <Link
-            to="/seo2#banner-containers"
-            className="card card4"
-            style={{
-              marginTop: "3rem",
-            }}
-          >
-            <div className="card-content"></div>
-            <h3>SEO Services</h3>
-          </Link>
-        </div>
-
-        <div className="cardsss">
-          <Link
-            to="/ui2#banner-containers"
-            className="card card5"
-            style={{
-              marginTop: "3rem",
-            }}
-          >
-            <div className="card-content"></div>
-            <h3>UI/UX Design</h3>
-          </Link>
-        </div>
+      <div className="cardsss">
+        <Link to="/ws" className="card card1" onClick={() => handleLinkClick('/ws')}>
+          <div className="card-content"></div>
+          <h3>Web Development</h3>
+        </Link>
       </div>
+
+      <div className="cardsss">
+        <Link to="/appsdevelop#banner-containers" className="card card2" onClick={() => handleLinkClick('/appsdevelop#banner-containers')}>
+          <div className="card-content"></div>
+          <h3>App Development</h3>
+        </Link>
+      </div>
+
+      <div className="cardsss">
+        <Link to="/digi#banner-containers" className="card card3" onClick={() => handleLinkClick('/digi#banner-containers')}>
+          <div className="card-content"></div>
+          <h3>Digital Marketing</h3>
+        </Link>
+      </div>
+
+      <div className="cardsss">
+        <Link to="/seo2#banner-containers" className="card card4" onClick={() => handleLinkClick('/seo2#banner-containers')} style={{ marginTop: "3rem" }}>
+          <div className="card-content"></div>
+          <h3>SEO Services</h3>
+        </Link>
+      </div>
+
+      <div className="cardsss">
+        <Link to="/ui2#banner-containers" className="card card5" onClick={() => handleLinkClick('/ui2#banner-containers')} style={{ marginTop: "3rem" }}>
+          <div className="card-content"></div>
+          <h3>UI/UX Design</h3>
+        </Link>
+      </div>
+    </div>
 
       <Footer />
     </div>
